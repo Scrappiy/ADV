@@ -1,0 +1,705 @@
+body{
+   margin: 0;
+   padding: 0;
+   background: url(piccher/backimg.webp) fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.nopicher{
+   pointer-events: none;
+}
+.noselect {
+	color: #000000;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.steam{
+   z-index: 3;
+   position: absolute;
+   top: 60.5%;
+   right: 71%;
+}
+.zagA{
+/* border: 1px solid #ff0000; */
+background:linear-gradient(15deg,#00c8ff7e,#ff000049);
+}
+.zagB{
+   color: #ffffffdd;
+   text-align: center;
+   text-shadow: 1px 1px #000000;
+   font-size: 28px;
+border: 10px groove #00ff2f98;
+border-radius: 15px;
+margin: 0.5% 20%;
+}
+.ChecGamemode{
+   background-color: #846ef587;
+   color: #ffffff;
+   /* text-align: left; */
+   font-weight:700;
+   text-shadow: 2px 1px #000000;
+   border: 10px double #00d5ffa7;
+   padding: 0;
+   margin: 0 30%;
+}
+.bigpar{
+   /* border: 1px solid #00ff37; */
+   padding: 2% 1%;
+}
+.parAll{
+   text-align: center;
+}
+.par{
+   min-width: 1000px;
+   max-width: 1025px;
+   /* border: 1px solid #2b00ff; */
+   margin-top: 1%;
+   text-align: center;
+   position: relative;
+}
+.chel1{
+   z-index: -1;
+position: absolute;
+top: 9.76%;
+left: 76.7%;
+width: 5.1%;
+}
+.chel1_1{
+   z-index: 2;
+}
+
+.ert{
+   opacity: 1;
+}
+.chel2{
+   font-size: 16px;
+   text-indent: 5%;
+  text-align: justify;
+   z-index: 1;
+position: absolute;
+top: 29.8%;
+left: 65.5%;
+right: 2.8%;
+bottom: 15.5%;
+padding: 0 4% 0 0;
+scrollbar-width: 1%;
+/* overflow: hidden; */
+overflow-y:  auto;
+scrollbar-gutter: stable;
+}
+.chel3{
+   z-index: 2;
+position: absolute;
+top: 27.4%;
+left: 63.6%;
+width: 32%;
+opacity: 1;
+}
+.obl{
+   z-index: 3;
+   border-radius: 5%;
+position: absolute;
+top: 29.5%;
+left: 65%;
+width: 28%;
+height: 55%;
+cursor:url("piccher/ed_gizmo_zone_portal.png") 0 0, pointer;
+}
+
+.rgbc{
+   z-index: 3;
+   position: absolute;
+   top: 24%;
+   left: 39.2%;
+   width: 3%;
+   cursor:pointer;
+}
+.dial{
+   z-index: 3;
+   position: absolute;
+   top: 32.5%;
+   left: 39.2%;
+   width: 3%;
+   cursor:pointer;
+}
+
+.diro{
+   z-index: 3;
+   position: absolute;
+   text-align: justify;
+   padding: 0.5%;
+   color: #19ff0c;
+   border: 8px ridge #a8a7a7;
+   background-color: #09470d;
+   top: 39%;
+   left: 19%;
+   width: 40%;
+   height: 50%;
+   overflow:auto;
+}
+
+.anD{
+   border: none;
+   cursor: pointer;
+}
+.anD:hover{
+/* border: 1px double #0ea911;
+box-shadow: 2px 2px #00000076; */
+background-color: #ffffff46;
+}
+
+.rgbck{
+   z-index: 4;
+   opacity: 0.8;
+}
+.rgbP{
+   border-radius: 15px;
+   border: 7px ridge #f3a02d;
+   background-color: #674801;
+   z-index: 3;
+   position: absolute;
+   top: 17.6%;
+   left: 44.5%;
+   width: 10%;
+   box-shadow: 0px 5px #00000070;
+}
+.rgbClick{
+   z-index: 4;
+   position: absolute;
+   top: 20.1%;
+   left: 45.8%;
+   width: 8.7%;
+   height: 46.5%;
+   /* background-color: #2b00ff6a; */
+}
+
+.rgbCl{
+   opacity: 0;
+   position:absolute;
+   width: 44px;
+  height: 44px;
+   background-color: #00ddff86;
+   cursor: pointer;
+}
+.rgbCl0{
+   top: 0%;
+   left: 0%;
+}
+.rgbCl1{
+   top: 0%;
+   left: 50%;
+}
+.rgbCl2{
+   top: 20%;
+   left: 0%;
+}
+.rgbCl3{
+   top: 20%;
+   left: 50%;
+}
+.rgbCl4{
+   top: 40%;
+   left: 0%;
+}
+.rgbCl5{
+   top: 40%;
+   left: 50%;
+}
+.rgbCl6{
+   top: 60%;
+   left: 0%;
+}
+.rgbCl7{
+   top: 60%;
+   left: 50%;
+}
+.rgbCl8{
+   top: 80%;
+   left: 0%;
+}
+.rgbCl9{
+   top: 80%;
+   left: 50%;
+}
+
+.oblsts{
+   z-index: 3;
+   position: absolute;
+   top: 25%;
+   left: 4.6%;
+   width: 5%;
+   height: 60%;
+   cursor:alias;
+}
+
+.cc0{
+   /* background-color: #d88c08; */
+   background:linear-gradient(0deg, #00d5ff7d, #48000000);
+   z-index: 4;
+   position: absolute;
+   /* border-top-right-radius: 10px;
+   border-top-left-radius: 10px; */
+   border-top: 1px solid #4ac9e21d;
+   border-left: 5px groove #4a4ae2a1;
+   border-right: 5px ridge #4a4ae2a1;
+   bottom: 85%;
+   top: 11.2%;
+   width: 4%;
+   overflow: hidden;
+  transition: top 400ms ease;
+}
+@media (max-width: 1000px) {
+   .cc0{
+      top: 4%;
+   }
+   .chel2{
+      text-indent: 3%;
+   }
+}
+.cc1{
+left: 6%;
+}
+.cc2{
+left: 12%;
+}
+.cc3{
+left: 18%;
+}
+.cc4{
+left: 27.8%;
+}
+
+.inB{
+   position: absolute;
+  filter: hue-rotate(110deg);
+   z-index: 5;
+   top: -5%;
+   right: -11%;
+}
+.inB:hover{
+   filter: hue-rotate(270deg);
+}
+
+.cc0:hover{
+   top: 4%;
+   animation: pic .5s infinite;
+   cursor: pointer;
+}
+
+.audio{
+   border: 1px solid #f3a02d;
+   border-radius: 15%;
+   z-index: 1;
+   position: absolute;
+   top: 56%;
+   left: 21.2%;
+   height: 28%;
+   width: 16%;
+   overflow: hidden;
+ }
+.selT{
+   width: 90%;
+}
+
+ .VVt{
+   border: 1px solid #f3a02d;
+   margin: 5% 0 5% 0;
+   padding:0 ;
+ }
+.audio1{
+   border: 1px solid #f3a02d;
+   z-index: 2;
+   position: relative;
+   height: 20%;
+   width: 100%;
+   overflow: hidden;
+   margin: 0;
+}
+.audio1_1{
+   border: 1px solid #f3a02d;
+   position: absolute;
+   width: 120%;
+   top: -60%;
+   left: -12%;
+}
+/* .audChec{
+   border: 1px solid #f3a02d;
+   font-weight: 800;
+   font-size: 16px;
+   color: #ffffff;
+   background-color: #929292;
+   padding: 0 0 0 0;
+   z-index: 4;
+   position: absolute;
+   width: 5.5%;
+   top: 56%;
+   left: 38%;
+} */
+.audChec{
+   text-align: center;
+   color: #3d3c3ce8;
+   border: 10px groove #f3a02d;
+   font-weight: 800;
+   font-size: 16px;
+   background-color: #929292;
+   margin: 0 35%;
+  }
+.ct{
+   cursor: pointer;
+   /* cursor:url("piccher/ed_gizmo_zone_portal.png") 0 0, pointer; */
+}
+
+.ssc{
+   border: 1px solid #68f32d;
+   border-radius: 10%;
+   padding: 0.1% 0.8%;
+   top: 1%;
+   cursor: pointer;
+}
+.ssc:hover{
+   animation: pic .6s infinite;
+}
+
+.ssc1{
+   position: absolute;
+   left: 9.3%;
+
+}
+.ssc2{
+   position: absolute;
+   left: 15.3%;
+}
+.ssc3{
+   position: absolute;
+   left: 21.3%;
+}
+.ssc4{
+   position: absolute;
+   left: 27.3%;
+}
+
+.l1{
+   position: absolute;
+   z-index: 1;
+   left: 24%;
+   bottom: 4%;
+}
+.l2{
+   position: absolute;
+   z-index: 1;
+   right:  24%;
+   bottom:  4%;
+}
+.colum{
+   text-align: justify;
+   position: absolute;
+   background-color: #00ff3766;
+   z-index: 1;
+   top: 13%;
+   left: 3%;
+   width: 45%;
+   height: 45%;
+   /* column-width: 400px; */
+	/* column-count: 2;
+	column-gap: 70px; */
+   overflow:hidden;
+}
+.inUP1{
+   position: absolute;
+   /* top: 145px;
+   left: 40px; */
+}
+.colum1{
+   padding: 0 2% 1% 2%;
+   background-image: url("piccher/paypa.webp");
+}
+.colum:hover{
+   overflow: visible;
+}
+.imUP3{
+   position: absolute;
+   left: 3%;
+   width: 45%;
+   bottom: 35%;
+}
+
+.colum2{
+   text-align: justify;
+   position: absolute;
+   background-color: #00ff3766;
+   z-index: 1;
+   top: 13%;
+   right: 3%;
+   width: 45%;
+   height: 45%;
+   /* column-width: 400px; */
+	/* column-count: 2;
+	column-gap: 70px; */
+   overflow:hidden;
+}
+/* .inUP4{
+   position: absolute;
+   top: 145px;
+   right: 40px;
+} */
+
+.colum2:hover{
+   overflow: visible;
+}
+.imUP6{
+   position: absolute;
+   right: 3%;
+   width: 45%;
+   bottom: 35%;
+  }
+
+.svgR{
+   position: absolute;
+   bottom:  5%;
+   right:  3%;
+}
+.svgL{
+   transform: scaleX(-1);
+   position: absolute;
+   bottom:  5%;
+left:  3%;
+}
+.svgI{
+   position: absolute;
+   padding: 0;
+   margin: 0;
+   bottom: 0;
+   right: 0;
+   cursor: pointer;
+}
+.svgI:hover{
+   transform:scale(-1.5, 1.5);
+}
+.svgI:hover{
+   transform:scale(1.5);
+}
+
+.colorP{
+   border: 10px double #d1d1d1b9;
+   background:linear-gradient(30deg, #1b1b1b, #676767, #d1d1d1);
+border-radius: 30%;
+   position: absolute;
+   top: 21%;
+   left: 20%;
+   height: 25%;
+   width:11.5%;
+}
+
+.col{
+   z-index: 2;
+   position: absolute;
+   border: 1px solid rgb(69, 69, 69);
+   background-color: #ffffff;
+   border-radius: 50%;
+   height: 20%;
+   width: 20%;
+   cursor: pointer;
+}
+
+
+.col1{
+   top: 10%;
+   left: 10%;
+}
+.col2{
+   top: 10%;
+   left: 40%;
+}
+.col3{
+   top: 10%;
+   left: 70%;
+}
+
+.col4{
+   top: 40%;
+   left: 10%;
+}
+.col5{
+   top: 40%;
+   left: 40%;
+}
+.col6{
+   top: 40%;
+   left: 70%;
+}
+
+.col7{
+   top: 70%;
+   left: 10%;
+}
+.col8{
+   top: 70%;
+   left: 40%;
+}
+.col9{
+   top: 70%;
+   left: 70%;
+}
+
+.ots{
+   z-index: 2;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.pict{
+   background-image: url("piccher/paypa.webp");
+}
+
+.up1{
+position: absolute;
+z-index: 0;
+top: 58%;
+left: 3%;
+width: 45%;
+height: 6%;
+}
+.up2{
+   position: absolute;
+   z-index: 0;
+   top: 58%;
+   right: 3%;
+   width: 45%;
+   height: 6%;
+   }
+.infrm{
+   position: absolute;
+   background-color: #2b00ff;
+   z-index: 1;
+ top: 5.4%;
+   left: 4%;
+   cursor: pointer;
+}
+.sPict{
+   text-align:left;
+   position: absolute;
+   z-index: 1;
+   /* background-color: #00ff375d; */
+   top: 13%;
+   left: 2.5%;
+   width: 46%;
+   /* height: 75%; */
+}
+
+.monolog{
+   padding: 1% 4% 1% 1%;
+   position: absolute;
+   text-align: justify;
+   z-index: 1;
+   top: 12%;
+   left: 55.5%;
+   width: 36%;
+   height: 79%;
+  background-image: url(piccher/papa.webp);
+  background-position: center;
+background-size: cover;
+   overflow-y:auto;
+   scrollbar-gutter: stable;
+   cursor:url("piccher/ed_gizmo_zone_portal.png") 0 0, pointer;
+
+}
+.cperit{
+   z-index: 2;
+   position: absolute;
+   border: 2px double #4b4b4bbb;
+   padding: 0 0.5%;
+   font-family: monospace;
+   text-align: justify;
+   width: 47%;
+   top: 68%;
+   left: 3%;
+}
+.bort1{
+   z-index: 2;
+   position: absolute;
+   width: 39.2%;
+   top: 10.5%;
+   left: 54.95%;
+}
+.bort2{
+   z-index: 2;
+   position: absolute;
+   width: 39.2%;
+   bottom: 3%;
+   left: 54.95%;
+}
+
+.imgPa{
+   float: left;
+   padding-right: 10px;
+   max-width:30%;
+}
+
+@keyframes pic{
+   0%{
+      border-color: rgba(0, 119, 255, 0.5);
+      background:linear-gradient(0deg, #00d5ff57, #48000000);
+   }
+   50%{
+ border-color: rgba(0, 191, 255, 0.277);
+ background:linear-gradient(0deg, #00d5ffa7, #05daff15);
+   }
+   100%{
+      background:linear-gradient(0deg, #00d5ff57, #48000000);
+      border-color: rgba(0, 119, 255, 0.5);
+        }
+}
+
+.pictin{
+   float: left;
+   max-height: 30%;
+   padding-right: 10px;
+   max-width: 99%;
+  }
+.pl{
+   z-index: 3;
+   position: absolute;
+   color: #ffffff;
+   /* font-style: oblique; */
+   background-color: #45454588;
+   top: 3%;
+   left: 52%;
+   border: 3px solid #8e8e8ed1;
+   cursor: pointer;
+}
+
+.helpy{
+   position: absolute;
+   z-index: 2;
+   top: 0%;
+   left: 0%;
+}
+
+.del{
+   position: absolute;
+   background-color: #d41807;
+   z-index: 2;
+   border: 1px solid #ffffff;
+   border-radius: 50%;
+   width: 2.5%;
+   height: 5.5%;
+   left: 33.2%;
+   top: 18%;
+   box-shadow: 2px 2px #00000087;
+   cursor: pointer;
+}
+
+.del:active{
+   box-shadow:none;
+   background-color: #f52b19;
+}
+.ct:hover{
+   border-radius: 24%;
+   box-shadow: 2px 3px #00000087;
+}

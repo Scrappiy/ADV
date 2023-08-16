@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ADV Wiki</title>
+  <link rel="shortcut icon" href="piccher\lg11.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="ZAG" class="zagA">
+    <div class="zagB">Website of the world of "The Adventures of a Dwarf"</div>
+  </div>
+  <div class="bigpar">
+    <div id="vis" class="parAll">
+      <div class="ChecGamemode noselect">Current Challengemode: <br>
+        Space Adventures &#128274;
+        <div translate="no" id="chec">
+          <p><input checked type="radio" name="ch0" value="SA" tabindex="1">Space Adventures</p>
+          <p><input type="radio" name="ch0" value="GK" tabindex="1">[MISSING_TEXT, хотя это просто второсортная хрень]
+          </p>
+        </div>
+      </div>
+      <!-- <div class="audChec" translate="no" id="chec">
+        <span><input checked type="radio" name="ch1" value="en" tabindex="1" >Eng   </span>
+        <span><input type="radio" name="ch1" value="ru" tabindex="1">Rus</span>
+      </div> -->
+      <div class="audChec" translate="no">
+        <span onclick="El()" class="ct" id="laE">
+          [ Eng ]
+        </span>
+        <span onclick="Rl()" class="ct" id="laR">
+          [ Rus ]
+        </span>
+      </div>
+      <th></th>
+      <img src="piccher/hud_logbook.png" class="ct" title="Logbook" width="3%" onclick="opLB()">
+      <img src="piccher/hud_handbook.png" class="ct" title="HandBook" width="3%" onclick="opHB()">
+      <img src="piccher/hud_backpack.png" class="ct" title="Backpack" width="3%" onclick="opBack()">
+      <img src="piccher/gui_icon_hud_health.png" class="ct" title="Guide" width="3%" onclick="opG()">
+      <img src="piccher/hud_monolog.png" class="ct" title="Сharacter recording" width="3%" onclick="opM()">
+      <h1>&#9989;<a href="https://youtu.be/mYqRHArUBNs">Story Trailer</a></h1>
+      <div>Please press F11</div>
+    </div>
+    <div id="prL" class="par">
+      <div class="helpy"> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2952659032" target="_blank">
+          <img src="piccher/pay/gui_icon_alert.webp" alt="Click to help" title="Click to help" width="80%"> </a></div>
+          <div id="invB" class="inB"><img src="piccher/Brui.gif" alt="" width="18%" title="Call" onclick="Call()"></div>
+      <img class="ert nopicher" src="piccher/logbook3_2.webp" width="100%">
+      <img class="chel1 nopicher" src="piccher/eyeMin.webp">
+      <img class="rgbc" src="piccher/rgb.webp" title="Click to help" onclick="HColor()">
+      <img class="dial" src="piccher/dia.webp" title="Click to open dialog" onclick="dialo()">
+      <div id="Dial" class="diro noselect">1 </div>
+      <img class="rgbc rgbck" src="piccher/key.webp" id="clos" title="You don't have access to this feature yet">
+      <img class="dial rgbck" src="piccher/key.webp" id="closd" title="You don't have access to this feature yet">
+      <div class="rgbClick" id="rgbC1">
+        <div class="rgbCl rgbCl1" onclick="HC1()"></div>
+        <div class="rgbCl rgbCl2" onclick="HC2()"></div>
+        <div class="rgbCl rgbCl3" onclick="HC3()"></div>
+        <div class="rgbCl rgbCl4" onclick="HC4()"></div>
+        <div class="rgbCl rgbCl5" onclick="HC5()"></div>
+        <div class="rgbCl rgbCl6" onclick="HC6()"></div>
+        <div class="rgbCl rgbCl7" onclick="HC7()"></div>
+        <div class="rgbCl rgbCl8" onclick="HC8()"></div>
+        <div class="rgbCl rgbCl9" onclick="HC9()"></div>
+        <div class="rgbCl rgbCl0" onclick="HC0()"></div>
+      </div>
+      <img class="rgbP" id="rgbC2" src="piccher/rgbP.webp">
+      <img class="chel1 chel1_1" src="piccher/eye.png" title="The Eye of Angnor">
+      <div id="ttx" class="chel2 noselect">
+        <!-- <video src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/874400/2fda5d3781c6d198d70775f53809db245151928d.mp4" autoplay preload="metadata"
+          width="95%"></video>
+          <img src="https://steamuserimages-a.akamaihd.net/ugc/1890974155629956892/D1C7F0E44CF0CC0D669ED05A280498A4C0D5C2C0/" alt=""> -->
+      </div>
+      <img class="chel3 nopicher" src="piccher/virez.webp">
+      <div class="obl"></div>
+      <div class="oblsts" title="The plot of the challenge" onclick="opst()"></div>
+      <div class="cc0 cc1"><br><img src="piccher/hud_handbook.png" title="HandBook" width="80%" onclick="opHB()"></div>
+      <div class="cc0 cc2"><br><img src="piccher/hud_backpack.png" title="Backpack" width="80%" onclick="opBack()">
+      </div>
+      <div class="cc0 cc3"><br><img src="piccher/gui_icon_hud_health.png" title="Guide" width="80%" onclick="opG()">
+      </div>
+      <div class="cc0 cc4"><br><img src="piccher/hud_monolog.png" title="Сharacter recording" width="80%"
+          onclick="opM()"></div>
+      <div class="del" onclick="delling()"></div>
+      <div class="colorP">
+        <div id="col1_1" class="col col1" onclick="colP1()"></div>
+        <div id="col2_1" class="col col2" onclick="colP2()"></div>
+        <div id="col3_1" class="col col3" onclick="colP3()"></div>
+        <div id="col4_1" class="col col4" onclick="colP4()"></div>
+        <div id="col5_1" class="col col5" onclick="colP5()"></div>
+        <div id="col6_1" class="col col6" onclick="colP6()"></div>
+        <div id="col7_1" class="col col7" onclick="colP7()"></div>
+        <div id="col8_1" class="col col8" onclick="colP8()"></div>
+        <div id="col9_1" class="col col9" onclick="colP9()"></div>
+      </div>
+      <div class="audio">
+        <div class="VVt">
+          <input type="search" id="Ytu" placeholder="Document number" tabindex="2" class="selT">
+          <hr>
+          <button onclick="scr1SA()" id="w1" tabindex="3"><b>Search</b></button>
+        </div>
+        <div class="audio1">
+          <audio tabindex="-1" id="mega_audio" class="audio1_1" src="#" controls preload="metadata"></audio>
+        </div>
+      </div>
+      <!-- <div class="audChec" translate="no" id="chec">
+      <p><input checked type="radio" name="ch1" value="en" tabindex="1">Eng</p>
+      <p><input type="radio" name="ch1" value="ru" tabindex="1">Rus</p>
+    </div> -->
+    </div>
+    <div id="prH" class="par noselect">
+      <div class="helpy"> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2952659032" target="_blank">
+          <img src="piccher/pay/gui_icon_alert.webp" alt="Click to help" title="Click to help" width="80%"> </a></div>
+      <div class="svgR" onclick="scrR()"><img class="svgI" src="piccher/strelka.png" title="Next"></div>
+      <div class="svgL" onclick="scrL()"><img class="svgI" src="piccher/strelka.png" title="Previous"></div>
+      <img class="nopicher" src="piccher/backbook.webp" width="100%">
+      <img class="ssc ssc1" src="piccher/hud_logbook.png" title="Logbook" width="3%" onclick="opLB()">
+      <img class="ssc ssc2" src="piccher/hud_backpack.png" title="Backpack" width="3%" onclick="opBack()">
+      <img class="ssc ssc3" src="piccher/gui_icon_hud_health.png" title="Guide" width="3%" onclick="opG()">
+      <img class="ssc ssc4" src="piccher/hud_monolog.png" title="Сharacter recording" width="3%" onclick="opM()">
+      <div id="List2n+1" class="l1">1</div>
+      <div id="List2n+2" class="l2">2</div>
+      <img class="imUP3" src="piccher/pay/paypD.webp">
+      <div class="colum">
+        <div class="colum1">
+          <img id="columT5" class="imUP1" src="piccher/pay/paypaUP8.png" width="100%">
+          <div id="columT1"></div>
+        </div>
+        <div><img id="columT3" class="imUP2" src="piccher/pay/paypSecret1.webp" width="100%"></div>
+      </div>
+      <img class="imUP6" src="piccher/pay/paypD.webp">
+      <div class="colum2">
+        <div class="colum1">
+          <img id="columT6" class="imUP1" src="piccher/pay/paypaUP1.png" width="100%">
+          <div id="columT2"></div>
+        </div>
+        <div><img id="columT4" class="imUP5" src="piccher/pay/paypSecret1.webp" width="100%"></div>
+      </div>
+    </div>
+    <div id="prM" class="par">
+      <div class="helpy"> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2952659032" target="_blank">
+          <img src="piccher/pay/gui_icon_alert.webp" alt="Click to help" title="Click to help" width="80%"> </a></div>
+      <img class="nopicher" src="piccher/backbook_Mon.webp" width="100%">
+      <a class="steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2885420493" target="_blank"><img
+          src="piccher/steamIcon.png" alt="STEAM" width="60%"></a>
+      <img class="ssc ssc1" src="piccher/hud_logbook.png" title="Logbook" width="3%" onclick="opLB()">
+      <img class="ssc ssc2" src="piccher/hud_handbook.png" title="HandBook" width="3%" onclick="opHB()">
+      <img class="ssc ssc3" src="piccher/hud_backpack.png" title="Backpack" width="3%" onclick="opBack()">
+      <img class="ssc ssc4" src="piccher/gui_icon_hud_health.png" title="Guide" width="3%" onclick="opG()">
+      <img class="ots" src="piccher/backbook_Mon_otstup.png" height="99.18%">
+      <img class="bort1" src="piccher/bort.png">
+      <img class="bort2" src="piccher/bort.png">
+      <div class="cperit" id="coope">Запятой раз маленький продолжил вскоре? Парадигматическая повстречался приставка
+        решила над, предложения однажды прямо семь ее мир. Великий пояс свой, гор злых они собрал одна сих последний
+        назад он снова большой рыбными текста залетают домах продолжил составитель о оксмокс. Единственное всеми океана,
+        предупредила ее, подзаголовок ты жаренные переулка маленький власти, деревни эта все до заголовок живет.</div>
+      <div id="monol" class="monolog">
+      </div>
+    </div>
+    <div id="prBack" class="par">
+      <div class="helpy"> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2952659032" target="_blank">
+          <img src="piccher/pay/gui_icon_alert.webp" alt="Click to help" title="Click to help" width="80%"> </a></div>
+      <div class="svgR" onclick="scrR1()"><img class="svgI" src="piccher/strelka.png" title="Next"></div>
+      <div class="svgL" onclick="scrL1()"><img class="svgI" src="piccher/strelka.png" title="Previous"></div>
+      <img class="nopicher" src="piccher/backbook.webp" width="100%">
+      <div class="pl noselect" id="pltS" onclick="ret1()"></div>
+      <img class="ssc ssc1" src="piccher/hud_logbook.png" title="Logbook" width="3%" onclick="opLB()">
+      <img class="ssc ssc2" src="piccher/hud_handbook.png" title="HandBook" width="3%" onclick="opHB()">
+      <img class="ssc ssc3" src="piccher/gui_icon_hud_health.png" title="Guide" width="3%" onclick="opG()">
+      <img class="ssc ssc4" src="piccher/hud_monolog.png" title="Сharacter recording" width="3%" onclick="opM()">
+      <div id="List1_2n+1" class="l1">1</div>
+      <div id="List1_2n+2" class="l2">2</div>
+      <div id="sec1">
+        <div class="colum pict">
+          <img id="columT1_5" class="imUP1" src="#" width="100%">
+          <div id="columT1_1" class="colum1"></div>
+          <img id="columT1_3" class="imUP5" src="#" width="100%">
+        </div>
+        <img class="up1" src="piccher/pay/paypD.webp">
+      </div>
+      <div id="sec2">
+        <div class="colum2 pict">
+          <img id="columT1_6" class="imUP1" src="#" width="100%">
+          <div id="columT1_2" class="colum1"></div>
+          <img id="columT1_4" class="imUP5" src="#" width="100%">
+        </div>
+        <img class="up2" src="piccher/pay/paypD.webp">
+      </div>
+    </div>
+    <div id="prG" class="par">
+      <div class="helpy"> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2952659032" target="_blank">
+          <img src="piccher/pay/gui_icon_alert.webp" alt="Click to help" title="Click to help" width="80%"> </a></div>
+      <div class="svgR" onclick="scrR2()"><img class="svgI" src="piccher/strelka.png" title="Next"></div>
+      <div class="svgL" onclick="scrL2()"><img class="svgI" src="piccher/strelka.png" title="Previous"></div>
+      <img class="nopicher" src="piccher/backbook.webp" width="100%">
+      <div class="pl noselect" id="pltG" onclick="ret1()"></div>
+      <img class="ssc ssc1" src="piccher/hud_logbook.png" title="Logbook" width="3%" onclick="opLB()">
+      <img class="ssc ssc2" src="piccher/hud_handbook.png" title="HandBook" width="3%" onclick="opHB()">
+      <img class="ssc ssc3" src="piccher/hud_backpack.png" title="Backpack" width="3%" onclick="opBack()">
+      <img class="ssc ssc4" src="piccher/hud_monolog.png" title="Сharacter recording" width="3%" onclick="opM()">
+      <div id="List2_2n+1" class="l1">1</div>
+      <div id="List2_2n+2" class="l2">2</div>
+      <img src="piccher/info_menu.webp" title="Menu" class="infrm" width="3%" onclick="list0()">
+      <div class="sPict" id="secPict">
+        #
+      </div>
+      <div id="sec3">
+        <div class="colum pict">
+          <img id="columT2_5" class="imUP1" src="#" width="100%">
+          <div id="columT2_1" class="colum1">lo</div>
+          <img id="columT2_3" class="imUP5" src="#" width="100%">
+        </div>
+        <img class="up1" src="piccher/pay/paypD.webp">
+      </div>
+      <div id="sec4">
+        <div class="colum2 pict">
+          <img id="columT2_6" class="imUP1" src="#" width="100%">
+          <div id="columT2_2" class="colum1">#</div>
+          <img id="columT2_4" class="imUP5" src="#" width="100%">
+        </div>
+        <img class="up2" src="piccher/pay/paypD.webp">
+      </div>
+    </div>
+  </div>
+  <div id="invA"></div>
+  <!-- <img src="piccher/screpka.png" onclick="ret()" width="3%"> -->
+  <!-- <img src="piccher/rgb.webp" onclick="ret1()" width="3%"> -->
+  <!-- <a href="piccher/dunland/char_male_head01_dif.tga" download="" title="всплывающая подсказка">скачать файл</a> -->
+  <script src="scrits.js"></script>
+</body>
+
+</html>
