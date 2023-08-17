@@ -1680,7 +1680,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
 
     b_mont = "< " + ci + " > :" + b_mont;
     a = a + b_mont;
-    a = a + `<br> ______________________________________________ `;
+    a = a + `<br>______________________________________________<br>`;
     document.getElementById("monol").innerHTML = a;
     ci = ``;
   }
@@ -3123,8 +3123,8 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             `;
         }
         break;
-      case "6606006066":
-      case "6,6,0,6,0,0,6,0,6,6":
+      case "606006066":
+      case "6,0,6,0,0,6,0,6,6":
         au = true;
         ta = false;
         mont = true;
@@ -3394,6 +3394,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       document.getElementById("Dial").style.display = 'none';
     } else {
       coling2 = true;
+      
       document.getElementById("ttx").innerHTML = "";
       document.getElementById("Dial").style.display = '';
       DialogSA();
@@ -3573,6 +3574,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         break;
     }
 
+    localStorage.setItem(`ZQvSA`, QvSA);
     if (a) {
       DialogSA();
     }
@@ -3660,15 +3662,15 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           b_ta = "";
         } else {
           b_ta = `Настройка завершена.
-          <br>  Список контактов пуст.
-          <br>  Ваше устройство готово принимать входящие вызовы.`;
+          <br> Список контактов пуст.
+          <br> Ваше устройство готово принимать входящие вызовы.`;
           ci = `
           <div class="anD" onclick="Ans2()">&#8226; ...</div>
           `;
         }
         Qv = "Lara1";
         if (dialTime) {
-          setTimeout(INVA, 50000);
+          setTimeout(INVA, 41000);
           dialTime = false;
         }
         break;
@@ -3968,7 +3970,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
     document.getElementById("invA").innerHTML = ``;
     document.getElementById("invB").style.display = 'none';
     QvSA = Qv;
-    setTimeout(dialo, 500);
+    setTimeout(dialo, 800);
     dialTime = true;
   }
 
