@@ -1,4 +1,5 @@
-if ((document.referrer !== ' https://scrappiy.github.io/tyia/') && (localStorage.getItem(`yyy`) !== "1")) {
+if ((document.referrer != "https://scrappiy.github.io/tyia/") && (localStorage.getItem(`yyy`) != "1")) {
+    alert (document.referrer);
     window.location = "https://store.steampowered.com/";
 } else {
     document.oncontextmenu = function () { return false };
