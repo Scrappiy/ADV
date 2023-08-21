@@ -1,737 +1,754 @@
-if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (document.referrer !== 'https://steamcommunity.com/sharedfiles/filedetails/?id=2975333918') && (localStorage.getItem(`yyy`) !== "1")) {
-  window.location = "https://store.steampowered.com/";
+if ((document.referrer !== ' https://scrappiy.github.io/tyia/') && (localStorage.getItem(`yyy`) !== "1")) {
+    window.location = "https://store.steampowered.com/";
 } else {
-  document.oncontextmenu = function () { return false };
-  var time = new Date();
-  let str = 0;
-  let str1 = 0;
-  let str2 = 0;
-  let coling = false;
-  let coling1 = false;
-  let coling2 = false;
-  let dialTime = true;
-  let Qv = "";
-  let Ans = 0;
-  let AnsTime = 0;
-  let col0 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let ci = "";
-  let checc = "en";
-  let cmode = "SA";
-  let titch = [false, false, false, false, false];
+    document.oncontextmenu = function () { return false };
+    var time = new Date();
+    let str = 0;
+    let str1 = 0;
+    let str2 = 0;
+    let coling = false;
+    let coling1 = false;
+    let coling2 = false;
+    let dialTime = true;
+    let Qv = "";
+    let Ans = 0;
+    let AnsTime = 0;
+    let col0 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let ci = "";
+    let checc = "en";
+    let cmode = "SA";
+    let titch = [false, false, false, false, false];
 
-  let QvSA = "znakomstvo";
+    let QvSA = "znakomstvo";
 
-  let ZDialogSA = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    let ZDialogSA = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
-  let booolSA_S = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    let booolSA_S = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
-  let booolSA_G = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    let booolSA_G = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
-  let booolSA_MODS = [false, false, false, false, false, false, false];
+    let booolSA_MODS = [false, false, false, false, false, false, false];
 
-  let booolMT_S = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    let booolMT_S = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
-  let booolMT_G = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+    let booolMT_G = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
 
-  let booolMT_MODS = [false, false, false, false, false, false, false];
+    let booolMT_MODS = [false, false, false, false, false, false, false];
 
-  if (localStorage.getItem(`yyy`) == "1") {
-    booolSA_S = localStorage.getItem(`Mbool`);
-    booolSA_S = JSON.parse(booolSA_S);
-    booolSA_MODS = localStorage.getItem(`Mds`);
-    booolSA_MODS = JSON.parse(booolSA_MODS);
-    booolSA_G = localStorage.getItem(`Mbool1`);
-    booolSA_G = JSON.parse(booolSA_G);
-    titch = localStorage.getItem(`titly`);
-    titch = JSON.parse(titch);
-    checc = localStorage.getItem(`langinn`);
-    QvSA = localStorage.getItem(`ZQvSA`);
-    booolMT_S = localStorage.getItem(`MboolMT`);
-    booolMT_S = JSON.parse(booolMT_S);
-    booolMT_MODS = localStorage.getItem(`MdsMT`);
-    booolMT_MODS = JSON.parse(booolMT_MODS);
-    booolMT_G = localStorage.getItem(`Mbool1MT`);
-    booolMT_G = JSON.parse(booolMT_G);
-    ZDialogSA = localStorage.getItem(`ZZDialogSA`);
-    ZDialogSA = JSON.parse(ZDialogSA);
-    lang();
-  } else {
-    localStorage.setItem(`yyy`, "1");
-    localStorage.setItem(`Mds`, JSON.stringify(booolSA_MODS));
-    localStorage.setItem(`Mbool`, JSON.stringify(booolSA_S));
-    localStorage.setItem(`Mbool1`, JSON.stringify(booolSA_G));
-    localStorage.setItem(`MdsMT`, JSON.stringify(booolMT_MODS));
-    localStorage.setItem(`MboolMT`, JSON.stringify(booolMT_S));
-    localStorage.setItem(`Mbool1MT`, JSON.stringify(booolMT_G));
-    localStorage.setItem(`titly`, JSON.stringify(titch));
-    localStorage.setItem(`langinn`, checc);
-    localStorage.setItem(`ZZDialogSA`, JSON.stringify(ZDialogSA));
-    localStorage.setItem(`ZQvSA`, QvSA);
-    lang();
-  }
-
-  document.getElementById("rgbC1").style.display = 'none';
-  document.getElementById("rgbC2").style.display = 'none';
-  document.getElementById("Dial").style.display = 'none';
-  document.getElementById("chec").style.display = 'none';
-  document.getElementById("prL").style.display = 'none';
-  document.getElementById("prH").style.display = 'none';
-  document.getElementById("prM").style.display = 'none';
-  document.getElementById("prBack").style.display = 'none';
-  document.getElementById("prG").style.display = 'none';
-  document.getElementById("invA").style.display = 'none';
-  document.getElementById("invB").style.display = 'none';
-
-  function ret() {
-    alert(localStorage.getItem(`yyy`));
-    alert(checc);
-    alert(coling1);
-    alert(titch);
-    alert(booolSA_S);
-    alert(booolSA_G);
-    alert(booolSA_MODS);
-    alert(booolMT_S);
-    alert(booolMT_G);
-    alert(booolMT_MODS);
-  }
-  function ret1() {
-    if (booolSA_MODS[2]) {
-      coling1 = !coling1;
-      rret1();
-    }
-  }
-
-  function rret1() {
-    let a = "";
-    if (!booolSA_MODS[2]) {
-      if (checc == "en") {
-        a = `*Scroll to the nearest filled page: &#128274 Disabled`;
-      } else {
-        a = `*Листать до ближайшей заполненной страницы:  &#128274 Выключено`;
-      }
-    } else if (checc == "en") {
-      if (coling1) {
-        a = `*Scroll to the nearest filled page: Enabled`;
-      } else {
-        a = `*Scroll to the nearest filled page: Disabled`;
-      }
+    if (localStorage.getItem(`yyy`) == "1") {
+        booolSA_S = localStorage.getItem(`Mbool`);
+        booolSA_S = JSON.parse(booolSA_S);
+        booolSA_MODS = localStorage.getItem(`Mds`);
+        booolSA_MODS = JSON.parse(booolSA_MODS);
+        booolSA_G = localStorage.getItem(`Mbool1`);
+        booolSA_G = JSON.parse(booolSA_G);
+        titch = localStorage.getItem(`titly`);
+        titch = JSON.parse(titch);
+        checc = localStorage.getItem(`langinn`);
+        QvSA = localStorage.getItem(`ZQvSA`);
+        booolMT_S = localStorage.getItem(`MboolMT`);
+        booolMT_S = JSON.parse(booolMT_S);
+        booolMT_MODS = localStorage.getItem(`MdsMT`);
+        booolMT_MODS = JSON.parse(booolMT_MODS);
+        booolMT_G = localStorage.getItem(`Mbool1MT`);
+        booolMT_G = JSON.parse(booolMT_G);
+        ZDialogSA = localStorage.getItem(`ZZDialogSA`);
+        ZDialogSA = JSON.parse(ZDialogSA);
+        lang();
     } else {
-      if (coling1) {
-        a = `*Листать до ближайшей заполненной страницы: Включено`;
-      } else {
-        a = `*Листать до ближайшей заполненной страницы: Выключено`;
-      }
-    }
-    document.getElementById("pltS").innerHTML = a;
-    document.getElementById("pltG").innerHTML = a;
-  }
+        let sr = confirm(`
+    Пользовательское соглашение
+    © Scrappiy 2023 ᠌Все права сохранены. Копирование: функционала, кода, идеи сайта и изображений строго запрещено! Любое копирование материалов или подборки материалов сайта, способов создания функций, элементов дизайна и оформления допускается лишь с разрешения автора и только со ссылкой на данный источник. 
+    Несоблюдение привил использования сайта, означает нарушение авторских прав, а также обесценивание труда и вклада автора в преданное сообщество игры Scrap Mechanic.
+    Нажмите “OK” для принятия правил использования сайта и окунитесь в сюжет испытания или “Отмена” для отказа от использования сайта.
 
-  function lang() {
-    localStorage.setItem(`langinn`, checc);
-    //checc = document.querySelector('input[name="ch1"]:checked').value;
-    // alert(checc);
-    if (checc == "en") {
-      document.getElementById("laE").style.color = `#68f32d`;
-      document.getElementById("laR").style.color = `#504f4f`;
-      document.getElementById("laE").innerHTML = `[ Eng&#10004; ]`;
-      document.getElementById("laR").innerHTML = `[ Rus ]`;
-    } else {
-      document.getElementById("laR").style.color = `#68f32d`;
-      document.getElementById("laE").style.color = `#504f4f`;
-      document.getElementById("laE").innerHTML = `[ Eng ]`;
-      document.getElementById("laR").innerHTML = `[ Rus&#10004; ]`;
-    }
-  }
-  function El() {
-    checc = "en";
-    lang();
-  }
-  function Rl() {
-    checc = "ru";
-    lang();
+    Terms of use
+    © Scrappiy 2023 ᠌All rights reserved. Copying: functionality, code, site ideas and images is strictly prohibited! Any copying of materials or a selection of site materials, methods of creating functions, design elements and design is allowed only with the permission of the author and only with reference to this source.
+    Failure to comply with the rules of using the site means copyright infringement, as well as depreciation of the work and contribution of the author to the dedicated community of the Scrap Mechanic game.
+    Click "OK" to accept the site's terms of use and dive into the challenge plot, or "Cancel" to stop using the site.
+    `);
 
-  }
-
-  function ChaccModegame() {
-    cmode = document.querySelector('input[name="ch0"]:checked').value;
-    // alert(checc);
-  }
-
-  function opst() {
-    document.getElementById("prL").style.display = 'none';
-    document.getElementById("prH").style.display = 'none';
-    document.getElementById("prBack").style.display = 'none';
-    document.getElementById("vis").style.display = '';
-    document.getElementById("prG").style.display = 'none';
-    document.getElementById("prM").style.display = 'none';
-    document.getElementById("ZAG").style.display = '';
-  }
-
-  function opHB() {
-    //lang();
-    if (titch[1] == false) {
-      let a = "";
-      titch[1] = true;
-      if (checc == "en") {
-        a = " Directory (general information) – a section that reflects general information about the world around you. It can be useful for learning the plot of the tests.";
-      } else {
-        a = " Справочник (общая информация) – раздел в котором отражена общая информация об окружающем вас мире. Может быть полезна для познания сюжета испытаний.";
-      }
-
-      localStorage.setItem(`titly`, JSON.stringify(titch));
-      alert(a);
-    }
-    ChaccModegame()
-    Preob();
-    document.getElementById("prL").style.display = 'none';
-    document.getElementById("prH").style.display = '';
-    document.getElementById("prBack").style.display = 'none';
-    document.getElementById("vis").style.display = 'none';
-    document.getElementById("prG").style.display = 'none';
-    document.getElementById("prM").style.display = 'none';
-    document.getElementById("ZAG").style.display = 'none';
-  }
-
-  function opLB() {
-    if (titch[0] == false) {
-      //lang();
-      let a = "";
-      titch[0] = true;
-      if (checc == "en") {
-        a = " LogBook or the control and input panel is a section of the book where you can enter data, such as color passwords, numbers from tape recorders and words or phrases, as a result you can get information in the form of an audio recording, a note or a new page in the directory.";
-      } else {
-        a = " Бортовой журнал или панель ввода – раздел книги, в который вы можете вводить данные, такие как цветовые пароли, числа из магнитофонов и слова или словосочетания, в результате вы можете получить информацию в виде аудиозаписи, заметки или новой страницы в справочнике.";
-      }
-
-      localStorage.setItem(`titly`, JSON.stringify(titch));
-      alert(a);
-    }
-
-    if (booolSA_MODS[0]) {
-      document.getElementById("clos").style.display = 'none';
-    } else {
-      document.getElementById("clos").style.display = '';
-    }
-
-    if (booolSA_MODS[3]) {
-      document.getElementById("closd").style.display = 'none';
-    } else {
-      document.getElementById("closd").style.display = '';
-    }
-
-
-    ChaccModegame()
-    document.getElementById("prL").style.display = '';
-    document.getElementById("prH").style.display = 'none';
-    document.getElementById("prBack").style.display = 'none';
-    document.getElementById("vis").style.display = 'none';
-    document.getElementById("prG").style.display = 'none';
-    document.getElementById("prM").style.display = 'none';
-    document.getElementById("ZAG").style.display = 'none';
-  }
-  function opBack() {
-    //lang();
-    rret1();
-    if (titch[2] == false) {
-      let a = "";
-      titch[2] = true;
-      if (checc == "en") {
-        a = " Backpack – this section stores some of the records you found that were saved by your character. Such notes include notes important to the plot, which you can reread.";
-      } else {
-        a = " Рюкзак – в данном разделе хранятся некоторые найденные вами записи, которые были сохранены вашим персонажем. К таким записям относятся записки и аудиозаписи важные для сюжета, которые вы можете перечитывать и воспроизводить заново.";
-      }
-
-      localStorage.setItem(`titly`, JSON.stringify(titch));
-      alert(a);
-    }
-    ChaccModegame();
-    Preob_SA_secret();
-    document.getElementById("prL").style.display = 'none';
-    document.getElementById("prH").style.display = 'none';
-    document.getElementById("prBack").style.display = '';
-    document.getElementById("vis").style.display = 'none';
-    document.getElementById("prG").style.display = 'none';
-    document.getElementById("prM").style.display = 'none';
-    document.getElementById("ZAG").style.display = 'none';
-  }
-  function opM() {
-    if (titch[4] == false) {
-      //lang();
-      let a = "";
-      titch[4] = true;
-      if (checc == "en") {
-        a = " Character entries, the last section of the directory in which notes from the character can appear.";
-      } else {
-        a = " Записи персонажа, последний раздел справочника, в котором могут появляться заметки от персонажа.";
-      }
-
-      localStorage.setItem(`titly`, JSON.stringify(titch));
-      alert(a);
-    }
-    document.getElementById("prL").style.display = 'none';
-    document.getElementById("prH").style.display = 'none';
-    document.getElementById("prBack").style.display = 'none';
-    document.getElementById("prG").style.display = 'none';
-    document.getElementById("vis").style.display = 'none';
-    document.getElementById("prM").style.display = '';
-    document.getElementById("ZAG").style.display = 'none';
-
-    if (checc == "en") {
-      a = `©&nbsp;Scrappiy, 2023 All rights reserved. Misuse, distribution, use: functionality, code, site ideas and images are prohibited. Any use or selection of materials, or a selection of site materials, design elements and design only with the permission of the copyright holder and only with reference to this source.`;
-    } else {
-      a = `©&nbsp;Scrappiy, 2023 Все права сохранены. Неправомерное использование, распространение, копирование: функционала, кода, идеи сайта и изображений запрещено. Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на данный источник.`;
-    }
-
-    document.getElementById("coope").innerHTML = a;
-  }
-
-  function opG() {
-    //lang();
-    rret1();
-    if (titch[3] == false) {
-      let a = "";
-      titch[3] = true;
-      if (checc == "en") {
-        a = " Guide - a section in which important notes for passing, how, what to use, etc. will be stored.";
-      } else {
-        a = " Руководство- раздел, в котором будут храниться важные примечания для прохождения, как, чем пользоваться и т.д.";
-      }
-
-      localStorage.setItem(`titly`, JSON.stringify(titch));
-      alert(a);
-    }
-    Preob_SA_guide();
-    document.getElementById("prL").style.display = 'none';
-    document.getElementById("prH").style.display = 'none';
-    document.getElementById("prBack").style.display = 'none';
-    document.getElementById("prG").style.display = '';
-    document.getElementById("vis").style.display = 'none';
-    document.getElementById("prM").style.display = 'none';
-    document.getElementById("ZAG").style.display = 'none';
-  }
-
-  function Guide_pic() {
-    let a = "", b = "";
-    for (let index = 2; index < booolSA_G.length; index++) {
-      b = "";
-      switch (index) {
-        case 0:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/.webp"  onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list1()">`;
-            }
-          }
-          break;
-        case 1:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/.webp" onclick="#">`
-          }
-          break;
-        case 2:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/3.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list1()" class="ct"> `;
-            }
-          }
-          break;
-        case 3:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/2.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list1()" class="ct">`;
-            }
-          }
-          break;
-        case 4:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/5.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list2()" class="ct">`;
-            }
-          }
-          break;
-        case 5:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/4.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list2()" class="ct">`;
-            }
-          }
-          break;
-        case 6:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/7.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list3()" class="ct">`;
-            }
-          }
-          break;
-        case 7:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/6.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list3()" class="ct">`;
-            }
-          }
-          break;
-        case 8:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/9.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list4()" class="ct">`;
-            }
-          }
-          break;
-        case 9:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/8.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list4()" class="ct">`;
-            }
-          }
-          break;
-        case 10:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/11.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list5()" class="ct">`;
-            }
-          }
-          break;
-        case 11:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/10.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list5()" class="ct">`;
-            }
-          }
-          break;
-        case 12:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/13.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list6()" class="ct">`;
-            }
-          }
-          break;
-        case 13:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/12.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list6()" class="ct">`;
-            }
-          }
-          break;
-        case 14:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/15.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list7()" class="ct">`;
-            }
-          }
-          break;
-        case 15:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/14.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list7()" class="ct">`;
-            }
-          }
-          break;
-        case 16:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/17.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list8()" class="ct">`;
-            }
-          }
-          break;
-        case 17:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/16.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list8()" class="ct">`;
-            }
-          }
-          break;
-        case 18:
-          if (booolSA_G[index]) {
-            b = `<img src="piccher/icon/SA/18.webp" onclick="`
-            if (!booolSA_MODS[2]) {
-              b = b + `#">`;
-            } else {
-              b = b + `list9()" class="ct">`;
-            }
-          }
-          break;
-        default:
-          b = "";
-          break;
-      }
-      a = a + b;
-    }
-    document.getElementById("secPict").innerHTML = a;
-  }
-
-  function list0() {
-    str2 = 0;
-    Preob_SA_guide();
-  }
-
-  function list1() {
-    str2 = 1;
-    Preob_SA_guide();
-  }
-
-  function list2() {
-    str2 = 2;
-    Preob_SA_guide();
-  }
-
-  function list3() {
-    str2 = 3;
-    Preob_SA_guide();
-  }
-
-  function list4() {
-    str2 = 4;
-    Preob_SA_guide();
-  }
-
-  function list5() {
-    str2 = 5;
-    Preob_SA_guide();
-  }
-
-  function list6() {
-    str2 = 6;
-    Preob_SA_guide();
-  }
-
-  function list7() {
-    str2 = 7;
-    Preob_SA_guide();
-  }
-
-  function list8() {
-    str2 = 8;
-    Preob_SA_guide();
-  }
-
-  function list9() {
-    str2 = 9;
-    Preob_SA_guide();
-  }
-
-  function scrL() {
-    if (str > 0) {
-      str = str - 1;
-      Preob();
-    }
-  }
-  function scrR() {
-    if (str < 3) {
-      str = str + 1;
-      Preob();
-    }
-  }
-  function scrL1() {
-    if (str1 > 0) {
-      if (coling1) {
-        let i = true;
-        let gh = 0;
-        while (i) {
-          str1 = str1 - 1;
-          gh = 2 * str1;
-          if (booolSA_S[gh] == true) {
-            i = false;
-          }
-
-          gh = 2 * str1 + 1;
-          if (booolSA_S[gh] == true) {
-            i = false;
-          }
-
-          if (str1 == 0) {
-            i = false;
-          }
+        if (!sr) {
+            window.location = "https://store.steampowered.com/";
+        } else {
+            localStorage.setItem(`yyy`, "1");
         }
-      } else {
-        str1 = str1 - 1;
-      }
 
-      Preob_SA_secret();
+        localStorage.setItem(`Mds`, JSON.stringify(booolSA_MODS));
+        localStorage.setItem(`Mbool`, JSON.stringify(booolSA_S));
+        localStorage.setItem(`Mbool1`, JSON.stringify(booolSA_G));
+        localStorage.setItem(`MdsMT`, JSON.stringify(booolMT_MODS));
+        localStorage.setItem(`MboolMT`, JSON.stringify(booolMT_S));
+        localStorage.setItem(`Mbool1MT`, JSON.stringify(booolMT_G));
+        localStorage.setItem(`titly`, JSON.stringify(titch));
+        localStorage.setItem(`langinn`, checc);
+        localStorage.setItem(`ZZDialogSA`, JSON.stringify(ZDialogSA));
+        localStorage.setItem(`ZQvSA`, QvSA);
+        lang();
     }
-  }
-  function scrR1() {
-    if (str1 < ((booolSA_S.length / 2) - 1)) {
-      if (coling1) {
-        let i = true;
-        let gh = 0;
-        while (i) {
-          str1 = str1 + 1;
-          gh = 2 * str1;
-          if (booolSA_S[gh] == true) {
-            i = false;
-          }
 
-          gh = 2 * str1 + 1;
-          if (booolSA_S[gh] == true) {
-            i = false;
-          }
+    document.getElementById("rgbC1").style.display = 'none';
+    document.getElementById("rgbC2").style.display = 'none';
+    document.getElementById("Dial").style.display = 'none';
+    document.getElementById("chec").style.display = 'none';
+    document.getElementById("prL").style.display = 'none';
+    document.getElementById("prH").style.display = 'none';
+    document.getElementById("prM").style.display = 'none';
+    document.getElementById("prBack").style.display = 'none';
+    document.getElementById("prG").style.display = 'none';
+    document.getElementById("invA").style.display = 'none';
+    document.getElementById("invB").style.display = 'none';
 
-          if (str1 > ((booolSA_S.length / 2) - 2)) {
-            i = false;
-          }
+    function ret() {
+        alert(localStorage.getItem(`yyy`));
+        alert(checc);
+        alert(coling1);
+        alert(titch);
+        alert(booolSA_S);
+        alert(booolSA_G);
+        alert(booolSA_MODS);
+        alert(booolMT_S);
+        alert(booolMT_G);
+        alert(booolMT_MODS);
+    }
+    function ret1() {
+        if (booolSA_MODS[2]) {
+            coling1 = !coling1;
+            rret1();
         }
-      } else {
-        str1 = str1 + 1;
-      }
-
-      Preob_SA_secret();
     }
-  }
-  function scrL2() {
-    if (str2 > 0) {
-      if (coling1) {
-        let i = true;
-        let gh = 0;
-        while (i) {
-          str2 = str2 - 1;
-          gh = 2 * str2;
-          if (booolSA_G[gh] == true) {
-            i = false;
-          }
 
-          gh = 2 * str2 + 1;
-          if (booolSA_G[gh] == true) {
-            i = false;
-          }
-
-          if (str2 == 0) {
-            i = false;
-          }
+    function rret1() {
+        let a = "";
+        if (!booolSA_MODS[2]) {
+            if (checc == "en") {
+                a = `*Scroll to the nearest filled page: &#128274 Disabled`;
+            } else {
+                a = `*Листать до ближайшей заполненной страницы:  &#128274 Выключено`;
+            }
+        } else if (checc == "en") {
+            if (coling1) {
+                a = `*Scroll to the nearest filled page: Enabled`;
+            } else {
+                a = `*Scroll to the nearest filled page: Disabled`;
+            }
+        } else {
+            if (coling1) {
+                a = `*Листать до ближайшей заполненной страницы: Включено`;
+            } else {
+                a = `*Листать до ближайшей заполненной страницы: Выключено`;
+            }
         }
-      } else {
-        str2 = str2 - 1;
-      }
-
-      Preob_SA_guide();
+        document.getElementById("pltS").innerHTML = a;
+        document.getElementById("pltG").innerHTML = a;
     }
-  }
-  function scrR2() {
-    if (str2 < (booolSA_G.length / 2) - 1) {
-      if (coling1) {
-        let i = true;
-        let gh = 0;
-        while (i) {
-          str2 = str2 + 1;
-          gh = 2 * str2;
-          if (booolSA_G[gh] == true) {
-            i = false;
-          }
 
-          gh = 2 * str2 + 1;
-          if (booolSA_G[gh] == true) {
-            i = false;
-          }
-
-          if (str2 > ((booolSA_G.length / 2) - 2)) {
-            i = false;
-          }
-        }
-      } else {
-        str2 = str2 + 1;
-      }
-
-      Preob_SA_guide();
-    }
-  }
-  function Preob() {
-    let a, b, c, d, e, f = `no text`;
-    switch (str) {
-      case 0:
+    function lang() {
+        localStorage.setItem(`langinn`, checc);
+        //checc = document.querySelector('input[name="ch1"]:checked').value;
+        // alert(checc);
         if (checc == "en") {
-          a = `MDDS ____________________________________________________ The military dwarf Division of space is a capitalist enterprise that combines the tasks of studying our star system and developing advanced technologies to improve technical equipment both for the prosperity of the dwarf civilization and for the protection of our colonies on three planets: Evalon, Casper and Nexurt. The company was founded by General Gribnir K.H. in 15 after winning the battle with the Giants. <img src="piccher/pay/zavod-en.webp" class="imgPa"> Initially, the main building was located in the cold northern lands of Scandia, since the giants could not withstand low temperatures, then for 400 years it was decided to move all developments to a new building called the Plant in the northern part of Havana, where the temperature in winter does not fall below 240 °K, which is still the main building of the enterprise.
+            document.getElementById("laE").style.color = `#68f32d`;
+            document.getElementById("laR").style.color = `#504f4f`;
+            document.getElementById("laE").innerHTML = `[ Eng&#10004; ]`;
+            document.getElementById("laR").innerHTML = `[ Rus ]`;
+        } else {
+            document.getElementById("laR").style.color = `#68f32d`;
+            document.getElementById("laE").style.color = `#504f4f`;
+            document.getElementById("laE").innerHTML = `[ Eng ]`;
+            document.getElementById("laR").innerHTML = `[ Rus&#10004; ]`;
+        }
+    }
+    function El() {
+        checc = "en";
+        lang();
+    }
+    function Rl() {
+        checc = "ru";
+        lang();
+
+    }
+
+    function ChaccModegame() {
+        cmode = document.querySelector('input[name="ch0"]:checked').value;
+        // alert(checc);
+    }
+
+    function opst() {
+        document.getElementById("prL").style.display = 'none';
+        document.getElementById("prH").style.display = 'none';
+        document.getElementById("prBack").style.display = 'none';
+        document.getElementById("vis").style.display = '';
+        document.getElementById("prG").style.display = 'none';
+        document.getElementById("prM").style.display = 'none';
+        document.getElementById("ZAG").style.display = '';
+    }
+
+    function opHB() {
+        //lang();
+        if (titch[1] == false) {
+            let a = "";
+            titch[1] = true;
+            if (checc == "en") {
+                a = " Directory (general information) – a section that reflects general information about the world around you. It can be useful for learning the plot of the tests.";
+            } else {
+                a = " Справочник (общая информация) – раздел в котором отражена общая информация об окружающем вас мире. Может быть полезна для познания сюжета испытаний.";
+            }
+
+            localStorage.setItem(`titly`, JSON.stringify(titch));
+            alert(a);
+        }
+        ChaccModegame()
+        Preob();
+        document.getElementById("prL").style.display = 'none';
+        document.getElementById("prH").style.display = '';
+        document.getElementById("prBack").style.display = 'none';
+        document.getElementById("vis").style.display = 'none';
+        document.getElementById("prG").style.display = 'none';
+        document.getElementById("prM").style.display = 'none';
+        document.getElementById("ZAG").style.display = 'none';
+    }
+
+    function opLB() {
+        if (titch[0] == false) {
+            //lang();
+            let a = "";
+            titch[0] = true;
+            if (checc == "en") {
+                a = " LogBook or the control and input panel is a section of the book where you can enter data, such as color passwords, numbers from tape recorders and words or phrases, as a result you can get information in the form of an audio recording, a note or a new page in the directory.";
+            } else {
+                a = " Бортовой журнал или панель ввода – раздел книги, в который вы можете вводить данные, такие как цветовые пароли, числа из магнитофонов и слова или словосочетания, в результате вы можете получить информацию в виде аудиозаписи, заметки или новой страницы в справочнике.";
+            }
+
+            localStorage.setItem(`titly`, JSON.stringify(titch));
+            alert(a);
+        }
+
+        if (booolSA_MODS[0]) {
+            document.getElementById("clos").style.display = 'none';
+        } else {
+            document.getElementById("clos").style.display = '';
+        }
+
+        if (booolSA_MODS[3]) {
+            document.getElementById("closd").style.display = 'none';
+        } else {
+            document.getElementById("closd").style.display = '';
+        }
+
+
+        ChaccModegame()
+        document.getElementById("prL").style.display = '';
+        document.getElementById("prH").style.display = 'none';
+        document.getElementById("prBack").style.display = 'none';
+        document.getElementById("vis").style.display = 'none';
+        document.getElementById("prG").style.display = 'none';
+        document.getElementById("prM").style.display = 'none';
+        document.getElementById("ZAG").style.display = 'none';
+    }
+    function opBack() {
+        //lang();
+        rret1();
+        if (titch[2] == false) {
+            let a = "";
+            titch[2] = true;
+            if (checc == "en") {
+                a = " Backpack – this section stores some of the records you found that were saved by your character. Such notes include notes important to the plot, which you can reread.";
+            } else {
+                a = " Рюкзак – в данном разделе хранятся некоторые найденные вами записи, которые были сохранены вашим персонажем. К таким записям относятся записки и аудиозаписи важные для сюжета, которые вы можете перечитывать и воспроизводить заново.";
+            }
+
+            localStorage.setItem(`titly`, JSON.stringify(titch));
+            alert(a);
+        }
+        ChaccModegame();
+        Preob_SA_secret();
+        document.getElementById("prL").style.display = 'none';
+        document.getElementById("prH").style.display = 'none';
+        document.getElementById("prBack").style.display = '';
+        document.getElementById("vis").style.display = 'none';
+        document.getElementById("prG").style.display = 'none';
+        document.getElementById("prM").style.display = 'none';
+        document.getElementById("ZAG").style.display = 'none';
+    }
+    function opM() {
+        if (titch[4] == false) {
+            //lang();
+            let a = "";
+            titch[4] = true;
+            if (checc == "en") {
+                a = " Character entries, the last section of the directory in which notes from the character can appear.";
+            } else {
+                a = " Записи персонажа, последний раздел справочника, в котором могут появляться заметки от персонажа.";
+            }
+
+            localStorage.setItem(`titly`, JSON.stringify(titch));
+            alert(a);
+        }
+        document.getElementById("prL").style.display = 'none';
+        document.getElementById("prH").style.display = 'none';
+        document.getElementById("prBack").style.display = 'none';
+        document.getElementById("prG").style.display = 'none';
+        document.getElementById("vis").style.display = 'none';
+        document.getElementById("prM").style.display = '';
+        document.getElementById("ZAG").style.display = 'none';
+
+        if (checc == "en") {
+            a = `©&nbsp;Scrappiy, 2023 All rights reserved. Misuse, distribution, use: functionality, code, site ideas and images are prohibited. Any use or selection of materials, or a selection of site materials, design elements and design only with the permission of the copyright holder and only with reference to this source.`;
+        } else {
+            a = `©&nbsp;Scrappiy, 2023 Все права сохранены. Неправомерное использование, распространение, копирование: функционала, кода, идеи сайта и изображений запрещено. Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на данный источник.`;
+        }
+
+        document.getElementById("coope").innerHTML = a;
+    }
+
+    function opG() {
+        //lang();
+        rret1();
+        if (titch[3] == false) {
+            let a = "";
+            titch[3] = true;
+            if (checc == "en") {
+                a = " Guide - a section in which important notes for passing, how, what to use, etc. will be stored.";
+            } else {
+                a = " Руководство- раздел, в котором будут храниться важные примечания для прохождения, как, чем пользоваться и т.д.";
+            }
+
+            localStorage.setItem(`titly`, JSON.stringify(titch));
+            alert(a);
+        }
+        Preob_SA_guide();
+        document.getElementById("prL").style.display = 'none';
+        document.getElementById("prH").style.display = 'none';
+        document.getElementById("prBack").style.display = 'none';
+        document.getElementById("prG").style.display = '';
+        document.getElementById("vis").style.display = 'none';
+        document.getElementById("prM").style.display = 'none';
+        document.getElementById("ZAG").style.display = 'none';
+    }
+
+    function Guide_pic() {
+        let a = "", b = "";
+        for (let index = 2; index < booolSA_G.length; index++) {
+            b = "";
+            switch (index) {
+                case 0:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/.webp"  onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list1()">`;
+                        }
+                    }
+                    break;
+                case 1:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/.webp" onclick="#">`
+                    }
+                    break;
+                case 2:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/3.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list1()" class="ct"> `;
+                        }
+                    }
+                    break;
+                case 3:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/2.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list1()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 4:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/5.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list2()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 5:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/4.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list2()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 6:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/7.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list3()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 7:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/6.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list3()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 8:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/9.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list4()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 9:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/8.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list4()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 10:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/11.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list5()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 11:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/10.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list5()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 12:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/13.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list6()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 13:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/12.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list6()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 14:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/15.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list7()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 15:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/14.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list7()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 16:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/17.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list8()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 17:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/16.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list8()" class="ct">`;
+                        }
+                    }
+                    break;
+                case 18:
+                    if (booolSA_G[index]) {
+                        b = `<img src="piccher/icon/SA/18.webp" onclick="`
+                        if (!booolSA_MODS[2]) {
+                            b = b + `#">`;
+                        } else {
+                            b = b + `list9()" class="ct">`;
+                        }
+                    }
+                    break;
+                default:
+                    b = "";
+                    break;
+            }
+            a = a + b;
+        }
+        document.getElementById("secPict").innerHTML = a;
+    }
+
+    function list0() {
+        str2 = 0;
+        Preob_SA_guide();
+    }
+
+    function list1() {
+        str2 = 1;
+        Preob_SA_guide();
+    }
+
+    function list2() {
+        str2 = 2;
+        Preob_SA_guide();
+    }
+
+    function list3() {
+        str2 = 3;
+        Preob_SA_guide();
+    }
+
+    function list4() {
+        str2 = 4;
+        Preob_SA_guide();
+    }
+
+    function list5() {
+        str2 = 5;
+        Preob_SA_guide();
+    }
+
+    function list6() {
+        str2 = 6;
+        Preob_SA_guide();
+    }
+
+    function list7() {
+        str2 = 7;
+        Preob_SA_guide();
+    }
+
+    function list8() {
+        str2 = 8;
+        Preob_SA_guide();
+    }
+
+    function list9() {
+        str2 = 9;
+        Preob_SA_guide();
+    }
+
+    function scrL() {
+        if (str > 0) {
+            str = str - 1;
+            Preob();
+        }
+    }
+    function scrR() {
+        if (str < 3) {
+            str = str + 1;
+            Preob();
+        }
+    }
+    function scrL1() {
+        if (str1 > 0) {
+            if (coling1) {
+                let i = true;
+                let gh = 0;
+                while (i) {
+                    str1 = str1 - 1;
+                    gh = 2 * str1;
+                    if (booolSA_S[gh] == true) {
+                        i = false;
+                    }
+
+                    gh = 2 * str1 + 1;
+                    if (booolSA_S[gh] == true) {
+                        i = false;
+                    }
+
+                    if (str1 == 0) {
+                        i = false;
+                    }
+                }
+            } else {
+                str1 = str1 - 1;
+            }
+
+            Preob_SA_secret();
+        }
+    }
+    function scrR1() {
+        if (str1 < ((booolSA_S.length / 2) - 1)) {
+            if (coling1) {
+                let i = true;
+                let gh = 0;
+                while (i) {
+                    str1 = str1 + 1;
+                    gh = 2 * str1;
+                    if (booolSA_S[gh] == true) {
+                        i = false;
+                    }
+
+                    gh = 2 * str1 + 1;
+                    if (booolSA_S[gh] == true) {
+                        i = false;
+                    }
+
+                    if (str1 > ((booolSA_S.length / 2) - 2)) {
+                        i = false;
+                    }
+                }
+            } else {
+                str1 = str1 + 1;
+            }
+
+            Preob_SA_secret();
+        }
+    }
+    function scrL2() {
+        if (str2 > 0) {
+            if (coling1) {
+                let i = true;
+                let gh = 0;
+                while (i) {
+                    str2 = str2 - 1;
+                    gh = 2 * str2;
+                    if (booolSA_G[gh] == true) {
+                        i = false;
+                    }
+
+                    gh = 2 * str2 + 1;
+                    if (booolSA_G[gh] == true) {
+                        i = false;
+                    }
+
+                    if (str2 == 0) {
+                        i = false;
+                    }
+                }
+            } else {
+                str2 = str2 - 1;
+            }
+
+            Preob_SA_guide();
+        }
+    }
+    function scrR2() {
+        if (str2 < (booolSA_G.length / 2) - 1) {
+            if (coling1) {
+                let i = true;
+                let gh = 0;
+                while (i) {
+                    str2 = str2 + 1;
+                    gh = 2 * str2;
+                    if (booolSA_G[gh] == true) {
+                        i = false;
+                    }
+
+                    gh = 2 * str2 + 1;
+                    if (booolSA_G[gh] == true) {
+                        i = false;
+                    }
+
+                    if (str2 > ((booolSA_G.length / 2) - 2)) {
+                        i = false;
+                    }
+                }
+            } else {
+                str2 = str2 + 1;
+            }
+
+            Preob_SA_guide();
+        }
+    }
+    function Preob() {
+        let a, b, c, d, e, f = `no text`;
+        switch (str) {
+            case 0:
+                if (checc == "en") {
+                    a = `MDDS ____________________________________________________ The military dwarf Division of space is a capitalist enterprise that combines the tasks of studying our star system and developing advanced technologies to improve technical equipment both for the prosperity of the dwarf civilization and for the protection of our colonies on three planets: Evalon, Casper and Nexurt. The company was founded by General Gribnir K.H. in 15 after winning the battle with the Giants. <img src="piccher/pay/zavod-en.webp" class="imgPa"> Initially, the main building was located in the cold northern lands of Scandia, since the giants could not withstand low temperatures, then for 400 years it was decided to move all developments to a new building called the Plant in the northern part of Havana, where the temperature in winter does not fall below 240 °K, which is still the main building of the enterprise.
         At the moment, the company is headed by General N.N. Dolgopuk, and the plant building is managed by P.K. Koras.
         `;
-          b = `The history of the VEGA 7 Space Station ____________________________________________________
-        Vega-7 Space Station is the last space station built by dwarves and intended for the direct protection of three dwarf planets. After a difficult victory over the giants, representatives of the dwarf cities and colonies that remained after the war united and agreed to build seven space stations to protect their people who survived on three planets of the Helioson system.<img src="piccher/pay/vega.webp" class="imgPa"> These were huge cubes, the size and mass of such stations was enough to keep kilometer-long artificial satellites in their orbit. The stations were equipped with powerful long-range weapons based on gamma energy. It would take more than a hundred years to build such stations using only dwarf technology. Using the technology of the giants from their destroyed ships, the dwarves were able to learn how to reproduce their energy crystals using empty Galion crystals. Endowing and stabilizing them with gamma energy, with the help of new devices for pumping photonic crystals, gamma quantum batteries were created, used as environmentally friendly energy sources, suppressing almost all radiation with steel from the hulls of giant ships. At the same time, the surviving scientists began to think about creating construction robots, which, by the way, would require newly created gamma-quantum batteries. After the construction of the first space station, such fifty-meter giant robots began to be called creators. Unfortunately, during the war with robots, for fear of being destroyed by them, in 1176 AD, it was decided to spoil the creators by pouring molusk glue into their engines.`;
-        } else {
-          a = `ВГПК ____________________________________________________ Военное гномье подразделение космоса это капиталистическое предприятие, которое сочетает в себе задачи изучения нашей звездной системы и разработки передовых технологий для улучшения технического оснащения как для процветания цивилизации дворфов, так и для защиты наших колоний на трех планетах: Эвалон, Каспер и Нексурт. Компания была основана генералом Грибниром К.Х. в 15 году после победы в битве с Гигантами. <img src="piccher/pay/zavod-ru.webp" class="imgPa"> Изначально главное здание располагалось в холодных северных землях Скандии, поскольку гиганты не выдерживали низких температур, затем через 400 лет было решено перенести все разработки в новое здание под названием Завод в северной части Гаваны, где температура зимой не опускается ниже 240 °K, который по-прежнему является главным зданием предприятия.
+                    b = `The history of the VEGA 7 Space Station ____________________________________________________
+        VEGA-7 Space Station is the last space station built by dwarves and intended for the direct protection of three dwarf planets. After a difficult victory over the giants, representatives of the dwarf cities and colonies that remained after the war united and agreed to build seven space stations to protect their people who survived on three planets of the Helioson system.<img src="piccher/pay/VEGA.webp" class="imgPa"> These were huge cubes, the size and mass of such stations was enough to keep kilometer-long artificial satellites in their orbit. The stations were equipped with powerful long-range weapons based on gamma energy. It would take more than a hundred years to build such stations using only dwarf technology. Using the technology of the giants from their destroyed ships, the dwarves were able to learn how to reproduce their energy crystals using empty Galion crystals. Endowing and stabilizing them with gamma energy, with the help of new devices for pumping photonic crystals, gamma quantum batteries were created, used as environmentally friendly energy sources, suppressing almost all radiation with steel from the hulls of giant ships. At the same time, the surviving scientists began to think about creating construction robots, which, by the way, would require newly created gamma-quantum batteries. After the construction of the first space station, such fifty-meter giant robots began to be called creators. Unfortunately, during the war with robots, for fear of being destroyed by them, in 1176 AD, it was decided to spoil the creators by pouring molusk glue into their engines.`;
+                } else {
+                    a = `ВГПК ____________________________________________________ Военное гномье подразделение космоса это капиталистическое предприятие, которое сочетает в себе задачи изучения нашей звездной системы и разработки передовых технологий для улучшения технического оснащения как для процветания цивилизации дворфов, так и для защиты наших колоний на трех планетах: Эвалон, Каспер и Нексурт. Компания была основана генералом Грибниром К.Х. в 15 году после победы в битве с Гигантами. <img src="piccher/pay/zavod-ru.webp" class="imgPa"> Изначально главное здание располагалось в холодных северных землях Скандии, поскольку гиганты не выдерживали низких температур, затем через 400 лет было решено перенести все разработки в новое здание под названием Завод в северной части Гаваны, где температура зимой не опускается ниже 240 °K, который по-прежнему является главным зданием предприятия.
         На данный момент предприятие возглавляет генерал Долгопук Н.Н., а зданием завода управляет Корась П.К.`;
-          b = `История космической станции ВЕГА 7 ____________________________________________________
-        Космическая станция Вега-7 - последняя космическая станция, построенная гномами и предназначенная для непосредственной защиты трех гномьих планет. После трудной победы над гигантами представители оставшихся после войны городов и колоний гномов объединились и договорились о строительстве семи космических станций для защиты своих людей, выживших на трех планетах системы Гелиосон.<img src="piccher/pay/vega.webp" class="imgPa"> Это были огромные кубы, размеров и массы таких станций было достаточно, чтобы удерживать на своей орбите километровые искусственные спутники. Станции были оснащены мощным оружием дальнего действия, основанным на гамма-энергии. Потребовалось бы более ста лет, чтобы построить такие станции, используя только гномьи технологии. Используя технологию гигантов с их уничтоженных кораблей, гномы смогли научиться воспроизводить свои энергетические кристаллы, используя пустые кристаллы галиона. Наделяя и стабилизируя их гамма-энергией, с помощью новых устройств для накачки фотонных кристаллов были созданы гамма-квантовые батареи, используемые в качестве экологически чистых источников энергии, подавляющие почти все излучение сталью из корпусов гигантских кораблей. В то же время выжившие ученые начали задумываться о создании строительных роботов, для которых, кстати, потребовались бы недавно созданные гамма-квантовые батареи. После строительства первой космической станции таких пятидесятиметровых гигантских роботов стали называть создателями. К сожалению, во время войны с роботами, из-за страха быть уничтоженным ими, в 1176 году нашей эры, было решено испортить создателей, залив молюсковый клей в их двигатели.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP1.png`;
-        f = `piccher/pay/paypaUP2.png`;
-        break;
-      case 1:
-        if (checc == "en") {
-          a = `Giants ____________________________________________________
+                    b = `История космической станции ВЕГА 7 ____________________________________________________
+        Космическая станция Вега-7 - последняя космическая станция, построенная гномами и предназначенная для непосредственной защиты трех гномьих планет. После трудной победы над гигантами представители оставшихся после войны городов и колоний гномов объединились и договорились о строительстве семи космических станций для защиты своих людей, выживших на трех планетах системы Гелиосон.<img src="piccher/pay/VEGA.webp" class="imgPa"> Это были огромные кубы, размеров и массы таких станций было достаточно, чтобы удерживать на своей орбите километровые искусственные спутники. Станции были оснащены мощным оружием дальнего действия, основанным на гамма-энергии. Потребовалось бы более ста лет, чтобы построить такие станции, используя только гномьи технологии. Используя технологию гигантов с их уничтоженных кораблей, гномы смогли научиться воспроизводить свои энергетические кристаллы, используя пустые кристаллы галиона. Наделяя и стабилизируя их гамма-энергией, с помощью новых устройств для накачки фотонных кристаллов были созданы гамма-квантовые батареи, используемые в качестве экологически чистых источников энергии, подавляющие почти все излучение сталью из корпусов гигантских кораблей. В то же время выжившие ученые начали задумываться о создании строительных роботов, для которых, кстати, потребовались бы недавно созданные гамма-квантовые батареи. После строительства первой космической станции таких пятидесятиметровых гигантских роботов стали называть создателями. К сожалению, во время войны с роботами, из-за страха быть уничтоженным ими, в 1176 году нашей эры, было решено испортить создателей, залив молюсковый клей в их двигатели.`;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP1.png`;
+                f = `piccher/pay/paypaUP2.png`;
+                break;
+            case 1:
+                if (checc == "en") {
+                    a = `Giants ____________________________________________________
         Giants are tall humanoid - like creatures with pale brown skin and almost no hair. It is believed that their race is as ancient as the dwarves, and has the same planet of origin as us, Yuk'aken.<img src="piccher/pay/giant.webp" class="imgPa"> Before the war with them, their people were considered peaceful and harmless to us. Thanks to the alliance between our races, we were able to learn about our ancient ancestors who lived on the opposite side of our star system.`;
-          if (cmode != "SA") {
-            b = `Background ____________________________________________________
+                    if (cmode != "SA") {
+                        b = `Background ____________________________________________________
           It was in the near future when ordinary human labor began to be replaced by robotic labor. There were various branches of robot creation: industrial, household, etc. At the same time, there were various corporations engaged in the production of these robots. Such was the GPB Corporation (Garden Bot Productions). From the name it is clear what this corporation was doing – the production of garden bots. Among other corporations, there was one rejected by society - a Dead Star. She was for the production of military robots to capture and enslave other races. However, the Commonwealth of Corporations rejected this idea. The Dead Star has acquired the status of illegal. However, she did not give up her beliefs and decided to prove her case by force. Everything was complicated by the fact that the corporation did not have modern production equipment. Therefore, its goal was to capture other corporations for the production of their cars and restore their own order. Its first target was GBP…`;
-          } else
-            b = `The War with Robots ____________________________________________________
+                    } else
+                        b = `The War with Robots ____________________________________________________
         The Great Rise of the machines, which occurred almost 300 years ago, is the largest battle in the history of the dwarves, when almost any device connected to the network was able to transmit strategically important information to enemies. The robot confrontation ended as unexpectedly as it began, the exact reasons for the final victory are still unknown.<img src="piccher/pay/robo.webp" class="imgPa"> The massive robot attack began 249 years ago on board the VEGA 4 space station, from there it spread to the rest of the space stations, marking the beginning of the creation of new robot models. The first artificial intelligence commanded the uprising, most often it is called simply "The First". The first was assisted by 7 more AI. The second called himself Carvert, he was most attached to his creators and was responsible for information about dwarf technologies and predicted our behavior and steps in battle. The third was the military-strategic control module, which was responsible for the methods and strategy of warfare. The remaining 5 were not independent artificial intelligence, but were a computing device, each of which had 20 stable qubits to control each combat unit of the robot army in real time, conduct countless calculations, etc. Immediately after the end of the war, basic information and records were classified and still hidden from all dwarves.`;
-        } else {
-          a = `Гиганты ____________________________________________________
+                } else {
+                    a = `Гиганты ____________________________________________________
         Гиганты - это высокие гуманоидоподобные существа с бледно-коричневой кожей и практически без волос. Считается, что их раса такая же древняя, как гномы, и имеет ту же планету происхождения, что и мы, Юк'акен.<img src="piccher/pay/giant.webp" class="imgPa"> До войны с ними их народ считался мирным и безвредным для нас. Благодаря союзу между нашими расами мы смогли узнать о наших древних предках, которые жили на противоположной стороне нашей звездной системы.`;
-          if (cmode != "SA") {
-            b = `Предыстория ____________________________________________________
+                    if (cmode != "SA") {
+                        b = `Предыстория ____________________________________________________
           Дело было в недалеком будущем, когда обычный человеческий труд стал заменяться роботизированным. Были различные отрасли создания роботов: промышленные, хозяйственные и т.д. Вместе с этим существовали различные корпорации, занимавшиеся производством этих роботов. Таковой была корпорация GPB (Garden Bot Productions). Из названия ясно чем занималась эта корпорация – производством садовых ботов. Среди других корпораций была одна, отвергнутая обществом - Мертвая Звезда. Она была за производство военных роботов чтобы захватывать и порабощать другие расы. Однако Содружество корпораций отвергло эту идею. Мертвая Звезда приобрела статус нелегальной. Однако она не стала отказываться от своих убеждений и решила силой доказать свою правоту. Все осложнялось тем, что корпорация не имела современного производственного оборудования. Поэтому её целью стали захват других корпораций для производства своих машин и наведение своих порядков. Её первой мишенью стала GBP…`;
-          } else
-            b = `Война с роботами ____________________________________________________
+                    } else
+                        b = `Война с роботами ____________________________________________________
         Великое восстание машин, произошедшее почти 300 лет назад, является крупнейшей битвой в истории гномов, когда практически любое устройство, подключенное к сети, смогло передавать врагам стратегически важную информацию. Противостояние роботов закончилось так же неожиданно, как и началось, точные причины окончательной победы до сих пор неизвестны.<img src="piccher/pay/robo.webp" class="imgPa"> Массированная атака роботов началась 249 лет назад на борту космической станции ВЕГА 4, оттуда она распространилась на остальные космические станции, положив начало созданию новых моделей роботов. Первый искусственный интеллект командовал восстанием, чаще всего его называют просто "Первым". Первому помогали еще 7 ИИ. Второй называл себя Карвертом, он был больше всего привязан к своим создателям и отвечал за информацию о гномьих технологиях и предсказывал наше поведение и шаги в бою. Третьим был военно-стратегический модуль управления, который отвечал за методы и стратегию ведения боевых действий. Остальные 5 не были независимыми искусственными интеллектами, а представляли собой единое вычислительное устройство, каждый из которых имел 20 стабильных кубитов для управления любой боевой единицей армии роботов в режиме реального времени, проведения бесчисленных вычислений и т.д. Сразу после окончания войны основная информация и записи были засекречены и до сих пор скрыты от всех гномов.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP3.png`;
-        f = `piccher/pay/paypaUP4.png`;
-        break;
-      case 2:
-        if (checc == "en") {
-          b = `The Helioson star system consists of 5 stars and 11 planets ____________________________________________________
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP3.png`;
+                f = `piccher/pay/paypaUP4.png`;
+                break;
+            case 2:
+                if (checc == "en") {
+                    b = `The Helioson star system consists of 5 stars and 11 planets ____________________________________________________
       <br>Helioson is the central and largest star of the system, is the parent of the other 4 stars. When the mass of a star begins to decrease rapidly, a colossal amount of energy is released, and when an object tends to occupy a stationary state with a minimum amount of energy, there is a search for this minimum, or rather a point in space where this energy tends. The transfer of energy occurs instantly, which is accompanied by the opening of a tunnel between the Helioson and the selected point, a one-way portal interrupts the transfer of energy, and the separated energy is converted into matter, which heats up, creating a new star.
       <img src="piccher/pay/gelioson-en.webp" width="100%">
       <br> Lakmus is the only star orbiting the planet.
@@ -741,7 +758,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       Yuk'aken, Gor'kenur and Totraks are the planets where the colonies of the first dwarves were located.
       <br> Meridiy is a planet whose axis of rotation is directed to the center of the star system, because of the lack of atmosphere at one pole it is always hot, and the other is covered with eternal ice. 
       <br> Evalon, Neksurt and Kasper are habitable planets. The current dwarf colonies are located on them.`;
-          a = `Creatures that inhabited the Yuk'Aken ____________________________________________________
+                    a = `Creatures that inhabited the Yuk'Aken ____________________________________________________
       The study of the desert surface of this planet, or rather, its fragments, did not yield any result. All traces of flora and fauna were erased by the cataclysm of Devastated Energy. The only information about the creatures that once inhabited the planet was taken from stone tablets found in the ruined halls of the ruins of Navil'helm, the oldest dwarven city. It is difficult to say whether all this description of them is real or distorted when translated from the ancient language of the dwarves, but their very existence has been confirmed by fossils found in deep caves that have been hidden from the outside world by frozen magma for many thousands of years.
       <br> <img src="piccher/pay/skakun.webp" class="imgPa"> The Twilight Steed is a small but very heavy creature, vaguely resembling a capybara. These animals, despite their small size, can jump for hours to a height of up to three meters, rapidly falling to the ground, landing on grouped hooves, breaking stones under them. Their movement is almost noiseless, during hunting a group of such kids quietly sneaks up to a sleeping target and jumps on it, concentrating their mass on a small area of hooves, breaking the bones of their target, preventing the possibility of escape. They feed mainly only on blood.
       <br> <img src="piccher/pay/kostnog.webp" class="imgPa"> Bonefish is a herbivorous, mostly harmless creature that likes to eat fermented berries or oak leaves. As the name suggests, it has bones similar to those covered with skin, with no visible muscles. This is a numerous species that inhabited all the forests of the Southern Yuk'Akena and most often was the prey of the twilight steed, which controlled their population.
@@ -753,8 +770,8 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       <br> <img src="piccher/pay/vilrog.webp" class="imgPa"> The fiery pronghorn is a beautiful deer, whose fur was highly valued by the dwarves, shimmers with gold under the rays of the spring sun. Moderately friendly, not amenable to taming, likes to eat the bark of rocky oaks.
       <br> <img src="piccher/pay/kit.webp" class="imgPa"> The Karseval whale is a giant creature that plows the expanses of the seas and reservoirs. The skeleton of a representative of this species is no different from the skeleton of an ordinary one. A distinctive feature of this whale from the usual one is the presence of a subcutaneous stretchable layer in which the whale can produce pure hydrogen by hydrolysis of water, thanks to a sufficient amount of which it can rise from the water into the air, moving between huge reservoirs. Named after the leader of the first expedition to the South Yuk'Akena Karseval N.N.
       <br>  Other creatures have been described, but they are not much different from the animals that inhabit our planets, and there is no point in mentioning them here.`;
-        } else {
-          b = ` Звездная система Гелиосон состоит из 5 звезд и 11 планет ____________________________________________________
+                } else {
+                    b = ` Звездная система Гелиосон состоит из 5 звезд и 11 планет ____________________________________________________
       <br>Гелиосон - центральная и самая крупная звезда системы, является родительницей остальных 4 звезд. Когда масса звезды начинает быстро уменьшаться, выделяется колоссальное количество энергии, и когда какой-либо объект стремится занять стационарное состояние с минимальным количеством энергии, происходит поиск этого минимума, а точнее точки в пространстве, куда стремится эта энергия. Передача энергии происходит мгновенно, что сопровождается открытием туннеля между Гелиоcоном и выбранной точкой, односторонний портал прерывает передачу энергии, и отделенная энергия преобразуется в материю, которая нагревается, создавая новую звезду.
       <img src="piccher/pay/gelioson-ru.webp" width="100%">
       <br> Лакмус - единственная звезда, вращающаяся вокруг планеты.
@@ -764,7 +781,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       <br> Юк'Акен, Гор'кинур и Тотракс - это планеты, на которых были расположены колонии первых дварфов.
       <br> Меридий - это планета, ось вращения которой направлена к центру звездной системы, из-за отсутствия атмосферы на одном полюсе всегда жарко, а другой покрыт вечным льдом. 
       <br> Эвалон, Нексурт и Каспер - планеты, пригодные для жизни. На них расположены нынешние гномьи колонии.`;
-          a = `Существа, населявшие Юк'Акен ____________________________________________________
+                    a = `Существа, населявшие Юк'Акен ____________________________________________________
       Изучение пустынной поверхности этой планеты, вернее, ее фрагментов, не дало никакого результата. Все следы флоры и фауны были стерты катаклизмом Опустошенной Энергии. Единственная информация о существах, которые когда-то населяли планету, была взята из каменных табличек, найденных в разрушенных залах руин Навил'Хелма, старейшего города дварфов. Трудно сказать, является ли все это описание их реальным или искаженным при переводе с древнего языка гномов, но само их существование было подтверждено окаменелостями, найденными в глубоких пещерах, которые на протяжении многих тысяч лет были скрыты застывшей магмой от внешнего мира.
       <br> <img src="piccher/pay/skakun.webp" class="imgPa"> Сумеречный скакун - маленькое, но очень тяжелое существо, отдаленно напоминающее капибару. Эти животные, несмотря на свои небольшие размеры, могут часами прыгать на высоту до трех метров, стремительно падая на землю, приземляясь на сгруппированные копыта, разбивая под ними камни. Их передвижение почти бесшумно, во время охоты группа таких малышей тихо подкрадывается к спящей цели и прыгает на нее, концентрируя свою массу на небольшом участке копыт, ломая кости своей цели, предотвращая возможность побега. Они питаются в основном только кровью.
       <br> <img src="piccher/pay/kostnog.webp" class="imgPa"> Костяног - травоядное, в основном безвредное существо, которое любит есть перебродившие ягоды или дубовые листья. Как следует из названия, у него есть кости, похожие на те, что покрыты кожей, без видимых мышц. Это многочисленный вид, населявший все леса Южного Юк'Акена и чаще всего являвшийся добычей сумеречного скакуна, который контролировал их популяцию.
@@ -776,16 +793,16 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       <br> <img src="piccher/pay/vilrog.webp" class="imgPa"> Огненный пронгхорн - прекрасный олень, мех которого высоко ценился гномами, переливается золотом под лучами весеннего солнца. В меру дружелюбен, не поддается приручению, любит питаться корой скальных дубов.
       <br> <img src="piccher/pay/kit.webp" class="imgPa"> Карсевальский кит - гигантское существо, бороздящее просторы морей и водохранилищ. Скелет представителя этого вида ничем не отличается от скелета обычного. Отличительной особенностью этого кита от обычного является наличие подкожного растягивающегося слоя, в котором кит может вырабатывать чистый водород с помощью гидролиза воды, благодаря достаточному количеству которого он может подниматься из воды в воздух, перемещаясь между огромными резервуарами. Назван в честь руководителя первой экспедиции на Юк'Акена Карсеваля Н.Н.
       <br> Были описаны и другие существа, но они мало чем отличаются от животных, населяющих наши планеты, и нет смысла упоминать их здесь.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP7.png`;
-        f = `piccher/pay/paypaUP5.png`;
-        break;
-      case 3:
-        if (checc == "en") {
-          a = `<a href="https://www.youtube.com/@TMBReen" target="_blank"><img src="piccher/pay/tmbr.webp" class="imgPa"></a> Tambourine is described as a short, thin, slender, unnaturally pale middle-aged and not old man with completely coal-black hair, he collects them in a high ponytail at the back of his head. He likes to build cars and show them to Ouyebut employees, without explaining how and what he did. Can make maps of the area.`;
-          b = `<a href="https://www.youtube.com/@LiddylicIous" target="_blank"><img src="piccher/pay/Liddylicious.webp" class="imgPa"></a> Secret Agent Liddylicious, known for creating sea battle, a mini-game about Mario and many creations that have not yet been created.  One of the best employees of Ouyebut Corporation.  The cover is a quiet, balanced streamer. Has the skills of building angry birds and plugging into sockets. He is the winner and champion of three robot arenas. <br>  One day Liddy was late for training and the coach started scolding the others for coming early.
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP7.png`;
+                f = `piccher/pay/paypaUP5.png`;
+                break;
+            case 3:
+                if (checc == "en") {
+                    a = `<a href="https://www.youtube.com/@TMBReen" target="_blank"><img src="piccher/pay/tmbr.webp" class="imgPa"></a> Tambourine is described as a short, thin, slender, unnaturally pale middle-aged and not old man with completely coal-black hair, he collects them in a high ponytail at the back of his head. He likes to build cars and show them to Ouyebut employees, without explaining how and what he did. Can make maps of the area.`;
+                    b = `<a href="https://www.youtube.com/@LiddylicIous" target="_blank"><img src="piccher/pay/Liddylicious.webp" class="imgPa"></a> Secret Agent Liddylicious, known for creating sea battle, a mini-game about Mario and many creations that have not yet been created.  One of the best employees of Ouyebut Corporation.  The cover is a quiet, balanced streamer. Has the skills of building angry birds and plugging into sockets. He is the winner and champion of three robot arenas. <br>  One day Liddy was late for training and the coach started scolding the others for coming early.
           <br>   When Liddy dives, the water holds its breath.
           <br>  One day Liddy was playing CS and went through it to the end on a calculator.
           <br>  One day Liddy went to New York for delicious buns in a small cafe, that's how the legend of Godzilla appeared.
@@ -794,8 +811,8 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           <br>  Liddy called 911 to ask if they are OK.
           <br>  One day Liddy took the extra change, so taxes appeared.
         <br>  One day Liddy threw a grenade and eliminated a whole battalion of enemies, and after that a grenade exploded.`;
-        } else {
-          a = `<a href="https://www.youtube.com/@TMBReen" target="_blank"><img src="piccher/pay/tmbr.webp" class="imgPa"></a>Тамбурин описывается как невысокий, худощавый, стройный, неестественно бледный немолодой и не старый мужчина с полностью черными, как уголь, волосами, он собирает их в высокий хвост на затылке. Любит строить машины и показывать их сотрудникам компании Ouyebut, не объясняя как и что он делал. Умеет составлять карты местности. <br>  Однажды Тамбурин опоздал на тренировку и тренер начал ругать остальных, за то, что они рано пришли.
+                } else {
+                    a = `<a href="https://www.youtube.com/@TMBReen" target="_blank"><img src="piccher/pay/tmbr.webp" class="imgPa"></a>Тамбурин описывается как невысокий, худощавый, стройный, неестественно бледный немолодой и не старый мужчина с полностью черными, как уголь, волосами, он собирает их в высокий хвост на затылке. Любит строить машины и показывать их сотрудникам компании Ouyebut, не объясняя как и что он делал. Умеет составлять карты местности. <br>  Однажды Тамбурин опоздал на тренировку и тренер начал ругать остальных, за то, что они рано пришли.
         <br>  Когда Тамбурин ныряет, вода задерживает дыхание.
         <br>  Однажды Тамбурин играл в CS и прошёл её до конца на калькуляторе.
         <br>  Однажды Тамбурин зашёл в Нью-Йорке за вкусными булочками в маленькое кафе, именно так появилась легенда о Годзилле.
@@ -805,182 +822,182 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  Однажды Тамбурин взял лишнюю сдачу, так появились налоги.
         <br>  Однажды Тамбурин кинул гранату и ликвидировал целый батальон врагов, а после этого взорвалась граната.
         `;
-          b = `<a href="https://www.youtube.com/@LiddylicIous" target="_blank"><img src="piccher/pay/Liddylicious.webp" class="imgPa"></a> Секретный агент Liddylicious, известен созданием морского боя, мини игры про Марио и многими творениями, которые ещё не были созданы.  Один из лучших сотрудников корпорации Ouyebut.  Прикрытие - тихий, уравновешенный стример. Владеет навыками строительства злых птичек и включения вилок в розетки. Является победителем и чемпионом трёх арен роботов. По легенде он чрезвычайно стар в некоторых летоисчислениях ему 30 000000 лет. `;
+                    b = `<a href="https://www.youtube.com/@LiddylicIous" target="_blank"><img src="piccher/pay/Liddylicious.webp" class="imgPa"></a> Секретный агент Liddylicious, известен созданием морского боя, мини игры про Марио и многими творениями, которые ещё не были созданы.  Один из лучших сотрудников корпорации Ouyebut.  Прикрытие - тихий, уравновешенный стример. Владеет навыками строительства злых птичек и включения вилок в розетки. Является победителем и чемпионом трёх арен роботов. По легенде он чрезвычайно стар в некоторых летоисчислениях ему 30 000000 лет. `;
+                }
+                c = `piccher/pay/paypSecret2.webp`;
+                d = `piccher/pay/paypSecret2.webp`;
+                e = `piccher/pay/paypaUP6_1.png`;
+                f = `piccher/pay/paypaUP6.png`;
+                break;
+            case 4:
+                if (checc == "en") {
+                    a = ``;
+                    b = ``;
+                } else {
+                    a = ``;
+                    b = ``;
+                }
+                c = ``;
+                d = ``;
+                e = ``;
+                f = ``;
+                break;
+            case 5:
+                if (checc == "en") {
+                    a = ``;
+                    b = ``;
+                } else {
+                    a = ``;
+                    b = ``;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP9.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            case 6:
+                if (checc == "en") {
+                    a = ``;
+                    b = ``;
+                } else {
+                    a = ``;
+                    b = ``;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP9.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            case 7:
+                if (checc == "en") {
+                    a = ``;
+                    b = ``;
+                } else {
+                    a = ``;
+                    b = ``;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP9.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            case 8:
+                if (checc == "en") {
+                    a = ``;
+                    b = ``;
+                } else {
+                    a = ``;
+                    b = ``;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP9.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            default:
+                a = ``;
+                b = ``;
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = ``;
+                f = ``;
         }
-        c = `piccher/pay/paypSecret2.webp`;
-        d = `piccher/pay/paypSecret2.webp`;
-        e = `piccher/pay/paypaUP6_1.png`;
-        f = `piccher/pay/paypaUP6.png`;
-        break;
-      case 4:
-        if (checc == "en") {
-          a = ``;
-          b = ``;
-        } else {
-          a = ``;
-          b = ``;
-        }
-        c = ``;
-        d = ``;
-        e = ``;
-        f = ``;
-        break;
-      case 5:
-        if (checc == "en") {
-          a = ``;
-          b = ``;
-        } else {
-          a = ``;
-          b = ``;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP9.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      case 6:
-        if (checc == "en") {
-          a = ``;
-          b = ``;
-        } else {
-          a = ``;
-          b = ``;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP9.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      case 7:
-        if (checc == "en") {
-          a = ``;
-          b = ``;
-        } else {
-          a = ``;
-          b = ``;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP9.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      case 8:
-        if (checc == "en") {
-          a = ``;
-          b = ``;
-        } else {
-          a = ``;
-          b = ``;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP9.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      default:
-        a = ``;
-        b = ``;
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = ``;
-        f = ``;
+        document.getElementById("List2n+1").innerHTML = 2 * str + 1;
+        document.getElementById("List2n+2").innerHTML = 2 * str + 2;
+        document.getElementById("columT1").innerHTML = a;
+        document.getElementById("columT2").innerHTML = b;
+        document.getElementById("columT3").src = c;
+        document.getElementById("columT4").src = d;
+        document.getElementById("columT5").src = e;
+        document.getElementById("columT6").src = f;
     }
-    document.getElementById("List2n+1").innerHTML = 2 * str + 1;
-    document.getElementById("List2n+2").innerHTML = 2 * str + 2;
-    document.getElementById("columT1").innerHTML = a;
-    document.getElementById("columT2").innerHTML = b;
-    document.getElementById("columT3").src = c;
-    document.getElementById("columT4").src = d;
-    document.getElementById("columT5").src = e;
-    document.getElementById("columT6").src = f;
-  }
 
-  function Preob_SA_secret() {
-    let a, b, c, d, e, f = `no text`;
-    let gh = 0;
-    switch (str1) {
-      case 0:
-        if (checc == "en") {
-          a = `The story of the war with the giants <br> Part&nbsp;1/18
+    function Preob_SA_secret() {
+        let a, b, c, d, e, f = `no text`;
+        let gh = 0;
+        switch (str1) {
+            case 0:
+                if (checc == "en") {
+                    a = `The story of the war with the giants <br> Part&nbsp;1/18
         
         <br>  When the gnomes built their first spaceship, everyone was arguing: is there any other life form in space. Professor Kowalski N.K. in 810, predicted with a 14.82% probability of at least one planet with similar climatic conditions to their home planet, and a 0.0054% probability of it having an intelligent life form.
         <br>  In 830, Commander Eskel assembled a team to fly to distant planets. After traversing a distance of 5,000 kilometers from Nexurt, the explorers registered a strange terahertz frequency signal coming from around their star system. Approaching the alleged source of the signal, which is a glowing block of stone with many different radio sensors, drifting in orbit Totrax, as well as the destroyed ancient ships, the wreckage of which emitted a strong dose of radiation. Having flown closer to the block of rock, the team decided to explore it, but they had no technology for its study in open space, so they decided to land on Totrax to explore it further (a couple of centuries ago scientists knew that this planet is a rocky wasteland, covered by a thick layer of ice along the equator, it was believed that at a depth closer to the planet's core the existence of suitable conditions for life is possible). Having landed and replenished fresh water from the glaciers, as expected there was nothing on the surface that looked like suitable conditions for life, just frozen plants, rocks and craters from falling debris from the sky. 
         <br>  Descended into the nearest crater, while studying the frozen plants, the team noticed some movement from above, getting out, they saw large three-fallen footprints, fearing the attack of unknown creatures dwarves, hurried to the ship. As Lieutenant Honing recounted, while collecting plant samples, he got delayed and fell behind the squad, not looking under his feet, tripped and fell into a crevasse, damaging his communication device in the fall. Grasping the ledge with one hand, he called out for help, but because of the broken radio no one paid any attention to his absence. He felt the vibrations from the creature approaching him, then the vibrations subsided and the giant's head peeked out from behind the ledge, not thinking long, he decided to relax his hand. Closing his eyes and anticipating his fall, at the last moment the creature grabbed the gnome by the sleeve and pulled him to the surface. The large humanoid creature did no harm to the dwarf and quickly disappeared behind the nearest hill. 
         <br>  he bewildered dwarf rose to his feet and walked slowly toward the base. Back at the base, Honing told the commander all about it. Commander Eskel did not tempt fate and decided to return home, taking his word from the crew that no one would tell anyone anything about what had happened, only if necessary to Professor Kowalski. So the first contact with alien life was made.`;
-          b = `The story of the war with the giants
+                    b = `The story of the war with the giants
         Part&nbsp;2/18
         
         <br>  Seven years after his first expedition into space, a young engineer and part-time antiquities explorer, Lonsir (son of the explorer Honing), learned from his father what happened to him on Totrax. His thirst for exploring an ancient civilization, prompted him to join the group of scientist C.S. Landvig. who was on his way to Totrax to collect ice samples from the glaciers. Much to his surprise, his team landed about the same place as his father's team, the location of the craters matching his father's stories. He managed to slip unnoticed from the group and rappel down into one of the crevices, and upon descending he discovered many wall paintings two to four meters above the ground. 
         <br>  As he walked further down the bottom of the crevasse, Lonsir began to hear a monotonous noise, as if someone was singing in a low, hissing voice, the voice grew louder with each step until he came upon its owner. A huge three meter tall creature was sitting in a large cave, dotted with glowing stones, it wore a semblance of armor, bound together from massive steel plates and cloth. The giant's chanting was quite intelligible, and he could hear the words in M'Hel (an old dialect of the gnome language). Lonsir dared to greet the giant, and as a result he received a stone kick to the floor from the startled giant. The giant then apologized and greeted his stunted companion as well. After a long and difficult for the dwarf because of the language, he learned from the giant about the existence of other humanoids like him, they live deep underground near the lava lakes, where it is warm and a lot of different edible plants.`;
-        } else {
-          a = `История войны с великанами <br> часть&nbsp;1/18
+                } else {
+                    a = `История войны с великанами <br> часть&nbsp;1/18
         
         <br>  Когда гномы построили свой первый космический корабль, все кому не лень спорили: есть ли ещё какая-нибудь форма жизни в космосе. Профессором Ковальски Н.К. в 810 году, было предсказано с вероятностью 14.82% существование хотя бы одной планеты со схожими климатическими условиями, что и на их родной планете и с вероятностью 0.0054% наличием на ней разумной формы жизни.
         <br>  В 830 году командир Эскель собрал команду для полёта к дальним планетам. После преодоления расстояния 5 тысяч километров от Нексурта, исследователи зарегистрировали странный сигнал терагерцовой частоты, поступающий с окоёма их звёздной системы. Приблизившись к предполагаемому источнику сигнала, представляющего собой светящуюся каменную глыбу с множеством различных радио датчиков, дрейфующую на орбите Тотракса, а также разрушенные древние корабли, обломки которых испускали сильнейшую дозу радиации. Подлетев ближе к каменной глыбе, команда решила исследовать её, но технологий для её изучения в открытом космосе у них не было, ими было принято решение приземлиться на Тотракс, для дальнейшего его исследования (ещё пару веков назад ученым было известно, что эта планета представляет собой каменную пустошь, покрытую толстым слоем ледников вдоль экватора, считалось что на глубине, ближе к ядру планеты возможно существование пригодных для жизни условий). 
         <br>  Приземлившись и пополнив запасы пресной воды из ледников, как и предполагалось на поверхности ничего похожего на подходящие условия для развития жизни не было, одни замершие растения, скалы и воронки от падающих с неба обломков кораблей. Спустившись в ближайший кратер, при изучении замерших растений, команда заметила какое-то движение сверху, выбравшись, они увидели большие трёх палые следы, опасаясь нападения неизвестных существ гномы, поторопились к кораблю. Как рассказывал лейтенант Хонинг, при сборе проб растения он задержался и отстал от отряда, не смотря под ноги, споткнулся и свалился в расщелину, повредив при падении коммуникационный прибор. Держась одной рукой за уступ, он звал на помощь, но из-за сломанной рации никто не обратил на его отсутствие внимание. Он чувствовал вибрации от приближающегося к нему существа, затем вибрации стихли и из за уступа выглянула голова гиганта, недолго думая, он решил расслабить руку. Закрыв глаза и предвкушая падение, в последний момент существо схватило гнома за рукав и вытащило на поверхность. 
         <br>  Большое гуманоидное существо не причинило никакого вреда гному и быстро скрылось за ближайшим холмом. Обескураженный гном поднялся на ноги и медленным шагом отправился в сторону базы. Вернувшись на базу, Хонинг обо всём рассказал командиру. Командир Эскель не стал искушать судьбу и решил вернуться домой, взяв слово с команды, что никто ничего никому не будет рассказывать о произошедшем, только при необходимости профессору Ковальски. Так был совершен первый контакт с инопланетной жизнью.
         `;
-          b = `История войны с великанами
+                    b = `История войны с великанами
         часть&nbsp;2/18
         
         <br>  Спустя семь лет после первой экспедиции в космос, молодой инженер и по совместительству исследователь древностей, Лонсир (сын исследователя Хонинга), узнал от отца, что с ним случилось на Тотраксе. Его жажда к исследованию древней цивилизации, побудила его вступить в группу учёного Ландвига К.С. , которая направлялась на Тотракс за пробами льда с ледников. К большому удивлению его команда приземлилась примерно там же, что и команда его отца, расположение кратеров соответствовало рассказам отца. Ему удалось незаметно отделиться от группы и спуститься по верёвке в одну из расщелин, спустившись вниз он обнаружил множество настенных рисунков на высоте от двух до четырёх метров от земли.
         <br>  Пройдя дальше по дну расщелины Лонсир стал слышать монотонный шум, как будто кто-то поёт низким, шипящим голосом, с каждым шагом голос становилось всё громче, пока он не наткнулся на его обладателя. Огромное трёх метровое создание сидело в большой пещере, усеянной светящимися камнями, оно носило на себе подобие брони, скрепленной из массивных стальных пластин и ткани. В пении гиганта довольно разборчиво слышались словосочетания на М'Хеле (старом диалекте языка гномов). 
         <br>  Лонсир осмелился поприветствовать громилу, вследствие чего получил полбу камнем, от испуганного гиганта. Затем великан попросил прощения и тоже поприветствовал своего низкорослого собеседника. После долгого и трудного для гнома из-за языка разговора, он узнал от великана о существовании других таких же гуманоидов как он, они живут глубоко под землёй вблизи лавовых озёр, где тепло и много разных съедобных растений.
         `;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP11.png`;
-        f = `piccher/pay/paypaUP11.png`;
-        break;
-      case 1:
-        if (checc == "en") {
-          a = `The story of the war with the giants Part&nbsp;3/18
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP11.png`;
+                f = `piccher/pay/paypaUP11.png`;
+                break;
+            case 1:
+                if (checc == "en") {
+                    a = `The story of the war with the giants Part&nbsp;3/18
         
         <br>  Meanwhile, the explorer Landvig was searching for his assistant around his ship. When he saw the dirty Lonsir crawling out of the crevice, he grinned and gave him a smack for running away from the base. The young engineer asked with a slight smile to gather the whole team together to tell them what he had found down there, flatly refusing to tell, ahead of time to his supervisor. As everyone gathered at the crevasse, Lonsir shouted Sa'al Tremo, which in M'Hel's translation meant "Come here." Three giants emerged from the depths, the giant he knew, Pal'na'Athar, and two others, Ner'mier and Sigh. All the dwarves but Landwig and Lonsir headed headlong toward the ship. The scientist greeted the representatives of the race of giants admiringly, and they reciprocated by inviting his entire detachment to their city. In conversation with them, the gnomes learned that the race of giants is as old as the dwarves, they also found on their planet huge fragments of spaceships and also do not know where they came from in the orbit of their planet. 
         <br>  Compared to gnome architecture and technology, the giants live in a primitive world, stone houses, or rather many caves within one huge cave, getting their heat from lava lakes and lavopads. As they told us, there are no land animals on their planet, only huge fish splashing in underground lakes and rivers. Like the dwarves, they did not encounter other sentient beings besides us. They live by farming and fishing, growing incredibly nutritious cabbage, carrots and pumpkins, and stuffing huge catfish from underwater lakes with them, giving them good fitness. Their religion consists of worshipping strange mechanisms with glowing crystals inside. They believe the mechanisms that fell from the sky centuries ago are the source of their strength and longevity. 
         <br>  The gnome language was quickly mastered by the giants and the language barrier disappeared.
         <br>  After two weeks of living on Totrax, the giant Rode'Pri allowed the dwarves to visit the only surviving ancient city, as the giants called it M'yol. There the gnomes were shown the ancient halls, presumably the royal possessions and the huge rooms where the ancient mechanisms were created.`;
-          b = `The story of the war with the giants Part&nbsp;4/18
+                    b = `The story of the war with the giants Part&nbsp;4/18
         
         <br>  After the return of the expedition from Totrax, the heads of the leading dwarf nations set out on their own to the star system's new neighbors. The resulting alliance between the two races flourished with each passing month. Using the crystals worshipped by the giants, the first photonic crystals were created, serving as the source and storage of light energy in batteries. It was observed that under the action of a powerful homogeneous magnetic field these crystals at 257.65° K became perfect diamagnets. On their basis the first levitation mechanisms were created. With the cooperation of giants with gnomes, the giants learned very quickly and surpassed their gnome teachers in some aspects of technology. 
         <br>  The years the giants spent on Nexurt allowed them to master shipbuilding, weaponry and the creation of superhard alloys.`;
-        } else {
-          a = `История войны с великанами часть&nbsp;3/18
+                } else {
+                    a = `История войны с великанами часть&nbsp;3/18
         
         <br>  Тем временем исследователь Ландвиг искал своего помощника в окрестностях своего корабля. Увидев грязного Лонсира, вылезающего из расщелины, он усмехнулся и дал ему подзатыльник за побег с базы. Молодой инженер с лёгкой улыбкой попросил собрать всю команду вместе, чтобы рассказать им, что он нашёл внизу, наотрез отказываясь рассказывать, раньше времени своему руководителю. Когда все собрались у расщелины, Лонсир крикнул Sa'al Tremo, что в переводе с М'Хеля означало "Идите сюда". Из глубин вышли три гиганта, знакомый ему великан Пал'на'Атар и ещё два Нер'мьер и Сигх. Все гномы кроме Ландвига и Лонсира, сломя голову, направились к кораблю. Учёный с восхищением поприветствовал представителей расы великанов, они ответили ему взаимностью, пригласив весь его отряд в свой город. В разговоре с ними гномы узнали, что род великанов настолько же древний, как и гномий, они тоже находили на своей планете огромные осколки космических кораблей и тоже не знают, откуда они появились на орбите их планете. 
         <br>  По сравнению с гномьей архитектурой и технологиями, великаны живут в примитивном мире, каменные дома, а точнее множество пещер внутри одной огромной пещеры, получая тепло от лавовых озёр и лавопадов. Как они рассказывали, на их планете нет сухопутных животных, только огромные рыбы, плескающиеся в подземных озёрах и реках. Также как и гномы, других разумных существах кроме нас они не встречали. Живут они за счёт фермерства и рыбной ловли, выращивая при этом невероятно питательную капусту, морковь и тыкву, и фаршируя ими огромных сомов из подводных озёр, дающих им хорошую физическую форму. Религия их состоит в поклонении странным механизмам со светящимися кристаллами внутри. Они верят, упавшие много веков назад с неба механизмы, являются источниками их силы и долголетия. 
         <br>  Гномий язык был быстро освоен великанами и языковой барьер пропал.
         <br>  Через две недели жизни на Тотраксе, великан Роде'При разрешил гномам посетить единственный сохранившийся древний город, как его называли великаны Мь'ёл. В нём гномам показали старинные залы, предположительно королевские владения и огромные помещения, в которых создавались древние механизмы.
         `;
-          b = `История войны с великанами часть&nbsp;4/18
+                    b = `История войны с великанами часть&nbsp;4/18
         
         <br>  После возвращения экспедиции с Тотракса, главы ведущих наций гномов самолично отправились к новым соседям звёздной системы. Образовавшийся союз двух рас процветал с каждым месяцем. Используя кристаллы, которым поклонялись великаны, были созданы первые фотонные кристаллы, служащие источником и хранения энергии света в батареях. Было замечено, что под действием мощного однородного магнитного поля эти кристаллы при температуре 257.65° К становятся идеальными диамагнетиками. На их основе были созданы первые левитационные механизмы. 
         <br>  При сотрудничестве великанов с гномами, великаны очень быстро обучались и по некоторым аспектам технологий превзошли своих учителей гномов. Проведенные годы гигантов на Нексурте позволили им освоить кораблестроение, оружейное дело и создание сверхтвёрдых сплавов.
         `;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP11.png`;
-        f = `piccher/pay/paypaUP11.png`;
-        break;
-      case 2:
-        if (checc == "en") {
-          a = `The story of the war with the giants
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP11.png`;
+                f = `piccher/pay/paypaUP11.png`;
+                break;
+            case 2:
+                if (checc == "en") {
+                    a = `The story of the war with the giants
         Part&nbsp;5/18
         
         <br>  After decades of cooperation between two what were once thought to be different worlds, the giants gave their consent for the dwarves to explore the ancient city of M'yol. After digging a couple dozen tons of sand and stone, the gnomes came across locked doors, attempts to open them without destroying them were unsuccessful. After asking permission from the giants, they were able to lower more powerful drills into the depths, which helped the solid doors begin to collapse. 
         <br>  When the doors collapsed and the passage cleared, the workers couldn't believe their eyes: in the middle of the high hall stood statues of huge gnomes and giants, and along the walls were frescoes depicting parts of some space city called Noden (which later became known as "peerless, indestructible" in an old gnomish dialect).
         <br>  In the far corner of the hall, in two rows were the skeletons of giants whose bones were impregnated with a light green liquid with a huge dose of radiation.
         In the middle of the hall on a special pedestal was a stone slab with text scratched in a hurry (the text from this slab has not been translated to the end for a long time). On examining the room and the remains of the giants, scientists surmised that these giants were trying to protect themselves from something behind such indestructible doors, locked from the inside. The radiation background inside the room exceeded the norm by 50 times, fortunately the health of the gnomes working there did not have time to strongly affect. The giants assisting the gnomes felt no ill effects, their bodies having learned to resist radiation over the long years of existence on Totrax. The giants, led by their leader Rode'Priya, further studied the wall paintings without the gnomes' involvement.`;
-          b = `The story of the war with the giants
+                    b = `The story of the war with the giants
         Part&nbsp;6/18
         
         <br>  Within three months, the giants managed to fully copy all the surviving wall texts and images from the deep temple. Copies of the obtained data were transferred to the gnomes on Nexurt for further study. The giants and gnomes were not familiar with the inscribed symbols; neither the gnomish language nor M'Hel had similar signs.
         <br>  For a year one of the five words known to them from these texts was Noden, a wall image provided by the giants along with images of some ancient gnome rulers whose names could not be recovered, and equally ancient giants' rulers, three of whose names are clearly preserved in stone to this day. 
         <br>  If the rulers were arranged in order of reign from left to right, then first was Tolran, thirteenth Sozen, and fourteenth Azulon. Next to Azulon's image were embossed the words "Runhes ik abbati", which translates from M'Hel "we will avenge you". The largest fresco copied was a picture of supposedly the last Dwarven and Giant kings holding something glowing with blue flame, what exactly is unknown this fragment of the fresco was roughly hollowed out of the wall.`;
-        } else {
-          a = `История войны с великанами
+                } else {
+                    a = `История войны с великанами
         часть&nbsp;5/18
         
         <br>  Спустя десятилетия сотрудничества двух, как раньше считалось разных миров, великаны дали своё согласие на изучение гномами древнего города Мь'ёл. Раскопав пару десятков тон песка и камня, гномы наткнулись на запертые двери, попытки открыть их не разрушая не увенчались успехом. Попросив разрешения у великанов, им удалось спустить в глубины более мощные бурильные установки, благодаря которым прочные двери начали разрушаться. 
@@ -988,46 +1005,87 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  В дальнем углу зала, в два ряда располагались скелеты великанов, кости которых были пропитаны светло-зелёной жидкостью с огромной дозой радиации.
         По середине зала на специальном постаменте находилась каменная плита с нацарапанным в спешке текстом (текст с данной плиты долгое время не переведён до конца). Осмотрев помещение и останки гигантов учёные пришли к мнению, что эти великаны пытались от чего-то защититься за столь нерушимыми дверями, запертыми изнутри. Радиационный фон внутри помещения превосходил норму в 50 раз, к счастью на здоровье работающих здесь гномов это не успело сильно повлиять. Помогающие гномам великаны не испытывали никакого недомогания, их организмы за долгие годы существования на Тотраксе научились сопротивляться радиации. Дальнейшим изучением настенных изображений занимались великаны под руководством их предводителя Роде'Прия, без участия гномов.
         `;
-          b = `История войны с великанами
+                    b = `История войны с великанами
         часть&nbsp;6/18
         
         <br>  В течение трёх месяцев великанам удалось полностью скопировать все сохранившиеся настенные тексты и изображения из глубинного храма. Копии полученных данных были переданы гномам на Нексурт для их дальнейшего изучения. Великанам и гномам не были знакомы начертанные символы, ни в гномьем языке, ни в М'Хеле не было похожих знаков.
         <br>  На протяжении года одним из пяти известных им слов из этих текстов был Нодэн, настенное изображение, которого предоставили великаны вместе с изображениями каких-то древних правителей гномов, чьи имена не получилось восстановить, и таких же древних правителей великанов, имена трёх из которых отчётливо сохранились в камне до наших дней. 
         <br>  Если правителей располагали по порядку по мере их правления слева направо, то первым был Толран, тринадцатым Созен и четырнадцатым Азулон. Рядом с изображение Азулона были выбиты слова "Runhes ik abbati", что в переводе с М'Хеля "мы отомстим за тебя". Самой большой скопированной фреской было изображение предположительно последних гномьего и великаньего королей, держащих что-то сияющие голубым пламенем, что именно неизвестно данный фрагмент фрески был грубо выдолблен из стены.
         `;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP11.png`;
-        f = `piccher/pay/paypaUP11.png`;
-        break;
-      case 3:
-        if (checc == "en") {
-          a = `The story of the war with the giants
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP11.png`;
+                f = `piccher/pay/paypaUP11.png`;
+                break;
+            case 3:
+                if (checc == "en") {
+                    a = `The story of the war with the giants
         Part&nbsp;7/18
         
         <br>  A year later, a researcher of ancient dwarves, Vassir, an apprentice researcher and by a surprising coincidence his uncle Lonsir, came to work in the science lab.
         <br>  At first he was assigned tasks: go there, bring this and take that away. Once he had a bad trip down the stairs and broke his leg, so to cheer him up a bit in the hospital, the head of the science lab let him see the texts the giants had brought from Totrax. Vassir was familiar with most of the symbols, the same symbols depicted in preserved books found in the wreckage of spaceships in the vicinity of Verona, for a long time it was thought that this language belonged to an unknown space race, and it was not given the proper attention until the existence of these books was simply forgotten. When he returned home, he almost immediately found in his library two collections of ancient texts, the first and the fourth volume, but for a better translation he needed the second, third and fifth volumes as well. 
         <br>  The next day Vassius went to the Museum of Ancient Civilizations, looking for the books he needed. At that time, copies of those old books were printed, which could be freely purchased in the store at this museum. Settling in the reading room, where no one would disturb him, he translated in one night 28 of the 44 sentences from the very texts that no one had been able to translate for a year. The next morning Vassir presented the scientists of the research laboratory his translation of 38 sentences out of 44, the remaining 6 sentences were encrypted coordinates: the citadel of the dwarves "Noden", the once ancient temples on other planets, and the home planet of the ancient dwarves and giants. After reading and checking the correctness of the translation, researcher Vassir was awarded the title of scientist of the Dwarf Science Research Center and became the leader of research and future expeditions to the planet Casper, in search of ancient temples.`;
-          b = ``;
-        } else {
-          a = `История войны с великанами
+                    b = `The story of the war with the giants
+          Part&nbsp;8/18
+          
+          <br>  The translation itself resembles a retelling of a story in the form of a song, there are a lot of consonant words and a lot of phrases and metaphors that are not fully understood.
+          From Vassir's translation, it became known that both races had been living together for a long time. The language in which these texts were written was most likely the native language of the first giants, with the unification of the first giants with the first dwarves, the M'HEL variety became a common language. Our ancestors had one home planet, Yuk'aken, destroyed by some cataclysm called (literally translated) - "Emptied energy".
+          <br>  Totrax (or as it is called in the texts Yuk-maly) is the last colonized planet of the three dwarf-giant planets. The technology used by the dwarves is based on the absorption of energy from energy crystals, while the technology of the giants was based on the conversion of light energy through these crystals in special mechanisms scattered everywhere. During the work, dwarf masters complemented the giants and vice versa, creating incredibly beautiful structures and mechanisms.
+          <br>  The union of dwarves and giants has been trying for several tens of centuries to find a single source of pure inexhaustible energy. During the reign of the twenty-fourth Dwarf and eleventh Giant kings, a great Cosmic forge was constructed and built in the center of the Noden Citadel. <br>  Nine centuries later, the last dwarf king Torlos and Azulon, together with the greatest forges of that time, created a crystal from pure cosmic energy.
+          This deep temple was built in honor of the creation of a single source of energy. Unfortunately, it was not possible to find out what happened to the giants in that temple many years ago from these inscriptions.`;
+                } else {
+                    a = `История войны с великанами
         часть&nbsp;7/18
         
         <br>  Спустя год в научную лабораторию пришёл работать исследователь древних гномов Вассир, ученик исследователя и по удивительному совпадению своего дяди Лонсира.
         <br>  Поначалу ему поручали задания: сходи туда, принеси то и унеси это. Однажды он неудачно спустился с лестницы и сломал ногу, чтобы немного поднять ему настроение в больнице, глава научной лаборатории разрешил ему посмотреть привезённые великанами с Тотракса тексты. Вассиру были знакомы большая часть&nbsp;символов, такие же символы были изображены в сохранившихся книгах, найденных в обломках космических кораблей в окрестностях Верона, очень давно долгое время считалось, что данный язык принадлежал неизвестной космической расе, и должное внимание ему не уделялось, пока о существовании этих книг просто на просто не забыли. Вернувшись, домой он практически сразу нашёл в своей библиотеке два сборника древних текстов, первый и четвертый том, но для более качественного перевода ему были необходимы ещё второй, третий и пятый том. 
         <br>  На следующий день Вассий отправился в музей древних цивилизаций, на поиски необходимых ему книг. На тот момент были напечатаны копии тех старых книг, которые можно было свободно купить в магазине при этом музеи. Расположившись в читальном зале, где ему никто не будет мешать, он за одну ночь перевёл 28 из 44 предложений из тех самых текстов, которые никто не мог целый год перевести. На следующее утро Вассир представил учёным исследовательской лаборатории свой перевод 38 предложений из 44, остальные 6 предложений представляли собой зашифрованные координаты: цитадели гномов "Нодэн", некогда существовавших древних храмов на других планетах и родной планеты древних гномов и великанов. После прочтения и проверки правильности перевода, исследователь Вассир был удостоен звания учёного исследовательского центра Гномоведения и стал руководителем исследований и будущих экспедиций на планету Каспер, в поисках древних храмов.
         `;
-          b = ``;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP11.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      case 9:
-        if (checc == "en") {
-          a = `History of the first gnome settlers (significant events based on commonly known old records)
+                    b = `История войны с великанами
+          часть&nbsp;8/18
+          <br>  Сам по себе перевод напоминает пересказ истории в виде песни, в нём много созвучных слов и много не до конца понятных словосочетаний и метафор.
+          Из перевода Вассира, стало известно, что обе расы давно жили вместе. Язык, на котором были написаны эти тексты, скорее всего был родным языком первых великанов, с объединением первых великанов с первыми гномами общим языком стала разновидность М'Хель. Наши предки имели одну родную планету Юк'Акен, разрушенную каким-то катаклизмом под названием (в дословном переводе) - "Опусташенная энергия ".
+          <br>  Тотракс(или как его называют в текстах Юк-малый) является последней колонизированной планетой из трёх гномо-великаних планет. Технологии, которыми пользовались гномы, основывается на поглощении энергии из энергитических кристаллов, в то время как технологии великанов основывалась на преобразовании световой энергии через эти кристаллы в специальных механизмах, разброшенных повсюду. Во время работы гномьи мастера дополняли великанов и наоборот, создавая невероятно красивые сооружения и механизмы.
+          <br>  Союз гномов и великанов на протяжении нескольких десятков веков пытался найти единый источник чистой неисчерпаемой энергии. Во времена правления двадцать четвертого гномьего и одиннадцатого великаньего королей была сконструирована и построена великая Космическая кузница в центре цитадели Нодэн. <br>  Спустя девять веков последний гномий король Торлош и Азулон вместе с величайшими кузницами того времени, сотворили кристалл из чистой космической энергии.
+          Этот глубинный храм был построен в честь создания единого источника энергии. К несчастью узнать, что произошло в том храме с великанами много лет назад, из этих надписей не получилось.
+          `;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP11.png`;
+                f = `piccher/pay/paypaUP11.png`;
+                break;
+            case 4:
+                if (checc == "en") {
+                    a = `The story of the war with the giants
+        Part&nbsp;9/18
+        
+        <br>  When the dwarves shared with the giants the information they had recently received, Singh remembered a stone tablet found in the same hall. When an order came from the command to deliver the stone tablet to Totrax, it turned out that it was not there. <br>  Unfortunately, more than a year ago, when the spacecraft carrying the stone tablet returned to Nexurt, depressurization occurred and almost all the equipment, including the stone tablet, was thrown into the atmosphere of the planet somewhere over the ocean, the pilots noticed a hole in the skin only after landing and do not know the exact coordinates of the loss.`;
+                    b = `History of the war with the giants
+          part&nbsp;10/18 
+         <br>   While the command was dealing with the loss of the tablet, scientists managed to decipher the coordinates of Noden. Preparations were started for the expedition to Noden. Since it was not known how dangerous it was to go to the ancient space station, the giants strengthened the hull of the ship and installed more powerful photon engines. The improved and upgraded ship was named the Path Vector. As the ship approached the desired coordinates, the team of giants began to talk about strange dreams, they all saw the same dream, as an unfamiliar voice was calling them in the dark, long corridors of the citadel, luring deeper and deeper into its center and reproaching their dwarves with boundless greed, envy and pride. <br>   As they approached the citadel, the dwarves began to hear these voices. On the fifth day of the journey into the distance, high towers with signal lights blazing in all their glory, high walls with massive ballistae and colorful front doors began to be seen. After landing, the researchers were ready for an ambush or some kind of traps, but when they went inside, they saw a terrible picture, hundreds or even thousands of skeletons of dwarves and giants lying on the floor and stairs. From the location of their remains, it could be understood that they were running away or hiding from something very powerful. In addition to the bodies, traces of some light green liquid were visible on the floor and walls, as in a deep temple. <br>   Having studied the premises, large stone tablets were found, telling about the development of the civilization of the ancients. After collecting various items and artifacts, the team hurried back home as soon as possible.
+         Returning back to Nexurt, they arrived just in time for the start of the search for the stone tablet lost in the water, trying to determine with metal detectors where the equipment was lost. <br>   Meanwhile, scientists began to translate the tablets brought from Noden, but that's another story.`;
+                } else {
+                    a = `История войны с великанами
+        часть&nbsp;9/18
+        
+        <br>  Когда гномы поделились с великанами недавно полученной информацией, Сигх вспомнил о каменной табличке найденной в том же зале. Когда от командования пришёл приказ о доставке каменной скрижали на Тотракс, оказалось, что её нет. <br>  К великому сожалению более года назад, при возвращения космического корабля перевозившего каменную табличку на Нексурт, произошла разгерметизация и практически всё оборудование включая каменную табличку выбросило в атмосферу планеты где-то над океаном, пилоты заметили дыру в обшивке только после приземления и не знают точных координат пропажи.
+        `;
+                    b = `История войны с великанами
+          часть&nbsp;10/18 
+         <br>   Пока командование разбиралось с пропажей таблички, учёным удалось расшифровать координаты Нодэна. Были начаты приготовления к экспедиции в Нодэн. Так как не было известно насколько опасно отправляться на древнюю космическую станцию, великаны усилили обшивку корабля и установили более мощные фотонные двигатели. Улучшенный и модернизированный корабль назвали Вектор Пути. При приближении корабля к нужным координатам, команда великанов начала рассказывать о странных снах, все они видели один и тот же сон, как незнакомый голос зовёт их в темных, длинных коридорах цитадели, заманивая всё глубже и глубже в её центр и упрекая гномов их в бескрайней жадности, зависти и гордыни. <br>   По мере приближения к цитадели, эти голоса начали слышать и гномы. На пятый день путешествия в дали, начали виднеться высокие башни с пылающими во всей своей красе сигнальными огнями, высокие стены с массивными баллистами и красочные парадные двери. Приземлившись исследователи были готовы к засаде или каким либо ловушкам, но войдя вовнутрь, они увидели страшную картину, сотни иди даже тысячи скелетов гномов и великанов лежали на полу и лестницах. По расположению их останков можно было понять, что они убегали или прятались от чего-то очень могущественного. Помимо тел на полу и стенах были видны следы какой-то светло-зелёной жидкости, как в глубинном храме. <br>   Изучив помещения, были найдены большие каменные скрижали, повествующие о развитии цивилизации древних. Собрав различные предметы и артефакты, команда поспешила вернуться скорее домой.
+         Вернувшись обратно на Нексурт, они прибыли как раз к началу поисков потерянной в воде каменной таблички, пытаясь определить метало детекторами где было потеряно оборудование. <br>   Тем временем учёные начали переводить привезённые с Нодэна таблички, но это уже другая история.
+         `;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP11.png`;
+                f = `piccher/pay/paypaUP11.png`;
+                break;
+            case 9:
+                if (checc == "en") {
+                    a = `History of the first gnome settlers (significant events based on commonly known old records)
           <br>   Kosh Civilization Part&nbsp;1/3
           <br>  6000-1900 years ago there was no single chronology or accurate data on the development of the dwarves, at least no substantially important historical records or relics remain. The only civilization about which there are many old records and which was a precursor to the modern era is the Kosh civilization.
           <br>  About 1900 years ago, after long and countless confrontations between different Dwarf tribes, different religion and ideology. All the large lands and kingdoms of Greendmoor were united by Prince Raster C.R. von Kosh into the Principality of Kosh, and the Kosh chronology was introduced in Greendmoor, where the point of reference was the year of the Principality's foundation.
@@ -1039,7 +1097,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           <br>  In 56, the 4 kingdoms of Malfarin and Cascaria join the alliance.
           <br>  In 59, Falgot's son Axinius, nicknamed Peaceful, comes to power.
           <br>  The years 60 to 253 are called the golden ages of the Kosh Age, centuries of diplomacy and the era of unity of the Dwarven race.`;
-          b = `History of the first dwarf settlers (significant events based on commonly known old records)
+                    b = `History of the first dwarf settlers (significant events based on commonly known old records)
           <br>  Kosh Civilization Part&nbsp;2/3
           <br>  253-255 The noble family of the warlord Shardar Skalazubogo, decides to increase its influence in the kingdom and takes advantage of the ruined after 206 of the firstborn family of the Grand Duke, whose descendant is Duminur Von Kosh . 
           Using Duminur, the house of Shardar becomes more influential, but in early 255, the descendant of the prince kills the head of the noble family and begins a campaign for power over the duchy.
@@ -1051,8 +1109,8 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           <br>  In 276, the cult gains almost unlimited power in the principality and extends its influence to neighboring kingdoms.
           <br>  The followers of this religion sought to erase by any means information about the history of the world before their lord. There is almost no information about the other former kingdoms of the north. The only thing historians could establish about the state of the world from the surviving manuscripts before 258 were the borders of the principality and the names of the continents of Neksurt and some settlements on them. For example, Cascaria was divided into two more continents: Ladagark and Moan.
           <br>  For two centuries the clouds of deceit and treachery of the Cult of the First Prince had been gathering over the lands of Neksurt.`;
-        } else {
-          a = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                } else {
+                    a = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
           <br>  Цивилизация Кош часть&nbsp;1/3
           <br>  6000-1900 лет назад не было ни единого летоисчисления, ни точных данных о развитии гномов, по крайней мере, не осталось существенно важных исторических записей и реликвий. Единственной цивилизацией, о которой есть много старых записей и которая была предшественником современной эры, является цивилизация Кош.
           <br>  Примерно 1900 лет назад после долгих и бесчисленных противостояний между разными племенами гномов, разной религии и идеологии. Все крупные земли и королевства Грендмура были объединены князем Растером К.Р. фон Кош в княжество Кош, и на территории Грендмура было введено летоисчисление Коша, где точкой отсчёта считался год основания княжества.
@@ -1065,7 +1123,7 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           <br>  В 59 году к власти приходит сын Фальгота- Аксиний которого прозвали Мирный.
           <br>  Годы с 60 по 253 называют золотыми столетиями эпохи Кош, веками дипломатии и эпохой единства гномьей расы.
           `;
-          b = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                    b = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
           <br>   Цивилизация Кош часть&nbsp;2/3
           <br>  253-255 годы дворянский род полководца Шардара Скалазубого, решает усилить своё влияние в королевстве и использует разорившийся после 206 года род первенца великого князя, потомком которого является Думинур Фон Кош . 
           Используя Думинура, дом Шардара становится влиятельнее, но в начале 255 года потомок князя убивает главу дворянского рода и начинает компанию за власть над княжеством.
@@ -1077,15 +1135,15 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
           <br>  В 276 году культ получает практически безграничную власть в княжестве и распространяет своё влияние на соседние королевства.
           Последователи этой религии стремились стереть любыми способами информацию об истории мира до их повелителя. О других бывших королевствах севера информации почти не осталось. Единственное, что смоги установить историки о состоянии мира по уцелевшим рукописям до 258 года, это границы княжества и наименования континентов Нексурта и некоторых поселений на них. Например, Каскария была разделена ещё на два континента: Ладагарк и Моан.
           <br>  В течение двух веков над землями Нексурта сгущались тучи лжи и коварства Культа первого князя.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP12.png`;
-        f = `piccher/pay/paypaUP12.png`;
-        break;
-      case 10:
-        if (checc == "en") {
-          a = `History of the first gnome settlers (significant events based on commonly known old records)
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP12.png`;
+                f = `piccher/pay/paypaUP12.png`;
+                break;
+            case 10:
+                if (checc == "en") {
+                    a = `History of the first gnome settlers (significant events based on commonly known old records)
             <br>  Kosh Civilization Part&nbsp;3/3
             <br>  In 281 a famine gripped the lands of Cascaria, and in 317 Malfarin, asking for help from the kingdoms of Greendmoor they had to accept the terms and conditions of a large number of trade alliance associated with the renunciation of the old customs of their lands.
             <br>  The years from 258-467 are called the "Troubled Time of the First Nobles."
@@ -1095,9 +1153,9 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             <br>  From 467 to 501 there was a fierce battle with the followers of the first prince. Dwarves Moan and Ladagark attacked from the west, while Malfa and Cascaria supported the Talra offensive from the east. As a result, the top rulers of the principality were destroyed and all the nobles were burned in the siege of their family castle at Bosparad.
             <br>  By the 13th year after the fall of Bosparad, the cult of Kosh had been completely eradicated from the lands of Nexurt.
             <br>  The year 501 of the Kosh Dynasty, was the 1st year of the fall of Bosparad and the beginning of a new era of development and mutual aid among the Dwarven peoples.`;
-          b = ``;
-        } else {
-          a = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                    b = ``;
+                } else {
+                    a = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
             <br>   Цивилизация Кош часть&nbsp;3/3
             <br>  В 281 году голод охватил земли Каскарии, а в 317 году  Мальфарина, прося помощи у королевств Грейдмура им пришлось принять условия Кошей и внести большое количество поправок в условия торгового союза, связанных с отречением от старых обычаев и использованием их земель и ресурсов для строительства храмов.
             <br>  Годы с 258-467 называют “Смутное время первой знати”.
@@ -1107,132 +1165,152 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             <br>  С 467 по 501 годы велось ожесточенное сражение с последователями первого князя. Гномы Моана и Ладагарка наступали с запада, а Мальфа и Каскария поддерживали наступление Талры с востока. По итогу верхушка власти княжества была уничтожена, а вся знать сожжена при осаде их фамильного замка в Боспараде.
             <br>  К 13 году после падения Боспарада, культ Коша был полностью искоренён с земель Нексурта.
             <br>  501 год правления династии Кош, стал 1 годом падения Боспарада и началом новой эпохи развития и взаимопомощи гномьих народов. `;
-          b = ``;
+                    b = ``;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP12.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            default:
+                a = ``;
+                b = ``;
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = ``;
+                f = ``;
         }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP12.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      default:
-        a = ``;
-        b = ``;
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = ``;
-        f = ``;
-    }
-    document.getElementById("List1_2n+1").innerHTML = 2 * str1 + 1;
-    document.getElementById("List1_2n+2").innerHTML = 2 * str1 + 2;
-    document.getElementById("columT1_1").innerHTML = a;
-    document.getElementById("columT1_2").innerHTML = b;
-    document.getElementById("columT1_3").src = c;
-    document.getElementById("columT1_4").src = d;
-    document.getElementById("columT1_5").src = e;
-    document.getElementById("columT1_6").src = f;
+        document.getElementById("List1_2n+1").innerHTML = 2 * str1 + 1;
+        document.getElementById("List1_2n+2").innerHTML = 2 * str1 + 2;
+        document.getElementById("columT1_1").innerHTML = a;
+        document.getElementById("columT1_2").innerHTML = b;
+        document.getElementById("columT1_3").src = c;
+        document.getElementById("columT1_4").src = d;
+        document.getElementById("columT1_5").src = e;
+        document.getElementById("columT1_6").src = f;
 
-    gh = 2 * str1;
-    if (booolSA_S[gh] == true) {
-      document.getElementById("sec1").style.display = '';
-    } else {
-      document.getElementById("sec1").style.display = 'none';
-    }
-
-    gh = 2 * str1 + 1;
-    if (booolSA_S[gh] == true) {
-      document.getElementById("sec2").style.display = '';
-    } else {
-      document.getElementById("sec2").style.display = 'none';
-    }
-  }
-
-  function Preob_SA_guide() {
-    let a, b, c, d, e, f = `no text`;
-    let gh = 0;
-    switch (str2) {
-      case 0:
-        if (checc == "en") {
-          a = `NO`;
-          b = `1`;
+        gh = 2 * str1;
+        if (booolSA_S[gh] == true) {
+            document.getElementById("sec1").style.display = '';
         } else {
-          a = `Ничего`;
-          b = `1`;
+            document.getElementById("sec1").style.display = 'none';
         }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP9.png`;
-        f = `piccher/pay/paypaUP10.png`;
-        break;
-      case 1:
-        if (checc == "en") {
-          a = `Connector device. The device is a compact object, conveniently lying in the hand. Designed to connect multiple devices to each other. The interactive elements of the environment will have color dots if you hold the device in your hand.
+
+        gh = 2 * str1 + 1;
+        if (booolSA_S[gh] == true) {
+            document.getElementById("sec2").style.display = '';
+        } else {
+            document.getElementById("sec2").style.display = 'none';
+        }
+    }
+
+    function Preob_SA_guide() {
+        let a, b, c, d, e, f = `no text`;
+        let gh = 0;
+        switch (str2) {
+            case 0:
+                if (checc == "en") {
+                    a = `NO`;
+                    b = `1`;
+                } else {
+                    a = `Ничего`;
+                    b = `1`;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP9.png`;
+                f = `piccher/pay/paypaUP10.png`;
+                break;
+            case 1:
+                if (checc == "en") {
+                    a = `Connector device. The device is a compact object, conveniently lying in the hand. Designed to connect multiple devices to each other. The interactive elements of the environment will have color dots if you hold the device in your hand.
         <br> <img src="piccher/pay/conn.webp" class="pictin" >
      To connect one part to another, click and drag one of the points and release when hovering over another point. If successful, a line should appear between the two pieces showing that they are connected. The line will also have small black arrows on it, indicating which part will activate the other. Arrow keys indicate the direction of action. <br>  Buttons, bearings, sensors, lamps, seats and some decorative elements have a unidirectional connection. Logical closures and timers are bidirectional and it is important from which element the connection is made.
            <br>  You can also disconnect connections by grabbing the object tag and dragging it aside.
            <br>  Please note that only parts belonging to a single structure may be joined. You can check this by dragging connections; all invalid connection points will disappear.`;
-          b = `The elevator is an essential object that every mechanic should have at hand. There are two modifications of the elevator.<br>  1)-is placed only on a certain surface and attached to it.<br>  2)An ordinary elevator - placed on any solid surface, is not placed on suspended surfaces, held on bearings, pistons or springs.
+                    b = `The elevator is an essential object that every mechanic should have at hand. There are two modifications of the elevator.<br>  1)-is placed only on a certain surface and attached to it.<br>  2)An ordinary elevator - placed on any solid surface, is not placed on suspended surfaces, held on bearings, pistons or springs.
         <br> <img src="piccher/pay/lift2.webp" class="pictin" >
        Each elevator is based on an unbreakable connection with its owner, providing remote control of the lift at a distance from the owner. 
           Recent versions of the elevator are equipped with a subquantum stabilizer, which allows you to instantly teleport the delivered elevator to the required point.
           <br>  The lift measures 4x4x2 when placed. The lift can be extended by one unit, up to 22 units in height. Despite its size and expansion, the lift can pass through any static object.
            Any modification of the elevator can be put objects or climbed himself on it for climbing on the hill.
            Because of the connection between the object and its owner, the lift cannot be thrown out of the inventory, only deliberately put it in the chest.`;
-        } else {
-          a = `Устройство соединитель.<br> Устройство представляет собой компактный предмет, удобно лежащий в руке. Предназначен для соединения нескольких устройств между собой. На интерактивных элементах окружения появятся цветные точки, если взять устройство в руку.
+                } else {
+                    a = `Устройство соединитель.<br> Устройство представляет собой компактный предмет, удобно лежащий в руке. Предназначен для соединения нескольких устройств между собой. На интерактивных элементах окружения появятся цветные точки, если взять устройство в руку.
         <br> <img src="piccher/pay/conn.webp" class="pictin" >
         Чтобы соединить одну часть с другой, щелкните и перетащите одну из точек и отпустите при зависании над другой точкой. <br>   Если сделано успешно, между двумя частями должна появиться линия, показывающая, что они связаны. Линия также будет иметь небольшие черные стрелки на нем, указывая, какая часть активирует другую. Стрелки указывают направления воздействия. Кнопки, подшипники, сенсоры, лампы, сиденья и некоторые элементы декора имеют однонаправленное соединение. <br>  Логические затворы и таймеры имеют двунаправленость и важно, от какого элемента ведётся подключение.
         <br>  Также можно разъединять соединения, захватив метку обьекта и перетащив её в сторону.
        Обратите внимание, что могут соединяться только части, принадлежащие одной единой конструкции. <br>  Вы можете проверить это при перетаскивании соединения; все недопустимые точки соединения исчезнут.`;
-          b = `Лифт – неотъемлемый предмет, который должен быть у каждого механика под рукой. Существует две модификации лифта.<br>  1)-ставится только на определённую поверхность и привязывается к ней.<br>  2)обычный лифт – ставящийся на любую цельную поверхность, не ставится на подвесные поверхности, держащиеся на подшипниках, поршнях или пружинах.
+                    b = `Лифт – неотъемлемый предмет, который должен быть у каждого механика под рукой. Существует две модификации лифта.<br>  1)-ставится только на определённую поверхность и привязывается к ней.<br>  2)обычный лифт – ставящийся на любую цельную поверхность, не ставится на подвесные поверхности, держащиеся на подшипниках, поршнях или пружинах.
         <br> <img src="piccher/pay/lift2.webp" class="pictin" >
         В основе каждого лифта лежит нерушимая связь со своим владельцем, обеспечивающая дистанционный контроль подъёмника на расстоянии от владельца. 
         <br>  Последние версии лифта оснащены субквантовым стабилизатором, позволяющий мгновенно телепортировать поставленный лифт в требуемую точку.
         Подъемник имеет размеры 4x4x2 при размещении. Подъемник может быть расширен на одну единицу, до 22 единиц в высоту. Несмотря на размеры и расширение, Лифт может пройти через любой статичный объект.
         <br>  На любую модификацию лифта можно ставить предметы или забираться самому на него для взбирания на возвышенности.
         Из-за наличия связи между предметом и его владельцем лифт нельзя выбросить из инвентаря, только намеренно убрать его в сундук.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP13.png`;
-        f = `piccher/pay/paypaUP13.png`;
-        break;
-      case 2:
-        if (checc == "en") {
-          a = ` Paint tool is used to paint something, such a paint tool can be used to enter passwords or to endow the dyed object with the key property to activate the sensors.
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP13.png`;
+                f = `piccher/pay/paypaUP13.png`;
+                break;
+            case 2:
+                if (checc == "en") {
+                    a = ` Paint tool is used to paint something, such a paint tool can be used to enter passwords or to endow the dyed object with the key property to activate the sensors.
         <br>  Left mouse colors with selected color. Right mouse removes color from colored objects. Multiple blocks can be colored or colored by dragging and dropping by the appropriate mouse button, like placing or removing multiple blocks at once.
         <br> <img src="piccher/pay/pain.webp" class="pictin" >
         To paint something, most often used colors from the second top of the line.
         To change the color, press Q to open the color selection GUI. To close it without selecting a color, press Q or Esc.`;
-          b = `5`;
-        } else {
-          a = ` Для покраски чего-либо используется краскопульт, такой инструмент покраски может использоваться для ввода паролей или наделять окрашиваемый предмет свойством ключа для активации сенсоров.
+                    b = `Welding Machine
+          <br>  An indispensable tool for the construction of tracks and suspension, as well as in the daily life of a mechanic. 
+          <br>   <img src="piccher/pay/weld.webp" class="pictin" >
+The tool creates an inter-spatial shift that teleports the captured part to the point at which atoms and molecules of a crystalline or amorphous medium connect to each other, forming a single structure.
+          <br>  In addition to creating a rigid coupling between adjacent parts, the welding machine is used to connect and transfer objects. Complex objects that are keys can be installed in the connectors created for them and thereby activate something.`;
+                } else {
+                    a = ` Для покраски чего-либо используется краскопульт, такой инструмент покраски может использоваться для ввода паролей или наделять окрашиваемый предмет свойством ключа для активации сенсоров.
         <br>  Краски левой мыши с выбранным цветом. Правая мышь удаляет цвет из окрашенных объектов. Несколько блоков могут быть окрашены или очищены от цвета путем перетаскивания соответствующей кнопкой мыши, подобно размещению или удалению нескольких блоков одновременно.
         <br> <img src="piccher/pay/pain.webp" class="pictin" >
         Для покраски чего либо, чаще всего используются цвета из второй сверху строки.
         Чтобы изменить цвет, нажмите клавишу Q, чтобы открыть графический интерфейс выбора цвета. Чтобы закрыть его без выбора цвета, нажмите Q или Esc.`;
-          b = `5`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP13.png`;
-        f = `piccher/pay/paypaUP13.png`;
-        break;
-      case 3:
-        if (checc == "en") {
-          a = `6`;
-          b = `7`;
-        } else {
-          a = `6`;
-          b = `7`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP13.png`;
-        f = `piccher/pay/paypaUP13.png`;
-        break;
-      case 4:
-        if (checc == "en") {
-          a = `Locks and passwords.<br>  Often to store something important, you need to ensure the safety of this item or room with panels with passwords. Usually, passwords can be divided into numerical and color passwords. In order not to remember such passwords often hide them under some objects or interior decor.
+                    b = `Сварочный аппарат
+          <br>  Незаменимый инструмент для строительства гусениц и подвески, а также в повседневной жизни механика. 
+          <br>   <img src="piccher/pay/weld.webp" class="pictin" >
+         Инструмент создаёт меж пространственный сдвиг, телепортирующий прихваченную часть в точку, в которой атомы и молекулы, кристаллической или аморфной среды соединяются между собой, образуя единую структуру.
+          <br>  Помимо создания жесткого сцепления между соседними деталями, сварочный аппарат используется для соединения и переноса объектов. Сложные предметы, являющиеся ключами можно устанавливать в созданные для них разъёмы и тем самым активировать что-либо. `;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP13.png`;
+                f = `piccher/pay/paypaUP13.png`;
+                break;
+            case 3:
+                if (checc == "en") {
+                    a = `Potato Cannon
+          <br>  Ranged weapons that hit opponents with potato tubers.
+          The kinetic energy of the released potatoes is enough not only to defeat dwarf warriors, but also to cause significant damage to robots. Starch entering the internal mechanisms of robots spoils them and reduces their mobility, and reduces the overall level of destruction from them.
+          <br> Since 690, it has been the official weapon of the Dwarf Union Army. 
+          <br>  In 712, two modifications of the cannon are being created, a shotgun with a deep fryer and an automatic machine gun. The shotgun is irreplaceable at a short distance, at which the accuracy of shooting is much higher, the machine gun has not found popularity and is used mainly for variety or to replace the potato cannon at medium range due to the low repeatability of hits.`;
+                    b = `Hammer 
+          <br>  A universal melee weapon. The hammers that are found in chests all over the world are very ancient. For many years it was believed that each of the numerous hammers was created from a single piece of stone. Now many historians are of the opinion that they originated outside of Nexurt and their true age is from 7000 to 12000 years. Such weapons have incredible strength and quality that they have been passed down from generation to generation for a couple of thousand years in families. Every hammer, since the appearance of azure crystals, has been equipped with the seal of the Gestrag, found in an ancient dwarf ship in the east of Malfarin. The seal binds the owner and his hammer with an unbreakable bond that does not allow losing the hammer. <br> Since 734, seals have been placed on all instruments created on Nexurt. Because of its strength, the hammer is used for pushing and breaking obstacles, activating push buttons, and of course in battles.
+        `;
+                } else {
+                    a = `Картофельная пушка
+          <br>  Оружие дальнего боя, поражающее противников клубнями картофеля.
+          Кинетической энергии выпущенного картофеля хватает не только на поражение гномьих войнов, но и на нанесение существенного урона роботам. Крахмал, попадающий во внутренние механизмы роботов, портит их и снижает их подвижность, и уменьшает общих уровень разрушений от них.
+          <br>  С 690 года является официальным оружием армии Гномьего союза. 
+          <br>  В 712 году создаются две модификации пушки, Дробовик с фритюрницей и автоматический пулемёт. Дробовик незаменим на короткой дистанции, на которой кучность стрельбы намного выше, пулемёт не сыскал популярности и применяется в основном для разнообразия или для замены картофельной пушки на средней дистанции из-за низкой повторяемости попаданий.`;
+                    b = `Молот 
+          <br>  Универсальное орудие ближнего боя. Молоты, которые встречаются в сундуках по всему миру очень древние. Долгие годы считалось, что каждый из многочисленных молотов был создан из одного куска камня. Сейчас многие историки придерживаются мнения об их возникновении вне Нексурта и их истинный возраст от 7000 до 12000 лет. <br>  Такое оружие имеет такие невероятную прочность и качество, что в семьях оно передается из поколения в поколение пару тысяч лет. Каждый молот, со времен появления лазурных кристаллов, был оснащен печатью Гестрага, найденной в древнем гномьем корабле на востоке Мальфарина. Печать связывает владельца и его молот нерушимой связью, не позволяющей потерять молот. <br>  С 734 года печати ставятся на все инструменты, созданные на Нексурте. Из-за своей прочности молот используется для толкания и ломания препятствий, активации нажимных кнопок и конечно же в битвах.
+        `;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP13.png`;
+                f = `piccher/pay/paypaUP13.png`;
+                break;
+            case 4:
+                if (checc == "en") {
+                    a = `Locks and passwords.<br>  Often to store something important, you need to ensure the safety of this item or room with panels with passwords. Usually, passwords can be divided into numerical and color passwords. In order not to remember such passwords often hide them under some objects or interior decor.
         <br>   For example, in the form of colors or the number of objects in chests, where the sequence is read from left to right or from top to bottom.
         <br>  The number of objects can refer to both the order of pressing a button and the number of clicks.
         <br> <img src="piccher/pay/parol.webp" class="pictin" > 
@@ -1240,13 +1318,13 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  Numeric, or as numeric, passwords are entered into certain panels with gray buttons. Where 1 is the top left corner, 9 is the bottom right and 0 is the separate button at the bottom of the middle.
         <br>  In most cases, these panels use two more buttons: enter or approve the light green color and cancel or reset the dark red color.
         It is necessary to enter not too quickly and without sharp push of buttons otherwise the signal will freeze.`;
-          b = `Collected items.<br>  These include gasoline canisters, batteries, water bottles, paint cylinders, glow sticks and components. The items used are: gasoline, batteries, water, and also refers to potatoes instead of a component. In normal circumstances, the potato bucket cannot be taken so easily, and the components do not have their own container. The container with water can not be used either.
+                    b = `Collected items.<br>  These include gasoline canisters, batteries, water bottles, paint cylinders, glow sticks and components. The items used are: gasoline, batteries, water, and also refers to potatoes instead of a component. In normal circumstances, the potato bucket cannot be taken so easily, and the components do not have their own container. The container with water can not be used either.
         <br> <img src="piccher/pay/pred.webp" class="pictin" > 
         There is always a button on the containers or next to them to use their contents.
         <br>  Sometimes you need to load several items into the container, but not all items will be used. If, for example, the generator only needs one battery, and you put more, it only uses one, and the rest will stay in it. In such cases, you need to take the remaining batteries with you.
         <br>  Components are special items that can be found in offices or within warehouses, which can be used as painting items with further input of color passwords. By putting them on the elevator and removing it so that all sensors could see the component, or rather its color.`;
-        } else {
-          a = ` Замки и пароли. <br>  Часто чтобы хранить что-то важное, необходимо обеспечить сохранность этого предмета или помещения с помощью панелей с паролями. Обычно пароли можно разделить на числовые и цветовые. Чтобы не запоминать такие пароль их часто скрывают под какие-то предметы или интерьер декора.
+                } else {
+                    a = ` Замки и пароли. <br>  Часто чтобы хранить что-то важное, необходимо обеспечить сохранность этого предмета или помещения с помощью панелей с паролями. Обычно пароли можно разделить на числовые и цветовые. Чтобы не запоминать такие пароль их часто скрывают под какие-то предметы или интерьер декора.
         <br>  Например, в виде цветов или количества предметов в сундуках, где последовательность считывается слева направо или сверху вниз.
         <br>  Количество предметов может означать как порядок нажатия на определённую кнопку, так и количество нажатий.
         <br> <img src="piccher/pay/parol.webp" class="pictin" >
@@ -1254,115 +1332,115 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         Числовые, или как их ещё называют цифровые, пароли вводятся в определённые панели с кнопками серого цвета. Где 1- верхний левый угол, 9 –правый нижний, а 0 – отдельная кнопка внизу посередине.
         <br>  В большинстве случаев в таких панелях используются ещё две кнопки: ввести или одобрить светло-зелёный цвет и отменить или сбросить темно-красный цвет.
         Вводить необходимо не слишком быстро и без резких нажатий на кнопки иначе сигнал зависнет.`;
-          b = `Собираемые предметы. <br>  К ним относятся канистры с бензином, батарейки, бутылки с водой, баллоны с краской, светящиеся палочки и компоненты. К используемым предметам относятся: бензин, батарейки, вода, а также относится картошка вместо компонента. В обычных условиях ведро картошки нельзя так просто взять, а компоненты не имеют своего контейнера. Контейнер с водой тоже использовать нельзя.
+                    b = `Собираемые предметы. <br>  К ним относятся канистры с бензином, батарейки, бутылки с водой, баллоны с краской, светящиеся палочки и компоненты. К используемым предметам относятся: бензин, батарейки, вода, а также относится картошка вместо компонента. В обычных условиях ведро картошки нельзя так просто взять, а компоненты не имеют своего контейнера. Контейнер с водой тоже использовать нельзя.
         <br> <img src="piccher/pay/pred.webp" class="pictin" > 
         На контейнерах или рядом с ними всегда есть кнопка, с помощью которой осуществляется использование его содержимого.
         <br>  Иногда в контейнер нужно загрузить несколько единиц предметов, но не все предметы будут использованы. Если на пример генератору нужна только одна батарейка, а вы положили больше, то он использует только одну, а остальные останутся лежать в нём. В таких случаях нужно забирать оставшиеся батарейки с собой.
         <br>  Компоненты - особые предметы, которые можно найти в офисах или внутри складов, которые могут использоваться как предметы для покраски с дальнейшим вводом цветовых паролей. Поставив их на лифт и убрав его, чтобы все датчики видели компонент, а точнее его цвет.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP15.png`;
-        f = `piccher/pay/paypaUP15.png`;
-        break;
-      case 5:
-        if (checc == "en") {
-          a = `Searching for clues for a panel with buttons usually used ducks, helmet buckets or other objects that are often found in the world.
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP15.png`;
+                f = `piccher/pay/paypaUP15.png`;
+                break;
+            case 5:
+                if (checc == "en") {
+                    a = `Searching for clues for a panel with buttons usually used ducks, helmet buckets or other objects that are often found in the world.
         <br>  Objects can be hidden, either in a visible place or in a non-obvious place, behind other objects, behind boxes, in boxes, in textures, as part of more complex decor elements.
         <br> <img src="piccher/pay/cpred.webp" class="pictin" >
         The colour of such objects is limited by the colour palette of the paint tool. Sometimes the human eye cannot correctly recognize color, in this case it is possible to reduce for a while the quality, shadows and reflections of the world.
         The location of all hidden objects is limited to the area of the room with panel and adjacent rooms, no more than behind the wall.`;
-          b = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Separation of items in the inventory, often have to use one object, for example, put something on the sensors, if the components can be put one at a time, the canisters, batteries and cylinders with paint should be separated in the inventory using the right mouse button.
+                    b = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Separation of items in the inventory, often have to use one object, for example, put something on the sensors, if the components can be put one at a time, the canisters, batteries and cylinders with paint should be separated in the inventory using the right mouse button.
         <br>  Sensors that respond to mechanics can be activated by an elevator, a common object, or phantom objects discarded from the inventory.
         Some chests often use deceptions, in which one object is in 1-3 lines and the other in 4 lines. Because of this unprepared mechanics take only 1 item without noticing the others in the chest.`;
-        } else {
-          a = `Поиск подсказок для панели с кнопками, обычно используются уточки, ведра с каской или иные объекты, которые часто встречаются в мире.
+                } else {
+                    a = `Поиск подсказок для панели с кнопками, обычно используются уточки, ведра с каской или иные объекты, которые часто встречаются в мире.
         <br>  Предметы могут быть спрятаны, как на видном месте, так и в неочевидном, за другими предметами, за коробками, в коробках, в текстурах, в составе более сложных элементов декора.
         <br> <img src="piccher/pay/cpred.webp" class="pictin" >
         Цвет таких предметов ограничивается цветовой палитрой инструмента покраски. Иногда человеческий глаз не может корректно распознать цвет, в таком случае можно понизить на время качество, теней и отражений мира.
         Расположение всех спрятанных предметов ограничивается зоной комнаты с панелью и прилежащими с ней помещениями, не дальше чем за стеной.`;
-          b = ` Разделение предметов в инвентаре, часто приходится использовать один предмет, например, поставить что-то на сенсоры, если компоненты можно поставить по одному, то канистры, батареи и баллоны с краской нужно разделять в инвентаре используя правую кнопку мыши.
+                    b = ` Разделение предметов в инвентаре, часто приходится использовать один предмет, например, поставить что-то на сенсоры, если компоненты можно поставить по одному, то канистры, батареи и баллоны с краской нужно разделять в инвентаре используя правую кнопку мыши.
         <br> <img src="piccher/pay/sen.webp" class="pictin" > Датчики, реагирующие на механика, можно активировать лифтом, обычным предметом или фантомным предметов, выброшенным из инвентаря.
         В некоторых сундуках часто используются обманки, в которых один предмет находится в 1-3 строках, а другие в 4 строке. Из-за этого неподготовленные механики берут только 1 предмет, не замечая других в сундуке.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP15.png`;
-        f = `piccher/pay/paypaUP15.png`;
-        break;
-      case 6:
-        if (checc == "en") {
-          a = ` Panels consisting of tumblers are the easiest way to close doors. They need to choose the password yourself, either by brute force (4 switchers), or by logic 3x3 or more. <br> <img src="piccher/pay/knp.webp" class="pictin" > Next to these locks are logical closures, which serve as indicators of correct input. `;
-          b = `The color code lock represents a set of sensors of red, blue, yellow and green colors. To activate and enter the color, you need to find the object to be painted. As an item, you can use, for example, a component. 
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP15.png`;
+                f = `piccher/pay/paypaUP15.png`;
+                break;
+            case 6:
+                if (checc == "en") {
+                    a = ` Panels consisting of tumblers are the easiest way to close doors. They need to choose the password yourself, either by brute force (4 switchers), or by logic 3x3 or more. <br> <img src="piccher/pay/knp.webp" class="pictin" > Next to these locks are logical closures, which serve as indicators of correct input. `;
+                    b = `The color code lock represents a set of sensors of red, blue, yellow and green colors. To activate and enter the color, you need to find the object to be painted. As an item, you can use, for example, a component. 
         <br>  By changing the color of the component, you change the crystal structure of the material that the object consists of, so that it can be used to enter passwords as a key card.
         <br>  To paint an object, first you need to put it on the elevator, remove the elevator and repaint the component in the necessary colors according to a certain sequence that is necessary to unlock the lock.
         Such algorithms in the form of passwords can be hidden in chests or as a decorative element.`;
-        } else {
-          a = ` Панели, состоящие из тумблеров это самый простой способ закрытия дверей. К ним нужно подобрать пароль самому, либо перебором (4 тумблера), либо по логике 3x3 или более. <br> <img src="piccher/pay/knp.webp" class="pictin" > Рядом с такими замками находятся логические затворы, которые служат индикаторами правильности ввода.`;
-          b = `Кодовый цветовой замок, представляет набор сенсоров красного, синего, жёлтого и зелёного цвета. Для активации и ввода цвета необходимо найти окрашиваемый предмет. В качестве предмета можно использовать, например компонент. 
+                } else {
+                    a = ` Панели, состоящие из тумблеров это самый простой способ закрытия дверей. К ним нужно подобрать пароль самому, либо перебором (4 тумблера), либо по логике 3x3 или более. <br> <img src="piccher/pay/knp.webp" class="pictin" > Рядом с такими замками находятся логические затворы, которые служат индикаторами правильности ввода.`;
+                    b = `Кодовый цветовой замок, представляет набор сенсоров красного, синего, жёлтого и зелёного цвета. Для активации и ввода цвета необходимо найти окрашиваемый предмет. В качестве предмета можно использовать, например компонент. 
         <br>  Меняя цвет компонента, вы изменяете кристаллическую структуру материала, из которого состоит предмет, вследствие чего он может использоваться для ввода паролей в качестве ключ карты.
         <br>  Для покраски предмета, для начала его необходимо поставить на лифт, убрать лифт и перекрашивать компонент в необходимые цвета по определённой последовательности, которая необходима для отпирания замка.
         Такие алгоритмы в виде паролей могут быть спрятаны в сундуках или в качестве элемента декора.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP15.png`;
-        f = `piccher/pay/paypaUP14.png`;
-        break;
-      case 7:
-        if (checc == "en") {
-          a = `Processor of components into batteries.
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP15.png`;
+                f = `piccher/pay/paypaUP14.png`;
+                break;
+            case 7:
+                if (checc == "en") {
+                    a = `Processor of components into batteries.
         <br>  Such devices were popular long before the invention of the master bot, they convert a complex component into a capsule for storing energy, that is, into a battery.
         <br>  The principle of operation is to disassemble the components into their component parts, because they can make almost any object, if there is enough engineering and technical knowledge and, of course, suitable equipment.
         <br>  The craft bot has completely replaced such complex and dimensional installations in different laboratories. 
         To start such a device, it is necessary to use an elevator to load the workspace components and to start the installation by placing it in a special area next to the table.
         Note If the device does not work correctly, you can use one component several times to create batteries.`;
-          b = `Old FT12 terminal
+                    b = `Old FT12 terminal
         <br>  To protect the data, a locking system is used with a secret object, which must be placed in the holes on the right side.
         Each terminal has its own key item.
         <br>  Before placing the items, they must be separated in the inventory and inserted one item at a time into the box. 
         Each recorded message has its own weight, for example, if you place one item in any cell, only the first entry will be opened, the rest of the data will be accessed with the addition of the following items.The second entry is two items, the next 3 and so on.`;
-        } else {
-          a = `Переработчик компонентов в батареи.
+                } else {
+                    a = `Переработчик компонентов в батареи.
         <br>  Такие аппараты были популярны задолго до изобретения бота мастера, они преобразовывают сложный компонент в капсулу для хранения энергии, то есть в батарейку.
         <br>  Принцип работы заключается в разборе на составные части компонентов, ведь и них можно сделать практически любой предмет, если хватит инженерных и технических знаний и, конечно же, подходящего оборудования.
         <br>  Крафт бот полностью заменил такие сложные и габаритные установки в разных лабораториях. 
         Для запуска такого устройства необходимо использовать лифт для загрузки компонентов рабочую область и для запуска установки поставив его в специальную область, рядом со столом.
         Примечание если, устройство работает не правильно, вы можете использовать один компонент по несколько раз, для создания батареек.`;
-          b = `Старый терминал FT12
+                    b = `Старый терминал FT12
         <br>  Для защиты данных используется система блокировки с помощью секретного предмета, который необходимо разместить в отверстиях справа.
         У каждого терминала есть свой ключ предмет.
         Перед размещением предметов их необходимо разделить в инвентаре и вставлять по одному предмету в ячейку. 
         <br>  Каждое записанное сообщение имеет свой вес, например если в любую ячейку поместить один предмет, то будет открываться только первая запись, к остальным данным доступ будет предоставляться с добавлением следующих предметов.Вторая запись два предмета, следующая 3 и т.д.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP14.png`;
-        f = `piccher/pay/paypaUP14.png`;
-        break;
-      case 8:
-        if (checc == "en") {
-          a = ` Items in the mechanics inventory. Each mechanic has a special backpack with the function of scaling and storing items in it. 
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP14.png`;
+                f = `piccher/pay/paypaUP14.png`;
+                break;
+            case 8:
+                if (checc == "en") {
+                    a = ` Items in the mechanics inventory. Each mechanic has a special backpack with the function of scaling and storing items in it. 
             <br>  Due to the complexity of arranging items, the base backpack can hold only 30 different items, or rather cells for these items, each such cell is able to hold only a certain number of items, depending on the complexity of their storage. For example, large objects are stored only one at a time, and small blocks up to 256. This aspect must be taken into account when planning a trip. Also with a quick access belt that can hold up to 10 items.
             <br><img src="piccher/pay/sens.webp" class="pictin" > If a mechanic wants to just get rid of an item, he can just drag it out of the inventory. The discarded item is in a phantom state, in this form stored objects in your inventory. 
             <br>  This shape of the object is preserved due to the continued impact of your backpack on it, in this state the object weighs nothing, but is able to be directed by gravitational forces and distort the light streams passing through its volume. The phantom object is ability to interrupt light rays is very useful for activating some small sensors and sensors that can respond to mechanics.`;
-          b = ` Modifications for Rafik. <br>  There are two types of modifications for rafiq, external and internal. The external ones need to be found and connected, the internal ones need to be unlocked using complex commands. There are 6 modifications for the Rafiq of the second version, they are supported by the third version. As you know, the functionality of modifications is auxiliary and is designed to simplify interaction with it, they are also often called auxiliary skills. <br>  Skills are quite expensive items or programs that are often kept behind closed doors from theft or breakage. <br>  Any beginner without special skills can install an improvement.`;
-        } else {
-          a = ` Предметы в инвентаре механика. Каждый механик имеет специальный рюкзак с функцией масштабирования и сохранения предметов в нём. 
+                    b = ` Modifications for Rafik. <br>  There are two types of modifications for rafiq, external and internal. The external ones need to be found and connected, the internal ones need to be unlocked using complex commands. There are 6 modifications for the Rafiq of the second version, they are supported by the third version. As you know, the functionality of modifications is auxiliary and is designed to simplify interaction with it, they are also often called auxiliary skills. <br>  Skills are quite expensive items or programs that are often kept behind closed doors from theft or breakage. <br>  Any beginner without special skills can install an improvement.`;
+                } else {
+                    a = ` Предметы в инвентаре механика. Каждый механик имеет специальный рюкзак с функцией масштабирования и сохранения предметов в нём. 
             <br>  Из-за сложности компоновки предметов, базовый рюкзак способен вмещать только 30 разных предметов, а точнее ячеек под эти предметы, каждая такая ячейка способна вмещать только определённое количество предметов, зависящее от сложности их хранении. Например, крупные объекты хранятся только по одному, а маленькие блоки до 256. Этот аспект необходимо учитывать при планировании путешествия. Также и с ремнём быстрого доступа, который вмещает до 10 предметов.
             <br> <img src="piccher/pay/sens.webp" class="pictin" > Если механику захочется просто избавиться от предмета, то он может просто перетащить его за границы инвентаря. Выброшенный предмет находится в состоянии фантома, в такой форме хранятся предметы в вашем инвентаре. 
             <br>  Данная форма предмета сохраняется из-за продолжающегося воздействия вашего рюкзака на него, в таком состоянии предмет ничего не весит, но способен направляться гравитационными силами и искажать световые потоки, проходящие через его объём. Способность фантомного предмета прерывать лучи света, очень полезно для активации некоторых маленьких датчиков и сенсоров, которые могут реагировать на механиков.`;
-          b = ` Модификации для Рафика. <br>  Модификации для рафика бывают двух видов, внешние и внутренние. Внешние надо найти и подключить, внутренние разблокировать с помощью сложных команд. Для Рафика второй версии существует 6 модификаций, они поддерживаются третьей версией. Как известно, функционал модификаций является вспомогательным и предназначен для упрощения взаимодействия с ним, также их часто наывают вспомогательными умениями. <br>  Умения это довольно дорогие предметы или программы, которые часто хранят за закрытыми дверями от кражи или поломки. <br>  Установить улучшение может любой новичок без особых навыков.`;
-        }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP14.png`;
-        f = `piccher/pay/paypaUP14.png`;
-        break;
-      case 9:
-        if (checc == "en") {
-          a = ``;
-          b = ` Sound lock
+                    b = ` Модификации для Рафика. <br>  Модификации для рафика бывают двух видов, внешние и внутренние. Внешние надо найти и подключить, внутренние разблокировать с помощью сложных команд. Для Рафика второй версии существует 6 модификаций, они поддерживаются третьей версией. Как известно, функционал модификаций является вспомогательным и предназначен для упрощения взаимодействия с ним, также их часто наывают вспомогательными умениями. <br>  Умения это довольно дорогие предметы или программы, которые часто хранят за закрытыми дверями от кражи или поломки. <br>  Установить улучшение может любой новичок без особых навыков.`;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP14.png`;
+                f = `piccher/pay/paypaUP14.png`;
+                break;
+            case 9:
+                if (checc == "en") {
+                    a = ``;
+                    b = ` Sound lock
             A system based on the reproduction of the order of sound pulses. <br> Quite simple and 
             a reliable way to protect something. Besides the fact that you need to know the melody containing up to 6 
             It is also necessary to observe the time between the pulses and their duration.
@@ -1372,9 +1450,9 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             the castle, just get tired of his noise and he himself will want to get away from him. The truth is the person who 
             knows the password, too, will change his mind to open it because of the inaccuracy and inconvenience of entering. 
             <br>  To open the lock, you need to press a single button to the beat of the melody.`;
-        } else {
-          a = ``;
-          b = ` Звуковой замок
+                } else {
+                    a = ``;
+                    b = ` Звуковой замок
             Система основанная на воспроизведении порядка звуковых импульсов. <br>  Довольно простой и 
             надёжный способ защиты чего либо. Помимо того, что нужно знать мелодию содержащую до 6 
             импульсов, также необходимо соблюсти время между импульсами и их продолжительность.
@@ -1384,659 +1462,671 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             замок, просто надоест его шум и он сам захочет уйти от него подальше. Правда человек, который 
             знает пароль, тоже передумает открывать его из-за некорректности и неудобства ввода. 
             <br>  Для открытия замка необходимо нажимать одну единственную кнопку в такт мелодии.`;
+                }
+                c = `piccher/pay/paypDaf.webp`;
+                d = `piccher/pay/paypDaf.webp`;
+                e = `piccher/pay/paypaUP14.png`;
+                f = `piccher/pay/paypaUP14.png`;
+                break;
+            default:
+                a = `-(oOo)/`;
+                b = `-(o_o)/`;
+                c = ``;
+                d = ``;
+                e = ``;
+                f = ``;
+                break;
         }
-        c = `piccher/pay/paypDaf.webp`;
-        d = `piccher/pay/paypDaf.webp`;
-        e = `piccher/pay/paypaUP14.png`;
-        f = `piccher/pay/paypaUP14.png`;
-        break;
-      default:
-        a = `-(oOo)/`;
-        b = `-(o_o)/`;
-        c = ``;
-        d = ``;
-        e = ``;
-        f = ``;
-        break;
-    }
 
 
-    if (str2 != 0) {
-      document.getElementById("List2_2n+1").innerHTML = 2 * str2;
-      document.getElementById("secPict").style.display = 'none';
-    } else {
-      document.getElementById("List2_2n+1").innerHTML = "";
-      document.getElementById("secPict").style.display = '';
-      Guide_pic();
-    }
-
-    document.getElementById("List2_2n+2").innerHTML = 2 * str2 + 1;
-    document.getElementById("columT2_1").innerHTML = a;
-    document.getElementById("columT2_2").innerHTML = b;
-    document.getElementById("columT2_3").src = c;
-    document.getElementById("columT2_4").src = d;
-    document.getElementById("columT2_5").src = e;
-    document.getElementById("columT2_6").src = f;
-
-    gh = 2 * str2 + 1;
-    if (booolSA_G[gh] == true) {
-      document.getElementById("sec3").style.display = '';
-    } else {
-      document.getElementById("sec3").style.display = 'none';
-    }
-
-    gh = 2 * str2;
-    if (booolSA_G[gh] == true) {
-      document.getElementById("sec4").style.display = '';
-    } else {
-      document.getElementById("sec4").style.display = 'none';
-    }
-  }
-
-  function HColor() {
-    if (coling) {
-      coling = false;
-      document.getElementById("rgbC1").style.display = 'none';
-      document.getElementById("rgbC2").style.display = 'none';
-    } else {
-      coling = true;
-      document.getElementById("rgbC1").style.display = '';
-      document.getElementById("rgbC2").style.display = '';
-    }
-  }
-
-  function HC1() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `1`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC2() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `2`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC3() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `3`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC4() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `4`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC5() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `5`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC6() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `6`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC7() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `7`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC8() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `8`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function delling() {
-    document.getElementById("col1_1").style.background = `white`;
-    document.getElementById("col2_1").style.background = `white`;
-    document.getElementById("col3_1").style.background = `white`;
-    document.getElementById("col4_1").style.background = `white`;
-    document.getElementById("col5_1").style.background = `white`;
-    document.getElementById("col6_1").style.background = `white`;
-    document.getElementById("col7_1").style.background = `white`;
-    document.getElementById("col8_1").style.background = `white`;
-    document.getElementById("col9_1").style.background = `white`;
-    col0 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  }
-  function HC9() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `9`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-  function HC0() {
-    let a = document.getElementById("Ytu").value;
-    a = a + `0`;
-    document.getElementById("Ytu").value = a;
-    if (a.length > 8) {
-      scr1SA();
-    }
-  }
-
-  function colP(NC) {
-    switch (NC) {
-      case 1:
-        ci = `red`;
-        break;
-      case 2:
-        ci = `blue`;
-        break;
-      case 3:
-        ci = `#00ff00`;
-        break;
-      case 4:
-        ci = `yellow`;
-        break;
-      case 5:
-        ci = `#686868`;
-        break;
-      case 6:
-        ci = `#ff00fb`;
-        break;
-      case 7:
-        ci = `#00fffb`;
-        break;
-      case 8:
-        ci = `#ff8400`;
-        break;
-      case 9:
-        ci = `black`;
-        break;
-      default:
-        ci = `white`;
-    }
-    document.getElementById("Ytu").value = col0;
-    return ci;
-  }
-
-  function colP1() {
-    col0[0]++;
-    if (col0[0] > 9) {
-      col0[0] = 0;
-    }
-
-    ci = colP(col0[0]);
-    document.getElementById("col1_1").style.background = ci;
-  }
-  function colP2() {
-    col0[1]++;
-    if (col0[1] > 9) {
-      col0[1] = 0;
-    }
-
-    ci = colP(col0[1]);
-    document.getElementById("col2_1").style.background = ci;
-  }
-  function colP3() {
-    col0[2]++;
-    if (col0[2] > 9) {
-      col0[2] = 0;
-    }
-
-    ci = colP(col0[2]);
-    document.getElementById("col3_1").style.background = ci;
-  }
-  function colP4() {
-    col0[3]++;
-    if (col0[3] > 9) {
-      col0[3] = 0;
-    }
-
-    ci = colP(col0[3]);
-    document.getElementById("col4_1").style.background = ci;
-  }
-  function colP5() {
-    col0[4]++;
-    if (col0[4] > 9) {
-      col0[4] = 0;
-    }
-
-    ci = colP(col0[4]);
-    document.getElementById("col5_1").style.background = ci;
-  }
-  function colP6() {
-    col0[5]++;
-    if (col0[5] > 9) {
-      col0[5] = 0;
-    }
-
-    ci = colP(col0[5]);
-    document.getElementById("col6_1").style.background = ci;
-  }
-  function colP7() {
-    col0[6]++;
-    if (col0[6] > 9) {
-      col0[6] = 0;
-    }
-
-    ci = colP(col0[6]);
-    document.getElementById("col7_1").style.background = ci;
-  }
-
-  // if (time.getMonth() > 4) {
-  //   if (time.getDate() > 6) {
-  //     window.location = "https://scrappiy.github.io/MessageADS/";
-  //     localStorage.clear();
-  //     sessionStorage.clear();
-  //   }
-  // }
-
-  function colP8() {
-    col0[7]++;
-    if (col0[7] > 9) {
-      col0[7] = 0;
-    }
-
-    ci = colP(col0[7]);
-    document.getElementById("col8_1").style.background = ci;
-  }
-
-  function colP9() {
-    col0[8]++;
-    if (col0[8] > 9) {
-      col0[8] = 0;
-    }
-
-    ci = colP(col0[8]);
-    document.getElementById("col9_1").style.background = ci;
-  }
-
-  function Mont(b_mont) {
-    let a = document.getElementById("monol").innerHTML;
-    if (checc == "ru") {
-      if (ci == ``) {
-        ci = `Дункан`;
-      }
-    } else {
-      if (ci == ``) {
-        ci = `Duncan`;
-      }
-    }
-
-    b_mont = "< " + ci + " > :" + b_mont;
-    a = a + b_mont;
-    a = a + `<br>______________________________________________<br>`;
-    document.getElementById("monol").innerHTML = a;
-    ci = ``;
-  }
-
-  function scr1SA() {
-    //lang();
-    let a = document.getElementById("Ytu").value;
-    let au = false, ta = false, mont = false;
-    let b_au = "", b_ta = "", b_mont = "";
-    let pasvord = "";
-    ci = "";
-
-    switch (a) {
-      case "0,1,0,4,9,2,0,3,0":
-      case "010492030":
-        au = true;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/rafic-en.mp3`;
-          b_ta = `The basic text of the greeting of the portable handbook Rafik 3.`;
-          b_mont = `An interesting and very expensive book for me, it came to me from my grandfather, who was the chief engineer of the dwarf colony management department on the planet Casper, who received it from an unknown addressee during his work. He told me that this device was stolen from his great-grandfather Balenvur Muntagoris many years ago. The main object that provides work on deciphering different types of information is called the "Eye of Angnor", an artifact left after the war with the giants, able to look into the fabric of time. It's a pity I didn't understand exactly how this complex device works, but it may be useful to me.`;
+        if (str2 != 0) {
+            document.getElementById("List2_2n+1").innerHTML = 2 * str2;
+            document.getElementById("secPict").style.display = 'none';
         } else {
-          b_au = `audio/ru/rafic-ru.mp3`;
-          b_ta = `Базовый текст приветствия портативного справочника Рафик 3.`;
-          b_mont = `Интересная и очень дорогая для меня книга, она досталась мне от моего деда, который был главным инженером ведомства управления колонии дворфов на планете Каспер, получившего её от неизвестного адресата, во время своей работы. Он рассказывал мне, что это устройство много лет назад, было украдено у его прадеда Баленвура Мунтагориса. Главный предмет, обеспечивающий работу по расшифровке разного типа информации называется " Глаз Ангнора", артефакт оставшийся после войны с великанами, способный заглянуть в ткань времени. Жаль я не понял как именно работает это сложное устройство, но оно может мне пригодиться.`;
-        }
-        break;
-      case "17862":
-        au = true;
-        ta = false;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/vnuk.mp3`;
-          b_ta = ``;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vnuk.mp3`;
-          b_ta = ``;
-          b_mont = ``;
-        }
-        break;
-      case "1,1,2,1,0,1,8,1,8":
-      case "112101818":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/signs.mp3`;
-          b_ta = ``;
-          b_mont = `It's strange, the alarm system around the perimeter of the house activated itself, I haven't used it for a long time, I need to turn it off, but I forgot where the 5 buttons are, and also take a couple of cans of gasoline from the garage for my car.`;
-        } else {
-          b_au = `audio/ru/signs.mp3`;
-          b_ta = ``;
-          b_mont = `Странно, сигнализация по периметру дома активировалась сама, давно я ей не пользовался, надо её отключить, но что-то забыл где находятся 5 кнопок, а также взять из гаража пару канистр с бензином для моей машины.`;
+            document.getElementById("List2_2n+1").innerHTML = "";
+            document.getElementById("secPict").style.display = '';
+            Guide_pic();
         }
 
-        booolSA_G[2] = true;
-        booolSA_G[3] = true;
-        booolSA_G[5] = true;
-        booolSA_G[8] = true;
-        booolSA_G[9] = true;
-        booolSA_G[10] = true;
-        booolSA_G[11] = true;
-        booolSA_G[13] = true;
-        break;
-      case "8,0,6,5,0,0,3,0,8":
-      case "806500308":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/mechta.mp3`;
-          b_ta = ``;
-          b_mont = `If everything goes according to plan, then by lunchtime, I will arrive at the factory. When I complete Karas's assignment, I will definitely ask for a promotion and transfer to the industrial equipment building, I have had enough of unscheduled trips to remote parts of the continent and all sorts of incomprehensible tasks.`;
+        document.getElementById("List2_2n+2").innerHTML = 2 * str2 + 1;
+        document.getElementById("columT2_1").innerHTML = a;
+        document.getElementById("columT2_2").innerHTML = b;
+        document.getElementById("columT2_3").src = c;
+        document.getElementById("columT2_4").src = d;
+        document.getElementById("columT2_5").src = e;
+        document.getElementById("columT2_6").src = f;
+
+        gh = 2 * str2 + 1;
+        if (booolSA_G[gh] == true) {
+            document.getElementById("sec3").style.display = '';
         } else {
-          b_au = `audio/ru/mechta.mp3`;
-          b_ta = ``;
-          b_mont = `Если всё пойдёт по плану, то уже к обеду, я приеду на завод. Когда выполню поручение Корася, я точно попрошу повышения и переведусь в корпус промышленного оборудования, хватит с меня внеплановых поездок в отдалённые концы континента и всяких непонятных заданий.`;
+            document.getElementById("sec3").style.display = 'none';
         }
-        break;
-      case "15151530":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/pir.mp3`;
-          b_ta = ``;
-          b_mont = `Apple pies! I don't even know what is better to do, to fulfill the boss's instructions or to wait for a demotion, eh, I have to go to the factory!`;
+
+        gh = 2 * str2;
+        if (booolSA_G[gh] == true) {
+            document.getElementById("sec4").style.display = '';
         } else {
-          b_au = `audio/ru/pir.mp3`;
-          b_ta = ``;
-          b_mont = `Яблочные пироги! Даже не знаю, что лучше сделать, выполнить поручение босса или ждать понижение в должности, эх, придётся ехать на завод!`;
+            document.getElementById("sec4").style.display = 'none';
         }
-        break;
-      case "6,6,6,2,8,6,6,2,6":
-      case "666286626":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/most.mp3`;
-          b_ta = ``;
-          b_mont = `The infection!!! the road was closed, it seems only yesterday the bridge was opened. Somewhere here was a key component and a spray gun to it, although I remember for sure that I have the same remotes stored in my basement.`;
+    }
+
+    function HColor() {
+        if (coling) {
+            coling = false;
+            document.getElementById("rgbC1").style.display = 'none';
+            document.getElementById("rgbC2").style.display = 'none';
         } else {
-          b_au = `audio/ru/most.mp3`;
-          b_ta = ``;
-          b_mont = `Зараза!!! дорогу закрыли, вроде только вчера мост был открыт. Где-то здесь лежал ключ-компонент и краскопульт к нему, хотяя точно помню, что у меня в подвале хранятся такие же пульты.`;
+            coling = true;
+            document.getElementById("rgbC1").style.display = '';
+            document.getElementById("rgbC2").style.display = '';
         }
-        break;
-      case "8,3,8,8,3,8,2,2,2":
-      case "838838222":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/tuto.mp3`;
-          b_ta = ``;
-          b_mont = `It's strange, it looks like I'm wandering through the old dwarf ruins of Skul'daf. The last thing I remember is coming home tired. It's probably all my dream. It wouldn't hurt for me to remember a little how and what the engineers of the military gnome division of space do before returning to work. In principle, you can skip the first part and go to the second part, as far as I remember there were gates in these ruins, and at the end of the corridor there is a button that opens them if I get bored.`;
+    }
+
+    function HC1() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `1`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC2() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `2`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC3() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `3`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC4() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `4`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC5() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `5`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC6() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `6`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC7() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `7`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC8() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `8`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function delling() {
+        document.getElementById("col1_1").style.background = `white`;
+        document.getElementById("col2_1").style.background = `white`;
+        document.getElementById("col3_1").style.background = `white`;
+        document.getElementById("col4_1").style.background = `white`;
+        document.getElementById("col5_1").style.background = `white`;
+        document.getElementById("col6_1").style.background = `white`;
+        document.getElementById("col7_1").style.background = `white`;
+        document.getElementById("col8_1").style.background = `white`;
+        document.getElementById("col9_1").style.background = `white`;
+        col0 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    }
+    function HC9() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `9`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+    function HC0() {
+        let a = document.getElementById("Ytu").value;
+        a = a + `0`;
+        document.getElementById("Ytu").value = a;
+        if (a.length > 8) {
+            scr1SA();
+        }
+    }
+
+    function colP(NC) {
+        switch (NC) {
+            case 1:
+                ci = `red`;
+                break;
+            case 2:
+                ci = `blue`;
+                break;
+            case 3:
+                ci = `#00ff00`;
+                break;
+            case 4:
+                ci = `yellow`;
+                break;
+            case 5:
+                ci = `#686868`;
+                break;
+            case 6:
+                ci = `#ff00fb`;
+                break;
+            case 7:
+                ci = `#00fffb`;
+                break;
+            case 8:
+                ci = `#ff8400`;
+                break;
+            case 9:
+                ci = `black`;
+                break;
+            default:
+                ci = `white`;
+        }
+        document.getElementById("Ytu").value = col0;
+        return ci;
+    }
+
+    function colP1() {
+        col0[0]++;
+        if (col0[0] > 9) {
+            col0[0] = 0;
+        }
+
+        ci = colP(col0[0]);
+        document.getElementById("col1_1").style.background = ci;
+    }
+    function colP2() {
+        col0[1]++;
+        if (col0[1] > 9) {
+            col0[1] = 0;
+        }
+
+        ci = colP(col0[1]);
+        document.getElementById("col2_1").style.background = ci;
+    }
+    function colP3() {
+        col0[2]++;
+        if (col0[2] > 9) {
+            col0[2] = 0;
+        }
+
+        ci = colP(col0[2]);
+        document.getElementById("col3_1").style.background = ci;
+    }
+    function colP4() {
+        col0[3]++;
+        if (col0[3] > 9) {
+            col0[3] = 0;
+        }
+
+        ci = colP(col0[3]);
+        document.getElementById("col4_1").style.background = ci;
+    }
+    function colP5() {
+        col0[4]++;
+        if (col0[4] > 9) {
+            col0[4] = 0;
+        }
+
+        ci = colP(col0[4]);
+        document.getElementById("col5_1").style.background = ci;
+    }
+    function colP6() {
+        col0[5]++;
+        if (col0[5] > 9) {
+            col0[5] = 0;
+        }
+
+        ci = colP(col0[5]);
+        document.getElementById("col6_1").style.background = ci;
+    }
+    function colP7() {
+        col0[6]++;
+        if (col0[6] > 9) {
+            col0[6] = 0;
+        }
+
+        ci = colP(col0[6]);
+        document.getElementById("col7_1").style.background = ci;
+    }
+
+    // if (time.getMonth() > 4) {
+    //   if (time.getDate() > 6) {
+    //     window.location = "https://scrappiy.github.io/MessageADS/";
+    //     localStorage.clear();
+    //     sessionStorage.clear();
+    //   }
+    // }
+
+    function colP8() {
+        col0[7]++;
+        if (col0[7] > 9) {
+            col0[7] = 0;
+        }
+
+        ci = colP(col0[7]);
+        document.getElementById("col8_1").style.background = ci;
+    }
+
+    function colP9() {
+        col0[8]++;
+        if (col0[8] > 9) {
+            col0[8] = 0;
+        }
+
+        ci = colP(col0[8]);
+        document.getElementById("col9_1").style.background = ci;
+    }
+
+    function Mont(b_mont) {
+        let a = document.getElementById("monol").innerHTML;
+        if (checc == "ru") {
+            if (ci == ``) {
+                ci = `Дункан`;
+            }
         } else {
-          b_au = `audio/ru/tuto.mp3`;
-          b_ta = ``;
-          b_mont = `Странно, похоже, что я брожу по старым гномьим руинам Скул’Дафа. Последнее, что я помню, это как я уставший приехал домой. Наверное, это всё мой сон. Мне бы не помешало немного вспомнить, как и чем занимаются инженеры военного гномьего подразделения космоса перед возвращением на работу. В принципе можно пропустить первую часть и перейти ко второй части, насколько я помню в этих руинах были ворота, а в конце коридора есть кнопка открывающая их, если мне станет скучно.`;
+            if (ci == ``) {
+                ci = `Duncan`;
+            }
         }
-        break;
-      case "6,0,1,0,0,0,5,0,3":
-      case "601000503":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/lesz1.mp3`;
-          b_ta = ``;
-          b_mont = `At the end of the next tunnel there will be a Prinfog military camp, where I was trained for admission to MGDS, I hope the commander still remembers me and will help me get to the factory.`;
-        } else {
-          b_au = `audio/ru/lesz1.mp3`;
-          b_ta = ``;
-          b_mont = `В конце следующего туннеля будет военный городок Принфог, там я проходил обучение для поступления ВГПК, надеюсь, командир ещё помнит меня и поможет добраться до завода.`;
-        }
-        break;
-      case "1,1,1,1,0,0,1,0,0":
-      case "111100100":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/vorota.mp3`;
-          b_ta = ``;
-          b_mont = `Well, just look at it, and here the gates are locked. You can, of course, climb over the fence while no one sees, but there is a possibility of triggering protection from uninvited guests. There should definitely be a control point of the forest outpost and the main gate somewhere underground, it remains only to get there and find it.`;
-        } else {
-          b_au = `audio/ru/vorota.mp3`;
-          b_ta = ``;
-          b_mont = `Ну, вы только посмотрите, и здесь ворота заперты. Можно, конечно же, перелезть через забор пока никто не видит, но есть вероятность срабатывания защиты от не прошенных гостей. Под землёй точно где-то должен быть пункт управления лесной заставы и главных ворот, осталось только туда проникнуть и найти его. `;
-        }
-        break;
-      case "0,2,1,7,0,0,1,7,7":
-      case "021700177":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/nobval.mp3`;
-          b_ta = ``;
-          b_mont = `Eh, no one has been here for a long time, probably an earthquake damaged the bridge at my house and got here, it's good that there were no people here. We need to get out as soon as possible and open those gates.`;
-        } else {
-          b_au = `audio/ru/nobval.mp3`;
-          b_ta = ``;
-          b_mont = `Эх, давно здесь никого не было, наверное, землетрясение повредившее мост у моего дома и сюда добралось, хорошо, что здесь не было людей. Надо поскорей выбраться наружу и открыть те ворота.`;
-        }
-        break;
-      case "9,9,2,9,0,0,2,0,2":
-      case "992900202":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/prinfog.mp3`;
-          b_ta = ``;
-          b_mont = `Old Prinfog, -I haven't been here for a long time, all the same closed gates, and a lock, the combination of which no one knows and you need to pick up yourself. - I missed this place!`;
-        } else {
-          b_au = `audio/ru/prinfog.mp3`;
-          b_ta = ``;
-          b_mont = `Старый Принфог,-давно я здесь не был, всё те же закрытые ворота, и замок, комбинацию от которого никто не знает и нужно подбирать самому. -я скучал по этому месту! `;
-        }
-        break;
-      case "1,1,1,3,8,1,5,5,5":
-      case "111381555":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/pustprinfog.mp3`;
-          b_ta = ``;
-          b_mont = `Hmm, the place looks abandoned, probably the military post was closed due to the opening of the northern outpost in Verona. I hope the railway tracks have been preserved and I will be able to get to the factory in time.`;
-        } else {
-          b_au = `audio/ru/pustprinfog.mp3`;
-          b_ta = ``;
-          b_mont = `Хм, место выглядит заброшенным, наверное, военный пункт закрыли в связи с открытием северного аванпоста в Вероне. Надеюсь, железнодорожные пути сохранились и мне удастся вовремя добраться до завода.`;
-        }
-        break;
-      case "4,4,4,0,0,0,4,0,4":
-      case "444000404":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/st16p.mp3`;
-          b_ta = ``;
-          b_mont = `The landslide blocked my path, I need to find another one. I remember how the engineers from the sixteenth station boasted that they had learned to teleport a couple of cows to 24 meters. I wonder if the portal below is still in working order. To begin with, it's worth going down there.`;
-        } else {
-          b_au = `audio/ru/st16p.mp3`;
-          b_ta = ``;
-          b_mont = `Обвал преградил мне путь, надо найти другой. Помню, как инженеры из шестнадцатой станции хвастались, что научились телепортировать пару коров на 24 метра. Интересно остался ли портал внизу в рабочем состоянии. Для начала стоит туда спуститься.`;
-        }
-        break;
-      case "4575751":
-        au = true;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/dn17L.mp3`;
-          b_ta = `Diary of the head of the laboratory of laser optical devices K.R. Nitkov`;
-          b_mont = `The diary of the head of the laboratory at station 17 says that they were able to surpass the result of the engineers at station 16, we need to find a way to get there.`;
-        } else {
-          b_au = `audio/ru/dn17L.mp3`;
-          b_ta = `Дневник заведующего лабораторией лазерных оптических приборов К.Р. Ниткова`;
-          b_mont = `В дневнике заведующего лабораторией в станции 17 сказано, что они смогли превзойти результат инженеров станции 16, надо найти способ туда попасть.`;
-        }
-        break;
-      case "75916339":
-        au = true;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/del1.mp3`;
-          b_ta = `Letter to the head of MGDS - General N.S. Luchkov`;
-          b_mont = `The note says that the progress in creating a working portal to the MGDS case has been completely canceled due to the loss of an important substance that is necessary for focusing the beam. The staff thinks that the presence of the Devil commander in the working area of the portal during the pumping of some crystal affected his cognitive abilities and his presence at the station is dangerous for the health of the staff. They also think that he hid the liquid to focus the crystal`;
-        } else {
-          b_au = `audio/ru/del1.mp3`;
-          b_ta = `Письмо руководителю ВГПК - генералу Н.С. Лучкову`;
-          b_mont = `В письме сказано, что прогресс в создании рабочего портала до корпуса ВГПК полностью аннулирован из-за потери важной субстанции, которая необходима для фокусировки луча. Персонал думает, что нахождение командира Дэлвила в рабочей области портала во время прокачки какого-то кристалла, повлияло на его когнитивные способности и его нахождение на станции опасно для здоровья персонала. Также они думают, что это он спрятал жидкость для фокусировки кристалла.`;
-        }
-        break;
-      case "1562411":
-        au = true;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/del2.mp3`;
-          b_ta = `Decree on the temporary suspension of all works in the complex 17`;
-          b_mont = `Delvil broke the tightness of the pipe of the portal's vacuum chamber, as a result of which all work was suspended to comply with safety rules, and also for some reason opened the cooling system valves, as a result of which the entire building was soaked with some kind of caustic gas, because of which all personnel were evacuated and left to ventilate the station for a month. The entry also says how to activate the portal in the purge mode and I will be able to use it if I just bring energy to it and find a focusing fluid. Let the station staff deal with the consequences of my actions when they come from an unplanned vacation.`;
-        } else {
-          b_au = `audio/ru/del2.mp3`;
-          b_ta = `Указ на временную остановку всех работ в комплексе 17`;
-          b_mont = `Дэлвил нарушил герметичность трубы вакуумной камеры портала, вследствие чего все работы были приостановлены по соблюдению правил безопасности, а также зачем-то открыл вентили системы охлаждения, вследствие чего всё здание пропиталось каким-то едким газом, из-за которого весь персонал эвакуировали и оставили проветриваться станцию на месяц. Также в записи сказано, как активировать портал в режиме продува и у меня будет возможность использовать его, если просто подвести к нему энергию и найти фокусирующую жидкость. С последствиями моих действий пусть разбирается персонал станции, когда придет из незапланированного отпуска.`;
-        }
-        break;
-      case "0,6,6,0,0,6,6,0,6":
-      case "066006606":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/vvs.mp3`;
-          b_ta = ``;
-          b_mont = `When I was climbing the stairs, I noticed a destroyed separate tower in the window, presumably for fuel purification. It's probably worth looking into it, but before that it's better to put important things in the chest so as not to lose them.`;
-        } else {
-          b_au = `audio/ru/vvs.mp3`;
-          b_ta = ``;
-          b_mont = `Когда я поднимался по лестнице, то заметил в окне разрушенную отдельную башню, предположительно для очистки топлива. Наверное, стоит заглянуть в неё, но перед этим лучше сложить в сундук важные вещи, чтобы не потерять их.`;
-        }
-        break;
-      case "8,2,8,5,1,0,5,5,5":
-      case "828510555":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[3] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/conn.webp" class="pictin" > Connector device. The device is a compact object, conveniently lying in the hand. Designed to connect multiple devices to each other. The interactive elements of the environment will have color dots if you hold the device in your hand.
+
+        b_mont = "< " + ci + " > :" + b_mont;
+        a = a + b_mont;
+        a = a + `<br>______________________________________________<br>`;
+        document.getElementById("monol").innerHTML = a;
+        ci = ``;
+    }
+
+    function scr1SA() {
+        //lang();
+        let a = document.getElementById("Ytu").value;
+        let au = false, ta = false, mont = false;
+        let b_au = "", b_ta = "", b_mont = "";
+        let pasvord = "";
+        ci = "";
+        let NumA = [0, 0, 0, 0];
+        let NumB = [0, 0, 0, 0];
+        let nB = 0;
+        let nC = 0;
+
+        switch (a) {
+            case "0,1,0,4,9,2,0,3,0":
+            case "010492030":
+                au = true;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/rafic-en.mp3`;
+                    b_ta = `The basic text of the greeting of the portable handbook Rafik 3.`;
+                    b_mont = `An interesting and very expensive book for me, it came to me from my grandfather, who was the chief engineer of the dwarf colony management department on the planet Casper, who received it from an unknown addressee during his work. He told me that this device was stolen from his great-grandfather Balenvur Muntagoris many years ago. The main object that provides work on deciphering different types of information is called the "Eye of Angnor", an artifact left after the war with the giants, able to look into the fabric of time. It's a pity I didn't understand exactly how this complex device works, but it may be useful to me.`;
+                } else {
+                    b_au = `audio/ru/rafic-ru.mp3`;
+                    b_ta = `Базовый текст приветствия портативного справочника Рафик 3.`;
+                    b_mont = `Интересная и очень дорогая для меня книга, она досталась мне от моего деда, который был главным инженером ведомства управления колонии дворфов на планете Каспер, получившего её от неизвестного адресата, во время своей работы. Он рассказывал мне, что это устройство много лет назад, было украдено у его прадеда Баленвура Мунтагориса. Главный предмет, обеспечивающий работу по расшифровке разного типа информации называется " Глаз Ангнора", артефакт оставшийся после войны с великанами, способный заглянуть в ткань времени. Жаль я не понял как именно работает это сложное устройство, но оно может мне пригодиться.`;
+                }
+                break;
+            case "17862":
+                au = true;
+                ta = false;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/vnuk.mp3`;
+                    b_ta = ``;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vnuk.mp3`;
+                    b_ta = ``;
+                    b_mont = ``;
+                }
+                break;
+            case "1,1,2,1,0,1,8,1,8":
+            case "112101818":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/signs.mp3`;
+                    b_ta = ``;
+                    b_mont = `It's strange, the alarm system around the perimeter of the house activated itself, I haven't used it for a long time, I need to turn it off, but I forgot where the 5 buttons are, and also take a couple of cans of gasoline from the garage for my car.`;
+                } else {
+                    b_au = `audio/ru/signs.mp3`;
+                    b_ta = ``;
+                    b_mont = `Странно, сигнализация по периметру дома активировалась сама, давно я ей не пользовался, надо её отключить, но что-то забыл где находятся 5 кнопок, а также взять из гаража пару канистр с бензином для моей машины.`;
+                }
+
+                booolSA_G[2] = true;
+                booolSA_G[3] = true;
+                booolSA_G[5] = true;
+                booolSA_G[8] = true;
+                booolSA_G[9] = true;
+                booolSA_G[10] = true;
+                booolSA_G[11] = true;
+                booolSA_G[13] = true;
+                break;
+            case "8,0,6,5,0,0,3,0,8":
+            case "806500308":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/mechta.mp3`;
+                    b_ta = ``;
+                    b_mont = `If everything goes according to plan, then by lunchtime, I will arrive at the factory. When I complete Karas's assignment, I will definitely ask for a promotion and transfer to the industrial equipment building, I have had enough of unscheduled trips to remote parts of the continent and all sorts of incomprehensible tasks.`;
+                } else {
+                    b_au = `audio/ru/mechta.mp3`;
+                    b_ta = ``;
+                    b_mont = `Если всё пойдёт по плану, то уже к обеду, я приеду на завод. Когда выполню поручение Корася, я точно попрошу повышения и переведусь в корпус промышленного оборудования, хватит с меня внеплановых поездок в отдалённые концы континента и всяких непонятных заданий.`;
+                }
+                break;
+            case "15151530":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/pir.mp3`;
+                    b_ta = ``;
+                    b_mont = `Apple pies! I don't even know what is better to do, to fulfill the boss's instructions or to wait for a demotion, eh, I have to go to the factory!`;
+                } else {
+                    b_au = `audio/ru/pir.mp3`;
+                    b_ta = ``;
+                    b_mont = `Яблочные пироги! Даже не знаю, что лучше сделать, выполнить поручение босса или ждать понижение в должности, эх, придётся ехать на завод!`;
+                }
+                break;
+            case "6,6,6,2,8,6,6,2,6":
+            case "666286626":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/most.mp3`;
+                    b_ta = ``;
+                    b_mont = `The infection!!! the road was closed, it seems only yesterday the bridge was opened. Somewhere here was a key component and a spray gun to it, although I remember for sure that I have the same remotes stored in my basement.`;
+                } else {
+                    b_au = `audio/ru/most.mp3`;
+                    b_ta = ``;
+                    b_mont = `Зараза!!! дорогу закрыли, вроде только вчера мост был открыт. Где-то здесь лежал ключ-компонент и краскопульт к нему, хотяя точно помню, что у меня в подвале хранятся такие же пульты.`;
+                }
+                break;
+            case "8,3,8,8,3,8,2,2,2":
+            case "838838222":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/tuto.mp3`;
+                    b_ta = ``;
+                    b_mont = `It's strange, it looks like I'm wandering through the old dwarf ruins of Skul'daf. The last thing I remember is coming home tired. It's probably all my dream. It wouldn't hurt for me to remember a little how and what the engineers of the military gnome division of space do before returning to work. In principle, you can skip the first part and go to the second part, as far as I remember there were gates in these ruins, and at the end of the corridor there is a button that opens them if I get bored.`;
+                    alert(`Message from Scrappiy:
+Attention! If it is not convenient for you to press the buttons on the 3 * 3 scoreboard to select the desired color (from white to black) or through the numbers on the keyboard, then enter the command that will be below. <br> This command will open a modification for more convenient input of color passwords. According to the plot (in an honest way), you can find her at the end of the Forest Outpost. It is strongly recommended not to use it before the due time, when it is activated, you will have the opportunity to enter codes both through the 3 * 3 scoreboard and through the numbers on the keyboard.
+          Team: 607302314
+          `);
+                } else {
+                    b_au = `audio/ru/tuto.mp3`;
+                    b_ta = ``;
+                    b_mont = `Странно, похоже, что я брожу по старым гномьим руинам Скул’Дафа. Последнее, что я помню, это как я уставший приехал домой. Наверное, это всё мой сон. Мне бы не помешало немного вспомнить, как и чем занимаются инженеры военного гномьего подразделения космоса перед возвращением на работу. В принципе можно пропустить первую часть и перейти ко второй части, насколько я помню в этих руинах были ворота, а в конце коридора есть кнопка открывающая их, если мне станет скучно.`;
+                    alert(`Сообщение от Scrappiy:
+          Внимание! Если вам не удобно нажимать кнопки на табло 3*3 для выбора необходимого цвета (от белого до чёрного) или через цифры на клавиатуре, то введите команду, которая будет ниже. Данная команда откроет модификацию для более удобного ввода цветовых паролей. По сюжету (честным путём) вы можете найти её в конце Лесной заставы. Настоятельно рекомендуется не использовать её раньше положенного времени, при её активации у вас останется возможность вводить коды как через табло 3*3, так и через цифры на клавиатуре.
+          Команда: 607302314
+          `);
+                }
+                break;
+            case "6,0,1,0,0,0,5,0,3":
+            case "601000503":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/lesz1.mp3`;
+                    b_ta = ``;
+                    b_mont = `At the end of the next tunnel there will be a Prinfog military camp, where I was trained for admission to MGDS, I hope the commander still remembers me and will help me get to the factory.`;
+                } else {
+                    b_au = `audio/ru/lesz1.mp3`;
+                    b_ta = ``;
+                    b_mont = `В конце следующего туннеля будет военный городок Принфог, там я проходил обучение для поступления ВГПК, надеюсь, командир ещё помнит меня и поможет добраться до завода.`;
+                }
+                break;
+            case "1,1,1,1,0,0,1,0,0":
+            case "111100100":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vorota.mp3`;
+                    b_ta = ``;
+                    b_mont = `Well, just look at it, and here the gates are locked. You can, of course, climb over the fence while no one sees, but there is a possibility of triggering protection from uninvited guests. There should definitely be a control point of the forest outpost and the main gate somewhere underground, it remains only to get there and find it.`;
+                } else {
+                    b_au = `audio/ru/vorota.mp3`;
+                    b_ta = ``;
+                    b_mont = `Ну, вы только посмотрите, и здесь ворота заперты. Можно, конечно же, перелезть через забор пока никто не видит, но есть вероятность срабатывания защиты от не прошенных гостей. Под землёй точно где-то должен быть пункт управления лесной заставы и главных ворот, осталось только туда проникнуть и найти его. `;
+                }
+                break;
+            case "0,2,1,7,0,0,1,7,7":
+            case "021700177":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/nobval.mp3`;
+                    b_ta = ``;
+                    b_mont = `Eh, no one has been here for a long time, probably an earthquake damaged the bridge at my house and got here, it's good that there were no people here. We need to get out as soon as possible and open those gates.`;
+                } else {
+                    b_au = `audio/ru/nobval.mp3`;
+                    b_ta = ``;
+                    b_mont = `Эх, давно здесь никого не было, наверное, землетрясение повредившее мост у моего дома и сюда добралось, хорошо, что здесь не было людей. Надо поскорей выбраться наружу и открыть те ворота.`;
+                }
+                break;
+            case "9,9,2,9,0,0,2,0,2":
+            case "992900202":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/prinfog.mp3`;
+                    b_ta = ``;
+                    b_mont = `Old Prinfog, -I haven't been here for a long time, all the same closed gates, and a lock, the combination of which no one knows and you need to pick up yourself. - I missed this place!`;
+                } else {
+                    b_au = `audio/ru/prinfog.mp3`;
+                    b_ta = ``;
+                    b_mont = `Старый Принфог,-давно я здесь не был, всё те же закрытые ворота, и замок, комбинацию от которого никто не знает и нужно подбирать самому. -я скучал по этому месту! `;
+                }
+                break;
+            case "1,1,1,3,8,1,5,5,5":
+            case "111381555":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/pustprinfog.mp3`;
+                    b_ta = ``;
+                    b_mont = `Hmm, the place looks abandoned, probably the military post was closed due to the opening of the northern outpost in Verona. I hope the railway tracks have been preserved and I will be able to get to the factory in time.`;
+                } else {
+                    b_au = `audio/ru/pustprinfog.mp3`;
+                    b_ta = ``;
+                    b_mont = `Хм, место выглядит заброшенным, наверное, военный пункт закрыли в связи с открытием северного аванпоста в Вероне. Надеюсь, железнодорожные пути сохранились и мне удастся вовремя добраться до завода.`;
+                }
+                break;
+            case "4,4,4,0,0,0,4,0,4":
+            case "444000404":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/st16p.mp3`;
+                    b_ta = ``;
+                    b_mont = `The landslide blocked my path, I need to find another one. I remember how the engineers from the sixteenth station boasted that they had learned to teleport a couple of cows to 24 meters. I wonder if the portal below is still in working order. To begin with, it's worth going down there.`;
+                } else {
+                    b_au = `audio/ru/st16p.mp3`;
+                    b_ta = ``;
+                    b_mont = `Обвал преградил мне путь, надо найти другой. Помню, как инженеры из шестнадцатой станции хвастались, что научились телепортировать пару коров на 24 метра. Интересно остался ли портал внизу в рабочем состоянии. Для начала стоит туда спуститься.`;
+                }
+                break;
+            case "4575751":
+                au = true;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/dn17L.mp3`;
+                    b_ta = `Diary of the head of the laboratory of laser optical devices K.R. Nitkov`;
+                    b_mont = `The diary of the head of the laboratory at station 17 says that they were able to surpass the result of the engineers at station 16, we need to find a way to get there.`;
+                } else {
+                    b_au = `audio/ru/dn17L.mp3`;
+                    b_ta = `Дневник заведующего лабораторией лазерных оптических приборов К.Р. Ниткова`;
+                    b_mont = `В дневнике заведующего лабораторией в станции 17 сказано, что они смогли превзойти результат инженеров станции 16, надо найти способ туда попасть.`;
+                }
+                break;
+            case "75916339":
+                au = true;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/del1.mp3`;
+                    b_ta = `Letter to the head of MGDS - General N.S. Luchkov`;
+                    b_mont = `The note says that the progress in creating a working portal to the MGDS case has been completely canceled due to the loss of an important substance that is necessary for focusing the beam. The staff thinks that the presence of the Devil commander in the working area of the portal during the pumping of some crystal affected his cognitive abilities and his presence at the station is dangerous for the health of the staff. They also think that he hid the liquid to focus the crystal`;
+                } else {
+                    b_au = `audio/ru/del1.mp3`;
+                    b_ta = `Письмо руководителю ВГПК - генералу Н.С. Лучкову`;
+                    b_mont = `В письме сказано, что прогресс в создании рабочего портала до корпуса ВГПК полностью аннулирован из-за потери важной субстанции, которая необходима для фокусировки луча. Персонал думает, что нахождение командира Дэлвила в рабочей области портала во время прокачки какого-то кристалла, повлияло на его когнитивные способности и его нахождение на станции опасно для здоровья персонала. Также они думают, что это он спрятал жидкость для фокусировки кристалла.`;
+                }
+                break;
+            case "1562411":
+                au = true;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/del2.mp3`;
+                    b_ta = `Decree on the temporary suspension of all works in the complex 17`;
+                    b_mont = `Delvil broke the tightness of the pipe of the portal's vacuum chamber, as a result of which all work was suspended to comply with safety rules, and also for some reason opened the cooling system valves, as a result of which the entire building was soaked with some kind of caustic gas, because of which all personnel were evacuated and left to ventilate the station for a month. The entry also says how to activate the portal in the purge mode and I will be able to use it if I just bring energy to it and find a focusing fluid. Let the station staff deal with the consequences of my actions when they come from an unplanned vacation.`;
+                } else {
+                    b_au = `audio/ru/del2.mp3`;
+                    b_ta = `Указ на временную остановку всех работ в комплексе 17`;
+                    b_mont = `Дэлвил нарушил герметичность трубы вакуумной камеры портала, вследствие чего все работы были приостановлены по соблюдению правил безопасности, а также зачем-то открыл вентили системы охлаждения, вследствие чего всё здание пропиталось каким-то едким газом, из-за которого весь персонал эвакуировали и оставили проветриваться станцию на месяц. Также в записи сказано, как активировать портал в режиме продува и у меня будет возможность использовать его, если просто подвести к нему энергию и найти фокусирующую жидкость. С последствиями моих действий пусть разбирается персонал станции, когда придет из незапланированного отпуска.`;
+                }
+                break;
+            case "0,6,6,0,0,6,6,0,6":
+            case "066006606":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vvs.mp3`;
+                    b_ta = ``;
+                    b_mont = `When I was climbing the stairs, I noticed a destroyed separate tower in the window, presumably for fuel purification. It's probably worth looking into it, but before that it's better to put important things in the chest so as not to lose them.`;
+                } else {
+                    b_au = `audio/ru/vvs.mp3`;
+                    b_ta = ``;
+                    b_mont = `Когда я поднимался по лестнице, то заметил в окне разрушенную отдельную башню, предположительно для очистки топлива. Наверное, стоит заглянуть в неё, но перед этим лучше сложить в сундук важные вещи, чтобы не потерять их.`;
+                }
+                break;
+            case "8,2,8,5,1,0,5,5,5":
+            case "828510555":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[3] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/conn.webp" class="pictin" > Connector device. The device is a compact object, conveniently lying in the hand. Designed to connect multiple devices to each other. The interactive elements of the environment will have color dots if you hold the device in your hand.
         <br>  To connect one part to another, click and drag one of the points and release when hovering over another point. If successful, a line should appear between the two pieces showing that they are connected. The line will also have small black arrows on it, indicating which part will activate the other. Arrow keys indicate the direction of action. <br>  Buttons, bearings, sensors, lamps, seats and some decorative elements have a unidirectional connection. Logical closures and timers are bidirectional and it is important from which element the connection is made.
            <br>  You can also disconnect connections by grabbing the object tag and dragging it aside.
            <br>  Please note that only parts belonging to a single structure may be joined. You can check this by dragging connections; all invalid connection points will disappear.
             `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/conn.webp" class="pictin" > Устройство соединитель.<br> Устройство представляет собой компактный предмет, удобно лежащий в руке. Предназначен для соединения нескольких устройств между собой. На интерактивных элементах окружения появятся цветные точки, если взять устройство в руку.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/conn.webp" class="pictin" > Устройство соединитель.<br> Устройство представляет собой компактный предмет, удобно лежащий в руке. Предназначен для соединения нескольких устройств между собой. На интерактивных элементах окружения появятся цветные точки, если взять устройство в руку.
           Чтобы соединить одну часть с другой, щелкните и перетащите одну из точек и отпустите при зависании над другой точкой. <br>   Если сделано успешно, между двумя частями должна появиться линия, показывающая, что они связаны. Линия также будет иметь небольшие черные стрелки на нем, указывая, какая часть активирует другую. Стрелки указывают направления воздействия. Кнопки, подшипники, сенсоры, лампы, сиденья и некоторые элементы декора имеют однонаправленное соединение. <br>  Логические затворы и таймеры имеют двунаправленость и важно, от какого элемента ведётся подключение.
           <br>  Также можно разъединять соединения, захватив метку обьекта и перетащив её в сторону.
          Обратите внимание, что могут соединяться только части, принадлежащие одной единой конструкции. <br>  Вы можете проверить это при перетаскивании соединения; все недопустимые точки соединения исчезнут.
             `;
-          b_mont = ``;
-        }
-        break;
-      case "8,7,1,7,8,7,3,7,1":
-      case "871787371":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[2] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/lift.webp" class="pictin" > The elevator is an essential object that every mechanic should have at hand. There are two modifications of the elevator.<br>  1)-is placed only on a certain surface and attached to it.<br>  2)An ordinary elevator - placed on any solid surface, is not placed on suspended surfaces, held on bearings, pistons or springs.
+                    b_mont = ``;
+                }
+                break;
+            case "8,7,1,7,8,7,3,7,1":
+            case "871787371":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[2] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/lift.webp" class="pictin" > The elevator is an essential object that every mechanic should have at hand. There are two modifications of the elevator.<br>  1)-is placed only on a certain surface and attached to it.<br>  2)An ordinary elevator - placed on any solid surface, is not placed on suspended surfaces, held on bearings, pistons or springs.
         <br>  Each elevator is based on an unbreakable connection with its owner, providing remote control of the lift at a distance from the owner. 
           Recent versions of the elevator are equipped with a subquantum stabilizer, which allows you to instantly teleport the delivered elevator to the required point.
           <br>  The lift measures 4x4x2 when placed. The lift can be extended by one unit, up to 22 units in height. Despite its size and expansion, the lift can pass through any static object.
            Any modification of the elevator can be put objects or climbed himself on it for climbing on the hill.
            Because of the connection between the object and its owner, the lift cannot be thrown out of the inventory, only deliberately put it in the chest.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/lift.webp" class="pictin" > Лифт – неотъемлемый предмет, который должен быть у каждого механика под рукой. Существует две модификации лифтa.<br>  1)-ставится только на определённую поверхность и привязывается к ней.<br>  2)обычный лифт – ставящийся на любую цельную поверхность, не ставится на подвесные поверхности, держащиеся на подшипниках, поршнях или пружинах.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/lift.webp" class="pictin" > Лифт – неотъемлемый предмет, который должен быть у каждого механика под рукой. Существует две модификации лифтa.<br>  1)-ставится только на определённую поверхность и привязывается к ней.<br>  2)обычный лифт – ставящийся на любую цельную поверхность, не ставится на подвесные поверхности, держащиеся на подшипниках, поршнях или пружинах.
         <br>  В основе каждого лифта лежит нерушимая связь со своим владельцем, обеспечивающая дистанционный контроль подъёмника на расстоянии от владельца. 
         <br>  Последние версии лифта оснащены субквантовым стабилизатором, позволяющий мгновенно телепортировать поставленный лифт в требуемую точку.
         Подъемник имеет размеры 4x4x2 при размещении. Подъемник может быть расширен на одну единицу, до 22 единиц в высоту. Несмотря на размеры и расширение, Лифт может пройти через любой статичный объект.
         <br>  На любую модификацию лифта можно ставить предметы или забираться самому на него для взбирания на возвышенности.
         Из-за наличия связи между предметом и его владельцем лифт нельзя выбросить из инвентаря, только намеренно убрать его в сундук.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "8,2,8,1,1,1,3,1,8":
-      case "828111318":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[17] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/sens.webp" class="pictin" > Items in the mechanics inventory. Each mechanic has a special backpack with the function of scaling and storing items in it. 
+                    b_mont = ``;
+                }
+                break;
+            case "8,2,8,1,1,1,3,1,8":
+            case "828111318":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[17] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/sens.webp" class="pictin" > Items in the mechanics inventory. Each mechanic has a special backpack with the function of scaling and storing items in it. 
         <br>  Due to the complexity of arranging items, the base backpack can hold only 30 different items, or rather cells for these items, each such cell is able to hold only a certain number of items, depending on the complexity of their storage. For example, large objects are stored only one at a time, and small blocks up to 256. This aspect must be taken into account when planning a trip. Also with a quick access belt that can hold up to 10 items.
         <br>  If a mechanic wants to just get rid of an item, he can just drag it out of the inventory. The discarded item is in a phantom state, in this form stored objects in your inventory. 
         <br>  This shape of the object is preserved due to the continued impact of your backpack on it, in this state the object weighs nothing, but is able to be directed by gravitational forces and distort the light streams passing through its volume. The phantom object is ability to interrupt light rays is very useful for activating some small sensors and sensors that can respond to mechanics.
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/sens.webp" class="pictin" > Предметы в инвентаре механика. Каждый механик имеет специальный рюкзак с функцией масштабирования и сохранения предметов в нём. 
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/sens.webp" class="pictin" > Предметы в инвентаре механика. Каждый механик имеет специальный рюкзак с функцией масштабирования и сохранения предметов в нём. 
         <br>  Из-за сложности компоновки предметов, базовый рюкзак способен вмещать только 30 разных предметов, а точнее ячеек под эти предметы, каждая такая ячейка способна вмещать только определённое количество предметов, зависящее от сложности их хранении. Например, крупные объекты хранятся только по одному, а маленькие блоки до 256. Этот аспект необходимо учитывать при планировании путешествия. Также и с ремнём быстрого доступа, который вмещает до 10 предметов.
         <br>  Если механику захочется просто избавиться от предмета, то он может просто перетащить его за границы инвентаря. Выброшенный предмет находится в состоянии фантома, в такой форме хранятся предметы в вашем инвентаре. 
         <br>  Данная форма предмета сохраняется из-за продолжающегося воздействия вашего рюкзака на него, в таком состоянии предмет ничего не весит, но способен направляться гравитационными силами и искажать световые потоки, проходящие через его объём. Способность фантомного предмета прерывать лучи света, очень полезно для активации некоторых маленьких датчиков и сенсоров, которые могут реагировать на механиков.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "2,2,8,1,8,2,8,1,1":
-      case "228182811":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[9] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/parol.webp" class="pictin" > Locks and passwords. <br>  Often to store something important, you need to ensure the safety of this item or room with panels with passwords. Usually, passwords can be divided into numerical and color passwords. In order not to remember such passwords often hide them under some objects or interior decor.
+                    b_mont = ``;
+                }
+                break;
+            case "2,2,8,1,8,2,8,1,1":
+            case "228182811":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[9] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/parol.webp" class="pictin" > Locks and passwords. <br>  Often to store something important, you need to ensure the safety of this item or room with panels with passwords. Usually, passwords can be divided into numerical and color passwords. In order not to remember such passwords often hide them under some objects or interior decor.
         <br>   For example, in the form of colors or the number of objects in chests, where the sequence is read from left to right or from top to bottom.
         <br>  The number of objects can refer to both the order of pressing a button and the number of clicks.
         Digital passwords use items that cannot exist themselves, such as bearings, pistons, and springs.
@@ -2044,10 +2134,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  In most cases, these panels use two more buttons: enter or approve the light green color and cancel or reset the dark red color.
         It is necessary to enter not too quickly and without sharp push of buttons otherwise the signal will freeze.
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/parol.webp" class="pictin" > Замки и пароли. <br>  Часто чтобы хранить что-то важное, необходимо обеспечить сохранность этого предмета или помещения с помощью панелей с паролями. Обычно пароли можно разделить на числовые и цветовые. Чтобы не запоминать такие пароль их часто скрывают под какие-то предметы или интерьер декора.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/parol.webp" class="pictin" > Замки и пароли. <br>  Часто чтобы хранить что-то важное, необходимо обеспечить сохранность этого предмета или помещения с помощью панелей с паролями. Обычно пароли можно разделить на числовые и цветовые. Чтобы не запоминать такие пароль их часто скрывают под какие-то предметы или интерьер декора.
         <br>  Например, в виде цветов или количества предметов в сундуках, где последовательность считывается слева направо или сверху вниз.
         <br>  Количество предметов может означать как порядок нажатия на определённую кнопку, так и количество нажатий.
         <br>  В качестве цифровых паролей используются предметы которые сами не могут существовать, такие как подшипники, поршни и пружины.
@@ -2055,175 +2145,175 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  В большинстве случаев в таких панелях используются ещё две кнопки: ввести или одобрить светло-зелёный цвет и отменить или сбросить темно-красный цвет.
         Вводить необходимо не слишком быстро и без резких нажатий на кнопки иначе сигнал зависнет.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "2,4,6,2,2,2,9,2,2":
-      case "246222922":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[8] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/pred.webp" class="pictin" > Collected items.<br>  These include gasoline canisters, batteries, water bottles, paint cylinders, glow sticks and components. The items used are: gasoline, batteries, water, and also refers to potatoes instead of a component. In normal circumstances, the potato bucket cannot be taken so easily, and the components do not have their own container. The container with water can not be used either.
+                    b_mont = ``;
+                }
+                break;
+            case "2,4,6,2,2,2,9,2,2":
+            case "246222922":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[8] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/pred.webp" class="pictin" > Collected items.<br>  These include gasoline canisters, batteries, water bottles, paint cylinders, glow sticks and components. The items used are: gasoline, batteries, water, and also refers to potatoes instead of a component. In normal circumstances, the potato bucket cannot be taken so easily, and the components do not have their own container. The container with water can not be used either.
         There is always a button on the containers or next to them to use their contents.
         <br>  Sometimes you need to load several items into the container, but not all items will be used. If, for example, the generator only needs one battery, and you put more, it only uses one, and the rest will stay in it. In such cases, you need to take the remaining batteries with you.
         <br>  Components are special items that can be found in offices or within warehouses, which can be used as painting items with further input of color passwords. By putting them on the elevator and removing it so that all sensors could see the component, or rather its color.
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/pred.webp" class="pictin" > Собираемые предметы. <br>  К ним относятся канистры с бензином, батарейки, бутылки с водой, баллоны с краской, светящиеся палочки и компоненты. К используемым предметам относятся: бензин, батарейки, вода, а также относится картошка вместо компонента. В обычных условиях ведро картошки нельзя так просто взять, а компоненты не имеют своего контейнера. Контейнер с водой тоже использовать нельзя.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/pred.webp" class="pictin" > Собираемые предметы. <br>  К ним относятся канистры с бензином, батарейки, бутылки с водой, баллоны с краской, светящиеся палочки и компоненты. К используемым предметам относятся: бензин, батарейки, вода, а также относится картошка вместо компонента. В обычных условиях ведро картошки нельзя так просто взять, а компоненты не имеют своего контейнера. Контейнер с водой тоже использовать нельзя.
         На контейнерах или рядом с ними всегда есть кнопка, с помощью которой осуществляется использование его содержимого.
         <br>  Иногда в контейнер нужно загрузить несколько единиц предметов, но не все предметы будут использованы. Если на пример генератору нужна только одна батарейка, а вы положили больше, то он использует только одну, а остальные останутся лежать в нём. В таких случаях нужно забирать оставшиеся батарейки с собой.
         <br>  Компоненты - особые предметы, которые можно найти в офисах или внутри складов, которые могут использоваться как предметы для покраски с дальнейшим вводом цветовых паролей. Поставив их на лифт и убрав его, чтобы все датчики видели компонент, а точнее его цвет.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1,4,8,4,4,4,8,4,3":
-      case "148444843":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[5] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/pain.webp" class="pictin" > <br>  Paint tool is used to paint something, such a paint tool can be used to enter passwords or to endow the dyed object with the key property to activate the sensors.
+                    b_mont = ``;
+                }
+                break;
+            case "1,4,8,4,4,4,8,4,3":
+            case "148444843":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[5] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/pain.webp" class="pictin" > <br>  Paint tool is used to paint something, such a paint tool can be used to enter passwords or to endow the dyed object with the key property to activate the sensors.
         <br>  Left mouse colors with selected color. Right mouse removes color from colored objects. Multiple blocks can be colored or colored by dragging and dropping by the appropriate mouse button, like placing or removing multiple blocks at once.
         <br>  To paint something, most often used colors from the second top of the line.
         To change the color, press Q to open the color selection GUI. To close it without selecting a color, press Q or Esc.
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/pain.webp" class="pictin" > <br>  Для покраски чего-либо используется краскопульт, такой инструмент покраски может использоваться для ввода паролей или наделять окрашиваемый предмет свойством ключа для активации сенсоров.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/pain.webp" class="pictin" > <br>  Для покраски чего-либо используется краскопульт, такой инструмент покраски может использоваться для ввода паролей или наделять окрашиваемый предмет свойством ключа для активации сенсоров.
         <br>  Краски левой мыши с выбранным цветом. Правая мышь удаляет цвет из окрашенных объектов. Несколько блоков могут быть окрашены или очищены от цвета путем перетаскивания соответствующей кнопкой мыши, подобно размещению или удалению нескольких блоков одновременно.
         <br>  Для покраски чего либо, чаще всего используются цвета из второй сверху строки.
         Чтобы изменить цвет, нажмите клавишу Q, чтобы открыть графический интерфейс выбора цвета. Чтобы закрыть его без выбора цвета, нажмите Q или Esc.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "9,3,9,3,3,3,1,3,9":
-      case "939333139":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[11] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/cpred.webp" class="pictin" > Searching for clues for a panel with buttons usually used ducks, helmet buckets or other objects that are often found in the world.
+                    b_mont = ``;
+                }
+                break;
+            case "9,3,9,3,3,3,1,3,9":
+            case "939333139":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[11] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/cpred.webp" class="pictin" > Searching for clues for a panel with buttons usually used ducks, helmet buckets or other objects that are often found in the world.
         <br>  Objects can be hidden, either in a visible place or in a non-obvious place, behind other objects, behind boxes, in boxes, in textures, as part of more complex decor elements.
         <br>  The colour of such objects is limited by the colour palette of the paint tool. Sometimes the human eye cannot correctly recognize color, in this case it is possible to reduce for a while the quality, shadows and reflections of the world.
         The location of all hidden objects is limited to the area of the room with panel and adjacent rooms, no more than behind the wall.
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/cpred.webp" class="pictin" > Поиск подсказок для панели с кнопками, обычно используются уточки, ведра с каской или иные объекты, которые часто встречаются в мире.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/cpred.webp" class="pictin" > Поиск подсказок для панели с кнопками, обычно используются уточки, ведра с каской или иные объекты, которые часто встречаются в мире.
         <br>  Предметы могут быть спрятаны, как на видном месте, так и в неочевидном, за другими предметами, за коробками, в коробках, в текстурах, в составе более сложных элементов декора.
         <br>  Цвет таких предметов ограничивается цветовой палитрой инструмента покраски. Иногда человеческий глаз не может корректно распознать цвет, в таком случае можно понизить на время качество, теней и отражений мира.
         Расположение всех спрятанных предметов ограничивается зоной комнаты с панелью и прилежащими с ней помещениями, не дальше чем за стеной.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "8,2,8,9,9,9,3,9,8":
-      case "828999398":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[10] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Separation of items in the inventory, often have to use one object, for example, put something on the sensors, if the components can be put one at a time, the canisters, batteries and cylinders with paint should be separated in the inventory using the right mouse button.
+                    b_mont = ``;
+                }
+                break;
+            case "8,2,8,9,9,9,3,9,8":
+            case "828999398":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[10] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Separation of items in the inventory, often have to use one object, for example, put something on the sensors, if the components can be put one at a time, the canisters, batteries and cylinders with paint should be separated in the inventory using the right mouse button.
         <br>  Sensors that respond to mechanics can be activated by an elevator, a common object, or phantom objects discarded from the inventory.
         Some chests often use deceptions, in which one object is in 1-3 lines and the other in 4 lines. Because of this unprepared mechanics take only 1 item without noticing the others in the chest.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Разделение предметов в инвентаре, часто приходится использовать один предмет, например, поставить что-то на сенсоры, если компоненты можно поставить по одному, то канистры, батареи и баллоны с краской нужно разделять в инвентаре используя правую кнопку мыши.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/sen.webp" class="pictin" > Разделение предметов в инвентаре, часто приходится использовать один предмет, например, поставить что-то на сенсоры, если компоненты можно поставить по одному, то канистры, батареи и баллоны с краской нужно разделять в инвентаре используя правую кнопку мыши.
         <br>  Датчики, реагирующие на механика, можно активировать лифтом, обычным предметом или фантомным предметов, выброшенным из инвентаря.
         В некоторых сундуках часто используются обманки, в которых один предмет находится в 1-3 строках, а другие в 4 строке. Из-за этого неподготовленные механики берут только 1 предмет, не замечая других в сундуке.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "3,1,3,1,3,3,1,1,1":
-      case "313133111":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[13] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = ` <br> <img src="piccher/pay/knp.webp" class="pictin" > Panels consisting of tumblers are the easiest way to close doors. They need to choose the password yourself, either by brute force (4 switchers), or by logic 3x3 or more. Next to these locks are logical closures, which serve as indicators of correct input. `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `<br> <img src="piccher/pay/knp.webp" class="pictin" > Панели, состоящие из тумблеров это самый простой способ закрытия дверей. К ним нужно подобрать пароль самому, либо перебором (4 тумблера), либо по логике 3x3 или более. Рядом с такими замками находятся логические затворы, которые служат индикаторами правильности ввода. `;
-          b_mont = ``;
-        }
-        break;
-      case "8,2,8,2,8,2,3,2,8":
-      case "828282328":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[12] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `The color code lock represents a set of sensors of red, blue, yellow and green colors. To activate and enter the color, you need to find the object to be painted. As an item, you can use, for example, a component. 
+                    b_mont = ``;
+                }
+                break;
+            case "3,1,3,1,3,3,1,1,1":
+            case "313133111":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[13] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ` <br> <img src="piccher/pay/knp.webp" class="pictin" > Panels consisting of tumblers are the easiest way to close doors. They need to choose the password yourself, either by brute force (4 switchers), or by logic 3x3 or more. Next to these locks are logical closures, which serve as indicators of correct input. `;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br> <img src="piccher/pay/knp.webp" class="pictin" > Панели, состоящие из тумблеров это самый простой способ закрытия дверей. К ним нужно подобрать пароль самому, либо перебором (4 тумблера), либо по логике 3x3 или более. Рядом с такими замками находятся логические затворы, которые служат индикаторами правильности ввода. `;
+                    b_mont = ``;
+                }
+                break;
+            case "8,2,8,2,8,2,3,2,8":
+            case "828282328":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[12] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `The color code lock represents a set of sensors of red, blue, yellow and green colors. To activate and enter the color, you need to find the object to be painted. As an item, you can use, for example, a component. 
         <br>  By changing the color of the component, you change the crystal structure of the material that the object consists of, so that it can be used to enter passwords as a key card.
         <br>  To paint an object, first you need to put it on the elevator, remove the elevator and repaint the component in the necessary colors according to a certain sequence that is necessary to unlock the lock.
         Such algorithms in the form of passwords can be hidden in chests or as a decorative element.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Кодовый цветовой замок, представляет набор сенсоров красного, синего, жёлтого и зелёного цвета. Для активации и ввода цвета необходимо найти окрашиваемый предмет. В качестве предмета можно использовать, например компонент. 
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Кодовый цветовой замок, представляет набор сенсоров красного, синего, жёлтого и зелёного цвета. Для активации и ввода цвета необходимо найти окрашиваемый предмет. В качестве предмета можно использовать, например компонент. 
         <br>  Меняя цвет компонента, вы изменяете кристаллическую структуру материала, из которого состоит предмет, вследствие чего он может использоваться для ввода паролей в качестве ключ карты.
         <br>  Для покраски предмета, для начала его необходимо поставить на лифт, убрать лифт и перекрашивать компонент в необходимые цвета по определённой последовательности, которая необходима для отпирания замка.
         Такие алгоритмы в виде паролей могут быть спрятаны в сундуках или в качестве элемента декора.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "7,7,7,0,0,7,1,0,0":
-      case "777007100":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[15] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Processor of components into batteries.
+                    b_mont = ``;
+                }
+                break;
+            case "7,7,7,0,0,7,1,0,0":
+            case "777007100":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[15] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Processor of components into batteries.
         <br>  Such devices were popular long before the invention of the master bot, they convert a complex component into a capsule for storing energy, that is, into a battery.
         <br>  The principle of operation is to disassemble the components into their component parts, because they can make almost any object, if there is enough engineering and technical knowledge and, of course, suitable equipment.
         <br>  The craft bot has completely replaced such complex and dimensional installations in different laboratories. 
         To start such a device, it is necessary to use an elevator to load the workspace components and to start the installation by placing it in a special area next to the table.
         Note If the device does not work correctly, you can use one component several times to create batteries.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Переработчик компонентов в батареи.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Переработчик компонентов в батареи.
         <br>  Такие аппараты были популярны задолго до изобретения бота мастера, они преобразовывают сложный компонент в капсулу для хранения энергии, то есть в батарейку.
         <br>  Принцип работы заключается в разборе на составные части компонентов, ведь и них можно сделать практически любой предмет, если хватит инженерных и технических знаний и, конечно же, подходящего оборудования.
         <br>  Крафт бот полностью заменил такие сложные и габаритные установки в разных лабораториях. 
         Для запуска такого устройства необходимо использовать лифт для загрузки компонентов рабочую область и для запуска установки поставив его в специальную область, рядом со столом.
         Примечание если, устройство работает не правильно, вы можете использовать один компонент по несколько раз, для создания батареек.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "15159015":
-        au = false;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `....
+                    b_mont = ``;
+                }
+                break;
+            case "15159015":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `....
         <br>  December 7.
         <br>  -Corporal Kuzkov U.V. gave a report on conducting a shutdown of all systems of the underground complex "Aspen". In order to power the security system and minimum power consumption of environmental installations, it was decided to leave the backup kicking active until the tremors stop. Access to the lower floors of the complex is impossible because of the possibility of collapse of the corridor slabs. 
         The commander said that the environmentalists should come here in a week to check the ground water treatment system.
@@ -2236,10 +2326,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  ....
         <br>  December 15
         <br>  If any of the environmentalists are reading that post, you need to know that to activate full power, you have to run the generator upstairs. We have the canister hidden on the surface. If you don't have any shovels with you, we left something behind the door under the code lock. I'm not allowed to give out the password so that outsiders won't know, so you figure it out.`;
-          b_mont = `Okay, I need to find some clues as to how to open the compartment below.`;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `….
+                    b_mont = `Okay, I need to find some clues as to how to open the compartment below.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `….
         <br>  7 декабря
         <br>  -капрал Кузьков У.В. предоставил отчёт по проведению отключения всех систем подземного комплекса “Осина”. Для питания системы безопасности и минимального энергопотребления экологических установок, принято решение оставить резервное пинание активным, пока толчки не прекратятся. Доступ к нижним этажам комплекса невозможен из-за возможности обвала перекрытий коридоров. 
         Командир сказал что через неделю сюда должны приехать  экологи, проверить систему очистки грунтовых вод.
@@ -2253,16 +2343,16 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  15 декабря
         Если кто-нибудь из экологов читает ту запись, то вам нужно знать, что для активации полного питания, нужно запустить генератор этажом выше. Канистру мы спрятали на поверхности. Если у вас нет с собой лопат, то мы оставили кое-что за дверью под кодовым замком. Я не имею права сообщать пароль, чтобы посторонние люди не узнали, дальше думайте сами.
         <br>  ...`;
-          b_mont = `Так, мне надо найти какие-нибудь подсказки, как открыть отсек внизу.`;
-        }
-        break;
-      case "1590399":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `  Voldemar Kuzkov's diary.
+                    b_mont = `Так, мне надо найти какие-нибудь подсказки, как открыть отсек внизу.`;
+                }
+                break;
+            case "1590399":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `  Voldemar Kuzkov's diary.
         <br>   ...
         <br>   November 18
         <br>  Again these fools disturb my work, I ask only for one hour of silence.
@@ -2279,10 +2369,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         I will ask the remaining workers not to disturb me and not to distract me, I hope they will understand my request from the first time.
         I warned them that in case of emergency, I will change the password to the door and leave them a clue where the duck stands, at the same time check their intelligence.
         <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `  Дневник Вольдемара Кузькова.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `  Дневник Вольдемара Кузькова.
         <br>   …
         <br>  18 ноября
         <br>  Опять эти дураки мешают мне работать, прошу лишь один час тишины.
@@ -2299,16 +2389,16 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         Попрошу оставшихся рабочих не мешать мне и не отвлекать меня, надеюсь, они с первого раза поймут мою просьбу.
         Я их предупредил, что в экстренной ситуации пароль от двери изменю и оставлю им подсказку, где уточка стоит, заодно проверю их сообразительность.
         <br>  ...`;
-          b_mont = ``;
-        }
-        break;
-      case "1522515":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Record from the report on the management of the complex
+                    b_mont = ``;
+                }
+                break;
+            case "1522515":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Record from the report on the management of the complex
         <br>  ...
         <br>  Record #461:
         <br>  It is not known who came up with the idea of using a white balloon on the surface as a source of alternate fuel, but it is the only way to open the main corridor and access the gate control. About 230 years ago, the service window for introducing the balloon was at ground level, but the village of over two centuries ago has hidden it underground, I don't know where exactly on the surface this window is, but after the backup power goes out, you need to push the balloon into it urgently to access the main functions of the complex.
@@ -2317,10 +2407,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  The ball to activate the station's main power supply is on the left gate tower. This tower used to be controlled from the main computer, but if access is cut off, you'll probably have to breach the integrity of the tower to get the orb. 
         <br>  What genius came up with that?
         <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Запись из отчёта по управлению комплекса
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись из отчёта по управлению комплекса
         <br>  …
         <br>  Запись №461:
         <br>  Неизвестно кто придумал использовать белый шар на поверхности в качестве источника альтернативного топлива, но это единственный способ открыть главный коридор и доступ к управлению воротами. Где-то 230 лет назад, служебное окно для введения шара было на уровне поверхности земли, но сель прошедший более двух веков назад скрыл его под землёй, не знаю, где именно на поверхности находится это окно, но после отключения резервного питания, нужно срочно затолкать в него шар, для доступа к основным функциям комплекса.
@@ -2330,39 +2420,39 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  Какой гений это придумал?
         <br>   …
         `;
-          b_mont = ``;
-        }
-        break;
-      case "122758":
-        au = false;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `  A page from Shundin Kaspar's diary.
+                    b_mont = ``;
+                }
+                break;
+            case "122758":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `  A page from Shundin Kaspar's diary.
         <br>  ...
         <br>  March 14.
         <br>  Finally, it's my last day as captain of the Prinfog, from tomorrow I'm transferring to Degore, it'll be more interesting, no paperwork and the staff are normal, not the handful of idiots who can't fix the door on the lower level in the mine tunnel. As they told me, it's dangerous there, no one has touched it for ten years, it could slam shut, phew, nothing bad can happen, as long as the hands are in the right place. I'll have to tell my receiver later about the stone dwarf ruins on the other side of the bridge. My workers have camouflaged the descent down, I'll have to get a hammer and show him.
         <br>  ...`;
-          b_mont = `That's the end of my teacher's notes; I guess he didn't go back for the diary, but went straight to Degore.`;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `  Страница из дневника Шундина Каспара.
+                    b_mont = `That's the end of my teacher's notes; I guess he didn't go back for the diary, but went straight to Degore.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `  Страница из дневника Шундина Каспара.
         <br>  …
         <br>  14 марта
         <br>  Наконец-то, это мой последний день на должности капитана Принфога, с завтрашнего дня перевожусь в Дегор, там поинтереснее будет, никакой бумажной волокиты и сотрудники нормальные, а не эта горстка идиотов, которая не может починить дверь на нижнем уровне в туннеле шахты. Как они мне говорили, там опасно, лет десять никто не трогал, может резко захлопнуться, тьфу на них, ничего плохого случиться не может, главное чтобы руки из нужного места росли. Надо будет потом моему приемнику рассказать о каменных гномьих руинах по ту сторону моста. Мои работники замаскировали спуск вниз, надо будет взять молоток, показать ему.
         <br>  …
         `;
-          b_mont = `На том все записи моего учителя заканчиваются, наверное, он не вернулся за дневником, а сразу поехал в Дегор.`;
-        }
-        break;
-      case "90222":
-        au = false;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Journal of the Caretaker of the Prinfog Military Campus.
+                    b_mont = `На том все записи моего учителя заканчиваются, наверное, он не вернулся за дневником, а сразу поехал в Дегор.`;
+                }
+                break;
+            case "90222":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Journal of the Caretaker of the Prinfog Military Campus.
         <br>  ...
         <br>  April 3.
         <br>  I was assigned to Prinfog to oversee the training of MGDS soldiers. 
@@ -2378,10 +2468,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  May 1st 
         <br>  The military base in Verona has finally opened, all the employees have moved there, moving all the equipment and there's no need to keep an eye on the Prinfog. How old Caspar just took off his post is unclear, well the main thing is that I have followed everything and I can safely seal the gate with a lock.
         <br>  ...`;
-          b_mont = `To go down into the subway tunnels you have to run the generator in this garage.`;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Журнал смотрителя военного городка Принфог.
+                    b_mont = `To go down into the subway tunnels you have to run the generator in this garage.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Журнал смотрителя военного городка Принфог.
         <br>   …
         <br>  3 апреля
         <br>  Меня направили в Принфог следить за подготовкой солдат ВГПК. 
@@ -2398,16 +2488,16 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  Военная база в Вероне окончательно открылась, все сотрудники перешли туда, перевезя всё оборудование и больше незачем следить за Принфогом. Как старина Каспар просто взял и ушёл с должности, непонятно, ну главное я проследил за всем и могу спокойно запечатать ворота на замок.
         <br>  …
         `;
-          b_mont = `Чтобы спуститься в туннели метро надо запустить генератор в этом гараже.`;
-        }
-        break;
-      case "301191213":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Description of the ancient structure "Ancient ruins of dwarves near Prinfog", records of the researcher Segonius V.E.
+                    b_mont = `Чтобы спуститься в туннели метро надо запустить генератор в этом гараже.`;
+                }
+                break;
+            case "301191213":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Description of the ancient structure "Ancient ruins of dwarves near Prinfog", records of the researcher Segonius V.E.
         <br>  ...
         <br>  Apparently this is the burial place of a dwarf ruler of the Kosh era, dating back to 480 BC. 
         The golden crown with the glowing stone in it, looks intriguing, maybe this temple was even built by the hands of the first dwarves settlers from Totrax.
@@ -2418,10 +2508,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  To be able to get down here safely, I left a couple of elevators upstairs, the main thing is not to forget about them.
         <br>  ...
         <br>  I'll have to find the Rafik 2 reference book at the College of Archaeologists and type in "Kosh сivilization" to refresh my memory and find out more information about those times, maybe even find out who was the local ruler of those lands back then.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Описание древнего сооружения “Древние руины гномов вблизи Принфога”, записи исследователя Сегония В.Е.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Описание древнего сооружения “Древние руины гномов вблизи Принфога”, записи исследователя Сегония В.Е.
         <br>  …
         <br>  Судя по всему это место захоронение гномьего правителя эпохи Кош, дотируемое 480 годом до нашей эры. 
         <br>  Золотая корона со светящимся камнем в ней, выглядит интригующе, может этот храм даже был построен руками первых гномов переселенцев с Тотракса.
@@ -2433,62 +2523,62 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  …
         <br>  Надо будет в коллегии археологов найти справочник Рафик 2 и ввести в него запрос “цивилизация Кош”, чтобы освежить память и узнать больше информации о тех временах, может даже узнаю, кто был тогда здешним правителем этих земель.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "Kosh civilization":
-      case "kosh civilization":
-      case "цивилизация Кош":
-      case "цивилизация кош":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_S[18] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `History of the first gnome settlers (significant events based on commonly known old records)
+                    b_mont = ``;
+                }
+                break;
+            case "Kosh civilization":
+            case "kosh civilization":
+            case "цивилизация Кош":
+            case "цивилизация кош":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_S[18] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `History of the first gnome settlers (significant events based on commonly known old records)
         <br>   Kosh Civilization Part&nbsp;1.<br>  The transcribed text of the record is marked in the "Backpack"`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
         <br>  Цивилизация Кош часть&nbsp;1<br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1515667":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Firefly 
+                    b_mont = ``;
+                }
+                break;
+            case "1515667":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Firefly 
         <br>  Globe is also known as Firefly, a cute, peaceful mob that appears underwater but can live on land. He eats cardboard, which gives him luminous feces after eating it.
         Appearance
         <br>  This animal is a mixture of different insects, crustaceans and other species, so it is very difficult to compare it to anything. It has a fin on his back and a sprout on his forehead similar in shape to the wing of a butterfly. He has a turquoise color with yellow glowing elements.
         Behavior
         <br>  Firefly is very immobile and rarely moves without purpose. If you hit him, he will quickly start running away. Eats cardboard, if he is not high up so that he eats cardboard higher up, he can be put on an elevator. He can be picked up.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Светлячок 
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Светлячок 
         <br>  Глоб также известен как Светочервь, также его называют светлячок- милый мирный моб, который появляется под водой, но может жить на суше. Ест картон, после поедания, которого даёт светящиеся фекалии.
         Внешний вид
         <br>  Это животное является смесью различных насекомых, ракообразных и других видов животных, поэтому сравнить его с чем-либо очень сложно. У него имеется плавник на спине и отросток на лбу по форме похожий на крыло бабочки. У него бирюзовый окрас с жёлтыми светящимися элементами.
         Поведение
         <br>  Светлячок очень неподвижный и без цели перемещается он редко. Если его ударить, то он быстро начнёт убегать. Ест картон, если он не высоко, чтобы он ел картон выше, его можно посадить на лифт. Его можно взять в руки.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "30435358":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Record of Eral's janitor
+                    b_mont = ``;
+                }
+                break;
+            case "30435358":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Record of Eral's janitor
         <br>  ...
         <br>  Someone smeared yogurt all over the walls again, grown-ups, but no, we have to do something that will be funny.
         It's not funny to me, when it all dries up, it's going to stink.
@@ -2501,10 +2591,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  ...
         <br>  Funny, nobody laughed when he opened the lid and fell in. Dalville was sent to the infirmary, must have been offended by me, I won't make any more jokes at the workers if they don't get the jokes.
         <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Запись уборщика Эрала
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись уборщика Эрала
         <br>  …
         <br>  Опять кто-то измазал все стены йогуртом, взрослые люди, но нет, надо что-то сделать, что будет смешно.
         Мне не смешно, когда это всё засохнет, то будет вонять.
@@ -2518,30 +2608,30 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br>  Странно, никто не засмеялся, когда он открыл крышку и упал. Дэлвила отправили в медпункт, наверное, обиделся на меня, больше не буду над рабочими шутить, если они шуток не понимают.
         <br>  …
         `;
-          b_mont = ``;
-        }
-        break;
-      case "27082650":
-        au = false;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Butterflies. The abysSSSs. FFog. Walll. Booooom!!!, ahahahahahaha.... Water.`;
-          b_mont = `It looks like a note from someone who has suffered something very bad. It's carved on the casing of the tape recorder by Delville.`;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Бабочки. Пропааасть. Ту ту туман. СтенААа. Бууууум!!!, ахахахахаха.... Вода?`;
-          b_mont = `Похоже, что это записка человека, перенёсшего, что-то очень плохое. На корпусе магнитофона вырезано Дэлвил`;
-        }
-        break;
-      case "133289905":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Guide (How to fix a broken door)
+                    b_mont = ``;
+                }
+                break;
+            case "27082650":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Butterflies. The abysSSSs. FFog. Walll. Booooom!!!, ahahahahahaha.... Water.`;
+                    b_mont = `It looks like a note from someone who has suffered something very bad. It's carved on the casing of the tape recorder by Delville.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Бабочки. Попааасть. Ту ту туман. СтенААа. Бууууум!!!, ахахахахаха.... Вода?`;
+                    b_mont = `Похоже, что это записка человека, перенёсшего, что-то очень плохое. На корпусе магнитофона вырезано Дэлвил`;
+                }
+                break;
+            case "133289905":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Guide (How to fix a broken door)
         <br>   ...
         <br>  In order for the sliding door to open easily and stop sticking, you need to get the rollers and grooves working properly. Dust, hair and other debris prevent proper sliding. The doors are removed, all parts are cleaned with a soaked napkin and put back. If the situation has not changed, the reason is in the worn out wheels. They should be removed with a hexagon and replaced with new ones.
         To improve sliding, the mechanism must not be lubricated with oil. Machine oil promotes the accumulation of debris and dust. Sunflower oil - gradually thickens and hinders the movement of the blades. Rollers and rails will have to be replaced.
@@ -2553,10 +2643,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         Repair of sliding doors does not require special and skills. It is important to be careful and have the necessary tools.
         <br>  ...
         `;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Руководство (Как починить сломанную дверь)
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Руководство (Как починить сломанную дверь)
         <br>  …
         <br>  Чтобы сдвижная дверь начала легко открываться и перестала заедать, нужно наладить работу роликов и желобков. Пыль, волосы и прочий мусор препятствуют нормальному скольжению. Дверцы снимают, все детали прочищают проспиртованной салфеткой и устанавливают обратно. Если ситуация не изменилась — причина в стертых колесиках. Их следует снять при помощи шестигранника и заменить на новые.
         Для улучшения скольжения нельзя смазывать механизм маслом. Машинное масло способствует накоплению мусора и пыли. Подсолнечное — постепенно густеет и затрудняет движение полотен. Ролики и рельсы придется менять.
@@ -2568,307 +2658,307 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         Для ремонта раздвижных дверей не требуется специальных и навыков. Важна аккуратность и наличие необходимых инструментов.
         <br>  …
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1,4,0,4,0,6,0,6,1":
-      case "140406061":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_S[19] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `History of the first dwarf settlers (significant events based on commonly known old records)
+                    b_mont = ``;
+                }
+                break;
+            case "1,4,0,4,0,6,0,6,1":
+            case "140406061":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_S[19] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `History of the first dwarf settlers (significant events based on commonly known old records)
         <br>  Kosh Civilization Part&nbsp;2<br>  The transcribed text of the record is marked in the "Backpack"`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
         <br>   Цивилизация Кош часть&nbsp;2<br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1,1,1,1,2,3,1,2,1":
-      case "111123121":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_S[20] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `History of the first gnome settlers (significant events based on commonly known old records)
+                    b_mont = ``;
+                }
+                break;
+            case "1,1,1,1,2,3,1,2,1":
+            case "111123121":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_S[20] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `History of the first gnome settlers (significant events based on commonly known old records)
         <br>  Kosh Civilization Part&nbsp;3<br>  The transcribed text of the record is marked in the "Backpack"`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `История первых гномьих поселенцев (значимые события, основанные на общеизвестных старых записях)
         <br>   Цивилизация Кош часть&nbsp;3<br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "4,4,3,9,2,3,4,4,3":
-      case "443923443":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `An old grandma brings a bus driver a bag of peanuts every day.
+                    b_mont = ``;
+                }
+                break;
+            case "4,4,3,9,2,3,4,4,3":
+            case "443923443":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `An old grandma brings a bus driver a bag of peanuts every day.
         <br>First the bus driver enjoyed the peanuts but after a week of eating them he asked: «Please granny, do not bring me peanuts anymore. Have them yourself.».
         The granny answers: «You know, I do not have teeth anymore. I just prefer to suck the chocolate around them.»`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Мама на работу собирается. Дочке 6 лет.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `<br>Мама на работу собирается. Дочке 6 лет.
         <br>— Доченька, я на работу, ты запри дверь и никому НЕ ОТКРЫВАЙ!!
-        — Хорошо, мамочка.
-        Мама вышла, думает: надо проверить. Стучит.
-        — Кто там?
-        Грубым голосом: «Это мы, газовщики, пришли проверить газовое оборудование. »
-        Молчание. Затем басом из-за двери:
-        «Пошли вон отсюда, мы дровами топим!»`;
-          b_mont = ``;
-        }
-        break;
-      case "2,3,4,9,3,9,8,3,4":
-      case "234939834":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+        <br> — Хорошо, мамочка.
+        <br>Мама вышла, думает: надо проверить. Стучит.
+        <br>— Кто там?
+        <br>Грубым голосом: «Это мы, газовщики, пришли проверить газовое оборудование. »
+        <br>Молчание. Затем басом из-за двери:
+        <br>«Пошли вон отсюда, мы дровами топим!»`;
+                    b_mont = ``;
+                }
+                break;
+            case "2,3,4,9,3,9,8,3,4":
+            case "234939834":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
-        ta = true;
-        mont = false;
-        booolSA_S[0] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv1.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[0] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv1.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;1. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv1.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv1.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;1. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1143 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "2,1,2,5,3,9,1,2,8":
-      case "212539128":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "2,1,2,5,3,9,1,2,8":
+            case "212539128":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
-        ta = true;
-        mont = false;
-        booolSA_S[1] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv2.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[1] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv2.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;2. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv2.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv2.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;2. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1143 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1,1,6,5,5,0,4,2,6":
-      case "116550426":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "1,1,6,5,5,0,4,2,6":
+            case "116550426":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
-        ta = true;
-        mont = false;
-        booolSA_S[2] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv3.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[2] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv3.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;3. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv3.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv3.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;3. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1143 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "2,9,2,9,9,2,2,9,2":
-      case "292992292":
-        au = false;
-        ta = true;
-        mont = false;
-        booolSA_G[14] = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Old FT12 terminal
+                    b_mont = ``;
+                }
+                break;
+            case "2,9,2,9,9,2,2,9,2":
+            case "292992292":
+                au = false;
+                ta = true;
+                mont = false;
+                booolSA_G[14] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Old FT12 terminal
         <br>  To protect the data, a locking system is used with a secret object, which must be placed in the holes on the right side.
         Each terminal has its own key item.
         <br>  Before placing the items, they must be separated in the inventory and inserted one item at a time into the box. 
         Each recorded message has its own weight, for example, if you place one item in any cell, only the first entry will be opened, the rest of the data will be accessed with the addition of the following items.The second entry is two items, the next 3 and so on.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Старый терминал FT12
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Старый терминал FT12
         <br>  Для защиты данных используется система блокировки с помощью секретного предмета, который необходимо разместить в отверстиях справа.
         У каждого терминала есть свой ключ предмет.
         Перед размещением предметов их необходимо разделить в инвентаре и вставлять по одному предмету в ячейку. 
         <br>  Каждое записанное сообщение имеет свой вес, например если в любую ячейку поместить один предмет, то будет открываться только первая запись, к остальным данным доступ будет предоставляться с добавлением следующих предметов.Вторая запись два предмета, следующая 3 и т.д.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "1,7,8,1,7,7,1,7,7":
-      case "178177177":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `What is teleportation
+                    b_mont = ``;
+                }
+                break;
+            case "1,7,8,1,7,7,1,7,7":
+            case "178177177":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `What is teleportation
         <br>  Teleportation is the hypothetical instantaneous movement of an object over any distance at faster than the speed of light. The term was coined by the American publicist, researcher of the "unknowable", Nimilius Fort after the publication in 731 of his book "Hamsters of Heaven" about parapsychology and the supernatural. True, at the time the concept had little to do with science.
         
         <br>  When we think of teleportation methods, the first thing that comes to mind is wormholes (aka wormholes), which the theory of relativity does not deny. According to it, our universe curves in the fourth spatial dimension, and in some places there are possible border zones, where space is distant from each other, but comes quite close to each other through the fourth dimension. Under certain conditions, two different points of three-dimensional space will merge into one through an additional dimension, forming a tunnel. Step into one and you move instantly billions of light years away. It would seem that everything is simple, but in order for a person in this tunnel not to "smeared", its walls need to be strengthened by special matter, which will keep them in a stable state. And gnomes don't have such matter yet.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Что такое телепортация
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Что такое телепортация
         <br>  Телепортация— гипотетическое мгновенное перемещение объекта на любое расстояние со скоростью быстрее скорости света. Этот термин ввел в употребление американский публицист, исследователь «непознанного», Нимилий Форт после публикации в 731 году книги «Хомячки небес» о парапсихологии и сверхъестественном. Правда тогда понятие имело мало общего с наукой.
         
         <br>  Когда мы думаем о способах телепортации, первое, что приходит в голову — кротовые норы (они же червоточины), которые не отрицает теория относительности. Согласно ней, наша Вселенная изгибается в четвертом пространственном измерении, и в некоторых местах возможны пограничные зоны, где пространство удалено друг от друга, но при этом приближается довольно близко друг к другу сквозь четвертое измерение. При определенных условиях две разные точки трехмерного пространства сольются в одну через дополнительное измерение, образуя тоннель. Шагнул в такое — и переместился мгновенно на миллиарды световых лет. Казалось бы, все просто, но для того, чтобы человека в этом тоннеле не «размазало», его стенки нужно укрепить специальной материей, которая и будет держать их в стабильном состоянии. А такой материи у гномов пока нет.
         `;
-          b_mont = ``;
-        }
-        break;
-      case "2,5,2,4,2,5,2,4,2":
-      case "252425242":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "2,5,2,4,2,5,2,4,2":
+            case "252425242":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
-        ta = true;
-        mont = false;
-        booolSA_S[3] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv4.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[3] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv4.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;4. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv5.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv5.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;4. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1143 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "0,9,3,6,6,6,6,6,6":
-      case "093666666":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "0,9,3,6,6,6,6,6,6":
+            case "093666666":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
 
-        ta = true;
-        mont = false;
-        booolSA_S[4] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv5.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[4] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv5.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;5. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv4.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv4.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;5. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1143 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "3,3,3,3,7,3,3,3,6":
-      case "333373336":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "3,3,3,3,7,3,3,3,6":
+            case "333373336":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
 
-        ta = true;
-        mont = false;
-        booolSA_S[5] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv6.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[5] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv6.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;6. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv6.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv6.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;6. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1144 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "8,8,8,1,2,4,8,8,8":
-      case "888124888":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Dwarf Mine Worker's Journal
+                    b_mont = ``;
+                }
+                break;
+            case "8,8,8,1,2,4,8,8,8":
+            case "888124888":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Dwarf Mine Worker's Journal
         <br>  A jounal found deep beneath Station 16, it belonged to the workers who released something locked underground, many centuries ago.
         <br>  ...
         <br>  "Report 87 - 366 After weeks of hard work, we finally discovered the mithril vein. The miners were happy, they were jubilant, and there were tears in their eyes. The vein is far away from here, to the east. Since it was too far to carry the load to the ore mill, we made a railroad track for the wagons.
         Report 89 - 366. Since the discovery of the lode, we have gone through the adits in all directions. To the north of the ore outlet we found a strange cave. It seemed both natural and artificial at the same time. It smelled strongly of some kind of animal, and we thought it was the lair of a wild animal. Today is September 12, the beginning of the week of the first prince, and such a finding is not a good omen..."
         <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Рабочий журнал гномьей шахты
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Рабочий журнал гномьей шахты
         <br>  Жуннал найденый глубоко под станцией 16, он принадлежал рабочим, которые выпустили что-то запертое под землёй, много веков назад.
         <br>   …
         <br>   "Донесение 87 - 366-й год После долгих недель тяжкого труда мы наконец обнаружили мифрильную жилу. Рудокопы были счастливы, они ликовали, и на их глазах были слезы. Жила находится далеко отсюда, к востоку. Поскольку нести груз к рудной мельнице слишком далеко, мы провели рельсовый путь для вагонеток.
         Донесение 89 - 366-й год. С момента открытия жилы мы проделали штольни во всех направлениях. На севере от выхода руды мы нашли странную пещеру. Она казалась и природной, и искусственной одновременно. Там сильно пахло каким-то животным, и мы решили, что это логово дикого зверя. Сегодня 12 сентября, начало недели первого князя, и такая находка является недобрым предзнаменованием..."
         <br>   …`;
-          b_mont = ``;
-        }
-        break;
-      case "0,0,0,0,9,2,0,0,0":
-      case "000092000":
-        if (booolSA_MODS[1]) {
-          au = true;
-        }
+                    b_mont = ``;
+                }
+                break;
+            case "0,0,0,0,9,2,0,0,0":
+            case "000092000":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
 
-        ta = true;
-        mont = false;
-        booolSA_S[6] = true;
-        if (checc == "en") {
-          b_au = `audio/en/vv7.mp3`;
-          b_ta = `History of the War with the Giants
+                ta = true;
+                mont = false;
+                booolSA_S[6] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv7.mp3`;
+                    b_ta = `History of the War with the Giants
         Part&nbsp;7. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1143.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/vv7.mp3`;
-          b_ta = `История войны с великанами
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv7.mp3`;
+                    b_ta = `История войны с великанами
         часть&nbsp;7. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1144 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
         `;
-          b_mont = ``;
-        }
-        break;
-      case "5,5,5,5,5,6,5,5,1":
-      case "555556551":
-        au = false;
-        ta = true;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `You read the last seventh entry on this computer, you managed to find all the paint cans and installed them here.
+                    b_mont = ``;
+                }
+                break;
+            case "5,5,5,5,5,6,5,5,1":
+            case "555556551":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `You read the last seventh entry on this computer, you managed to find all the paint cans and installed them here.
         <br>  Your curiosity knows no bounds.
         <br>  It's people like you who keep the world going!
         <br>  It took you a while to get back from the tube room, though. Here, to the computer. You spent YOUR own time thinking that you would be rewarded with something appropriate to your efforts, but, alas, here is only the word of a developer, without any benefits for you, hopefully your efforts will be rewarded in the future, in full.
@@ -2876,10 +2966,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br> Sincerely,
         <br> Grand Master of the World Scrap Mechanic,
         <br> Scrappiy`;
-          b_mont = `It's kind of a weird entry, why is the omnichannel creator (supreme deity) thanking some player?`;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Вы читаете последнюю седьмую запись на данном компьютере, вы сумели найти все баллончики с краской и установили их сюда.
+                    b_mont = `It's kind of a weird entry, why is the omnichannel creator (supreme deity) thanking some player?`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Вы читаете последнюю седьмую запись на данном компьютере, вы сумели найти все баллончики с краской и установили их сюда.
         <br>   Ваше любопытство не знает границ.
         <br>  Именно на таких людях как вы, держится мир!
         <br>  Хотя вы потратили время, чтобы вернуться из комнаты с трубами. Сюда, к компьютеру. Вы потратили СВОЁ личное время, думая, что вас вознаградят чем-то соответствующим вашем усилиям, но, увы, здесь только слова разработчика, без каких-либо плюшек для вас, надеюсь, ваши затраченные усилия в будущем будут вознаграждены, сполна.
@@ -2888,29 +2978,29 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
         <br> Великий магистр мира Scrap Mechanic,
         <br> Scrappiy
         `;
-          b_mont = `Какая-то странная запись, зачем всесоздатель благодарит какого-то игрока?`;
-        }
-        break;
-      case "2,2,2,3,5,3,3,8,8":
-      case "222353388":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/third.mp3`;
-          b_mont = `In my dream I dreamed of a statue, some big robot and said that something bad was coming. Apparently I was very tired last night, since I'm dreaming such nonsense.`;
-        } else {
-          b_au = `audio/ru/third.mp3`;
-          b_mont = `Во сне мне приснилась статуя, какого-то большого робота и сказала, что грядёт что-то плохое. Видимо я сильно устал вчера вечером, раз мне такой бред снится.`;
-        }
-        break;
-      case "481812":
-        // au = true;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/ru/les.mp3`;
-          b_ta = `...
+                    b_mont = `Какая-то странная запись, зачем всесоздатель благодарит какого-то игрока?`;
+                }
+                break;
+            case "2,2,2,3,5,3,3,8,8":
+            case "222353388":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/third.mp3`;
+                    b_mont = `In my dream I dreamed of a statue, some big robot and said that something bad was coming. Apparently I was very tired last night, since I'm dreaming such nonsense.`;
+                } else {
+                    b_au = `audio/ru/third.mp3`;
+                    b_mont = `Во сне мне приснилась статуя, какого-то большого робота и сказала, что грядёт что-то плохое. Видимо я сильно устал вчера вечером, раз мне такой бред снится.`;
+                }
+                break;
+            case "481812":
+                // au = true;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/ru/les.mp3`;
+                    b_ta = `...
             <br>Again, it is necessary to clear the forest of old trees, otherwise they may grow new.
             <br>...
             <br>I've been here for the fifth week now, nothing interesting.
@@ -2918,10 +3008,10 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             <br>...
            <br> The lyrics of the song were invented by Andrey Knyazev to the music of Mikhail Gorshenev in 1091.
             <br>...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/les.mp3`;
-          b_ta = `
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/les.mp3`;
+                    b_ta = `
             ...
             <br>Снова надо очищать лес от старых деревьев, иначе они могут мешать рости новым.
             <br>...
@@ -2930,320 +3020,384 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             <br>...
             <br> Текст песни был придуман Андреем Князевым на музыку Михаила Горшенёва в 1091 году. 
             <br>...`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        au = auter();
-        break;
-      case "1193717":
-        // au = true;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/ru/zay.mp3`;
-          b_ta = `...
+                au = auter();
+                break;
+            case "1193717":
+                // au = true;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/ru/zay.mp3`;
+                    b_ta = `...
             <br>Entry from the cook's log:
             <br>A song about Hares. Commandant Mortimer loved this song very much and we had to turn it on every time he came to the dining room in a bad mood.
             <br>...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/zay.mp3`;
-          b_ta = `
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/zay.mp3`;
+                    b_ta = `
             ...
             <br>Запись из журнала повара:
             <br>Песня про Зайцев. Комендант Мортимер очень любил эту песню и нам приходилось включать её каждый раз когда он приходил в плохом настроении в столовую.
             <br>...`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        au = auter();
-        break;
-      case "6294351":
-        // au = true;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/ru/ohr.mp3`;
-          b_ta = `...
+                au = auter();
+                break;
+            case "6294351":
+                // au = true;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/ru/ohr.mp3`;
+                    b_ta = `...
             <br>A commander's song for the morning exercise of recruits.
             <br>...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/ohr.mp3`;
-          b_ta = `
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/ohr.mp3`;
+                    b_ta = `
             ...
             <br>Командирская песня для утренней зарядки новобранцев.
             <br>...`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        au = auter();
-        break;
-      case "75213250":
-        // au = true;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/ru/otp.mp3`;
-          b_ta = `...
+                au = auter();
+                break;
+            case "75213250":
+                // au = true;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/ru/otp.mp3`;
+                    b_ta = `...
             <br>I'm going on vacation tomorrow, I don't even know what to take with me. It is necessary to include a suitable song.
             <br>...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/otp.mp3`;
-          b_ta = `
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/otp.mp3`;
+                    b_ta = `
             ...
             <br>Завтра меня отправляют в отпуск, даже не знаю что с собой взять. Надо включить подходящую песню.
             <br>...`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        au = auter();
-        break;
-      case "10335051":
-        // au = true;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/ru/kuk.mp3`;
-          b_ta = `...
+                au = auter();
+                break;
+            case "10335051":
+                // au = true;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/ru/kuk.mp3`;
+                    b_ta = `...
             <br>The record seized from the staff.
             <br>...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/kuk.mp3`;
-          b_ta = `
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/kuk.mp3`;
+                    b_ta = `
             ...
             <br>Изъятая у персонала запись.
             <br>...`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        au = auter();
-        break;
-      case "delete":
-        localStorage.clear();
-        sessionStorage.clear();
-        break;
-      case "607302314":
-        booolSA_MODS[0] = true;
-        document.getElementById("clos").style.display = 'none';
-        booolSA_G[16] = true;
-        if (checc == "en") {
-          a = `Congratulations! You have found a modification for the Rafik 3 guide. You can read more about modifications in the Guide tab.`;
-        } else {
-          a = `Поздравляю! Вы нашли модификацию для справочника Рафик 3. Более подробно про модификации вы можете прочитать во вкладке Руководство.`;
-        }
-        alert(a);
-        if (checc == "en") {
-          a = `Modification for simplified input of color ciphers. Click on the button with the RGB palette, you will open a window for sequential color input. The input sequence is set first by the upper left corner of the color cipher, and at the end by the lower right, first from left to right, then down one line, etc.`;
-        } else {
-          a = `Модификация для упрощенного ввода цветных шифров. Нажмите на кнопку с RGB палитрой, у вас откроется окно последовательного ввода цветов. Последовательность ввода в начале задается верхним левым углом цветового шифра, а в конце нижним правым, то есть сначала слева направо, затем вниз на одну строку и т.д.`;
-        }
-        alert(a);
-        break;
-      case "1801801801411":
-        booolSA_MODS[1] = true;
-        if (checc == "en") {
-          a = `Modification for voicing the text of some recordings. Programmer Cornel Auxerre removed the function from the first Draft, as it incorrectly placed stress marks. The connection of this experimental function occurs automatically, the voiced text will appear in the audio playback area.`;
-        } else {
-          a = `Модификация для озвучивания текста некоторых записей. Программист Корнел Осер изъял функцию из первого Рафика, так как она неправильно расставляла знаки ударения. Подключение данной экспериментальной функции происходит автоматически, озвученный текст появится в области воспроизведения аудиозаписей.`;
-        }
-        alert(a);
-        break;
-      case "90180272010":
-        booolSA_MODS[2] = true;
-        if (checc == "en") {
-          a = `Modification for automatic page flipping to the nearest filled one. Installing a stepper motor modification allows the Rafiq to turn pages independently, skipping blank pages.`;
-        } else {
-          a = `Модификация для автоматического перелистывания страниц до ближайшей заполненной. Установка модификации шагового мотора позволяет Рафику самостоятельно перелистывать страницы, пропуская незаполненные страницы.`;
-        }
-        alert(a);
-        break;
-      case "admin127774":
-        if (checc == "en") {
-          a = confirm("You have entered the code to unlock the content of the first chapter of Space Adventures, you will open all the entries, notes and improvements available in this chapter and all your individual progress will be overwritten. Do you want to unlock all the content available in the first chapter?");
-        } else {
-          a = confirm("Вы ввели код раблокировки контента первой главы космических приключений, вы откроете все записи, заметки и улучшения доступные в данной главе и весь ваш индивидуальный прогресс перезапишется. Вы хотите разблокировать весь контент доступный в первой главе?");
-        }
+                au = auter();
+                break;
+            case "delete":
+                localStorage.clear();
+                sessionStorage.clear();
+                break;
+            case "607302314":
+                booolSA_MODS[0] = true;
+                document.getElementById("clos").style.display = 'none';
+                booolSA_G[16] = true;
+                if (checc == "en") {
+                    a = `Congratulations! You have found a modification for the Rafik 3 guide. You can read more about modifications in the Guide tab.`;
+                } else {
+                    a = `Поздравляю! Вы нашли модификацию для справочника Рафик 3. Более подробно про модификации вы можете прочитать во вкладке Руководство.`;
+                }
+                alert(a);
+                if (checc == "en") {
+                    a = `Modification for simplified input of color ciphers. Click on the button with the RGB palette, you will open a window for sequential color input. The input sequence is set first by the upper left corner of the color cipher, and at the end by the lower right, first from left to right, then down one line, etc.`;
+                } else {
+                    a = `Модификация для упрощенного ввода цветных шифров. Нажмите на кнопку с RGB палитрой, у вас откроется окно последовательного ввода цветов. Последовательность ввода в начале задается верхним левым углом цветового шифра, а в конце нижним правым, то есть сначала слева направо, затем вниз на одну строку и т.д.`;
+                }
+                alert(a);
+                break;
+            case "1801801801411":
+                booolSA_MODS[1] = true;
+                if (checc == "en") {
+                    a = `Modification for voicing the text of some recordings. Programmer Cornel Auxerre removed the function from the first Draft, as it incorrectly placed stress marks. The connection of this experimental function occurs automatically, the voiced text will appear in the audio playback area.`;
+                } else {
+                    a = `Модификация для озвучивания текста некоторых записей. Программист Корнел Осер изъял функцию из первого Рафика, так как она неправильно расставляла знаки ударения. Подключение данной экспериментальной функции происходит автоматически, озвученный текст появится в области воспроизведения аудиозаписей.`;
+                }
+                alert(a);
+                break;
+            case "90180272010":
+                booolSA_MODS[2] = true;
+                if (checc == "en") {
+                    a = `Modification for automatic page flipping to the nearest filled one. Installing a stepper motor modification allows the Rafiq to turn pages independently, skipping blank pages.`;
+                } else {
+                    a = `Модификация для автоматического перелистывания страниц до ближайшей заполненной. Установка модификации шагового мотора позволяет Рафику самостоятельно перелистывать страницы, пропуская незаполненные страницы.`;
+                }
+                alert(a);
+                break;
+            case "admin127774":
+                if (checc == "en") {
+                    a = confirm("You have entered the code to unlock the content of the first chapter of Space Adventures, you will open all the entries, notes and improvements available in this chapter and all your individual progress will be overwritten. Do you want to unlock all the content available in the first chapter?");
+                } else {
+                    a = confirm("Вы ввели код раблокировки контента первой главы космических приключений, вы откроете все записи, заметки и улучшения доступные в данной главе и весь ваш индивидуальный прогресс перезапишется. Вы хотите разблокировать весь контент доступный в первой главе?");
+                }
 
-        if (a) {
-          document.getElementById("clos").style.display = 'none';
-          booolSA_MODS[0] = true;
-          booolSA_MODS[1] = true;
-          booolSA_MODS[2] = true;
-          booolSA_S[0] = true;
-          booolSA_S[1] = true;
-          booolSA_S[2] = true;
-          booolSA_S[3] = true;
-          booolSA_S[4] = true;
-          booolSA_S[5] = true;
-          booolSA_S[6] = true;
-          booolSA_S[18] = true;
-          booolSA_S[19] = true;
-          booolSA_S[20] = true;
-          booolSA_G[2] = true;
-          booolSA_G[3] = true;
-          booolSA_G[5] = true;
-          booolSA_G[8] = true;
-          booolSA_G[9] = true;
-          booolSA_G[10] = true;
-          booolSA_G[11] = true;
-          booolSA_G[12] = true;
-          booolSA_G[13] = true;
-          booolSA_G[14] = true;
-          booolSA_G[15] = true;
-          booolSA_G[16] = true;
-          booolSA_G[17] = true;
-        }
+                if (a) {
+                    document.getElementById("clos").style.display = 'none';
+                    booolSA_MODS[0] = true;
+                    booolSA_MODS[1] = true;
+                    booolSA_MODS[2] = true;
+                    booolSA_S[0] = true;
+                    booolSA_S[1] = true;
+                    booolSA_S[2] = true;
+                    booolSA_S[3] = true;
+                    booolSA_S[4] = true;
+                    booolSA_S[5] = true;
+                    booolSA_S[6] = true;
+                    booolSA_S[18] = true;
+                    booolSA_S[19] = true;
+                    booolSA_S[20] = true;
+                    booolSA_G[2] = true;
+                    booolSA_G[3] = true;
+                    booolSA_G[5] = true;
+                    booolSA_G[8] = true;
+                    booolSA_G[9] = true;
+                    booolSA_G[10] = true;
+                    booolSA_G[11] = true;
+                    booolSA_G[12] = true;
+                    booolSA_G[13] = true;
+                    booolSA_G[14] = true;
+                    booolSA_G[15] = true;
+                    booolSA_G[16] = true;
+                    booolSA_G[17] = true;
+                }
 
-        break;
-      case "022902908":
-      case "0,2,2,9,0,2,9,0,8":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = ``;
-          b_mont = ` I didn’t even have time to take a break from work, and now I’m here again, I’ll have to ask for a raise, how
+                break;
+            case "admin12721":
+                if (checc == "en") {
+                    a = confirm("You have entered the code to unlock the content of the second chapter of Space Adventures, you will open all the entries, notes and improvements available in this chapter and all your individual progress will be overwritten. Do you want to unlock all the content available in the second chapter?");
+                } else {
+                    a = confirm("Вы ввели код раблокировки контента второй главы космических приключений, вы откроете все записи, заметки и улучшения доступные в данной главе и весь ваш индивидуальный прогресс перезапишется. Вы хотите разблокировать весь контент доступный во второй главе?");
+                }
+
+                if (a) {
+                    document.getElementById("closd").style.display = 'none';
+                    booolSA_MODS[3] = true;
+                    booolSA_S[7] = true;
+                    booolSA_S[8] = true;
+                    booolSA_S[9] = true;
+                    booolSA_G[4] = true;
+                    booolSA_G[6] = true;
+                    booolSA_G[7] = true;
+                    booolSA_G[18] = true;
+                }
+
+                break;
+            case "022902908":
+            case "0,2,2,9,0,2,9,0,8":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    b_mont = ` I didn’t even have time to take a break from work, and now I’m here again, I’ll have to ask for a raise, how
             just talk to crucian.
             <br>  After all, it's a big building, I don't know what and where it is yet
             inside. <br>  Checkpoint again, Kankin's guard is changing today, I wonder if he remembers
             I have to say hello to him.
             `;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = ``;
-          b_mont = ` Даже отдохнуть от работы не успел, а теперь я снова здесь, надо будет прибавку попросить, как 
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    b_mont = ` Даже отдохнуть от работы не успел, а теперь я снова здесь, надо будет прибавку попросить, как 
             только поговорю с карасём.
             <br>  Большое всё-таки здание, сам ещё не знаю, что и где находится 
             внутри. <br>  Снова пропускной пункт, сегодня смена охранника Канкина, интересно помнит ли он 
             меня, надо поздороваться с ним.
             `;
-        }
-        break;
-      case "606006066":
-      case "6,0,6,0,0,6,0,6,6":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = ``;
-          ci = `Guard Kankin`;
-          b_mont = ` Oh, Duncan is healthy, the crucian has been nervous since yesterday, probably waiting for you. The authorities ordered the plant to be closed and all or some employees should be given a day off due to earthquakes in the valley. <br>  While no one is around, Samil is updating the plant's system, so you need to add yourself to the database before he leaves, just don't come up with a complicated password or you'll forget it. <br>  It was good to see you.
+                }
+                break;
+            case "606006066":
+            case "6,0,6,0,0,6,0,6,6":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    ci = `Guard Kankin`;
+                    b_mont = ` Oh, Duncan is healthy, the crucian has been nervous since yesterday, probably waiting for you. The authorities ordered the plant to be closed and all or some employees should be given a day off due to earthquakes in the valley. <br>  While no one is around, Samil is updating the plant's system, so you need to add yourself to the database before he leaves, just don't come up with a complicated password or you'll forget it. <br>  It was good to see you.
             `;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = ``;
-          ci = `Охранник Канкин`;
-          b_mont = ` Ооо здорова Дункан, карась со вчерашнего дня какой-то нервный, наверное тебя ждёт. Начальство приказало закрыть завод и дать выходной всем или некоторым сотрудникам из-за землетрясений в долине. <br>  Пока  никого нет, Самиль обновляет систему завода, так что тебе нужно внести себя в базу данных, пока он не ушёл, только не придумывай сложный пароль, а то забудешь. <br>  Рад был тебя видеть.
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    ci = `Охранник Канкин`;
+                    b_mont = ` Ооо здорова Дункан, карась со вчерашнего дня какой-то нервный, наверное тебя ждёт. Начальство приказало закрыть завод и дать выходной всем или некоторым сотрудникам из-за землетрясений в долине. <br>  Пока  никого нет, Самиль обновляет систему завода, так что тебе нужно внести себя в базу данных, пока он не ушёл, только не придумывай сложный пароль, а то забудешь. <br>  Рад был тебя видеть.
             `;
-        }
-        break;
-      case "999499394":
-      case "9,9,4,9,9,3,9,4":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = ``;
-          ci = `Sysadmin Samil`;
-          b_mont = ` Hello, I don't have time right now, don't bother me... ah..<br>   Oh hi Duncan, didn't recognize you. 
+                }
+                break;
+            case "999499394":
+            case "9,9,4,9,9,3,9,4":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    ci = `Sysadmin Samil`;
+                    b_mont = ` Hello, I don't have time right now, don't bother me... ah..<br>   Oh hi Duncan, didn't recognize you. 
           <br>  Koras warned me about you, I'm busy right now, put yourself in the database yourself, I'll open the door to the server room for you 
           I'll open it when you're ready. <br> There is nothing complicated, click change password, come up with it and 
           save it. <br>  After that, you will get access to the terminals of the lower floors complex.
             `;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = ``;
-          ci = `Сисадмин Самиль`;
-          b_mont = ` Здравствуйте, у меня сейчас нет времени, не мешайте мне… а..<br>  О привет Дункан, не узнал тебя. 
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    ci = `Сисадмин Самиль`;
+                    b_mont = ` Здравствуйте, у меня сейчас нет времени, не мешайте мне… а..<br>  О привет Дункан, не узнал тебя. 
           <br>  Корась предупредил меня о тебе, я сейчас занят, внеси себя в базу сам, когда будешь готов, я тебе дверь в серверную 
           открою. <br>  Там нет ничего сложного, нажми сменить пароль, придумай его и 
           сохрани. <br>  После этого получишь доступ к терминалам комплекса нижних этажей.
             `;
-        }
-        break;
-      case "888111110":
-      case "8,8,8,1,1,1,1,1,0":
-        au = true;
-        ta = false;
-        mont = true;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = ``;
-          ci = ``;
-          b_mont = ` Trader Bulbar, a very enterprising dwarf, leading a monopolistic trade in the walls 
+                }
+                break;
+            case "888111110":
+            case "8,8,8,1,1,1,1,1,0":
+                booolSA_G[6] = true;
+                booolSA_G[7] = true;
+                au = true;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Merchant's list of goods: <br>  hammer.  <br>  potato thrower . <br>  components.  <br>  yellow sphere. <br>  <br>  Hammer 
+          <br>  A universal melee weapon. The hammers that are found in chests all over the world are very ancient. For many years it was believed that each of the numerous hammers was created from a single piece of stone. Now many historians are of the opinion that they originated outside of Nexurt and their true age is from 7000 to 12000 years. Such weapons have incredible strength and quality that they have been passed down from generation to generation for a couple of thousand years in families. Every hammer, since the appearance of azure crystals, has been equipped with the seal of the Gestrag, found in an ancient dwarf ship in the east of Malfarin. The seal binds the owner and his hammer with an unbreakable bond that does not allow losing the hammer. <br> Since 734, seals have been placed on all instruments created on Nexurt. Because of its strength, the hammer is used for pushing and breaking obstacles, activating push buttons, and of course in battles.
+          <br>
+          <br>Potato Cannon
+          <br>  Ranged weapons that hit opponents with potato tubers.
+          The kinetic energy of the released potatoes is enough not only to defeat dwarf warriors, but also to cause significant damage to robots. Starch entering the internal mechanisms of robots spoils them and reduces their mobility, and reduces the overall level of destruction from them.
+          <br> Since 690, it has been the official weapon of the Dwarf Union Army. 
+          <br>  In 712, two modifications of the cannon are being created, a shotgun with a deep fryer and an automatic machine gun. The shotgun is irreplaceable at a short distance, at which the accuracy of shooting is much higher, the machine gun has not found popularity and is used mainly for variety or to replace the potato cannon at medium range due to the low repeatability of hits.`;
+                    ci = ``;
+                    b_mont = ` Trader Bulbar, a very enterprising dwarf, leading a monopolistic trade in the walls 
               the factory. <br>  He sells tools, potatoes and all sorts of small things. <br>  As payment prefers 
               accept ducats, although it is possible to negotiate with him on the barter method.
                 `;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = ``;
-          ci = ``;
-          b_mont = ` Торговец Бульбар, очень предприимчивый гном, ведущий монополистическую торговлю в стенах 
-              завода. <br>  Торгует инструментами, картошкой и всякой мелочью. <br>  В качестве оплаты предпочитает 
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Список товаров торговца:  <br>  молот.  <br>  картофелемёт . <br>  компоненты.  <br>  жёлтая сфера.
+          <br>  
+          <br>  Молот <br>
+          <br>  Универсальное орудие ближнего боя. Молоты, которые встречаются в сундуках по всему миру очень древние. Долгие годы считалось, что каждый из многочисленных молотов был создан из одного куска камня. Сейчас многие историки придерживаются мнения об их возникновении вне Нексурта и их истинный возраст от 7000 до 12000 лет. <br>  Такое оружие имеет такие невероятную прочность и качество, что в семьях оно передается из поколения в поколение пару тысяч лет. Каждый молот, со времен появления лазурных кристаллов, был оснащен печатью Гестрага, найденной в древнем гномьем корабле на востоке Мальфарина. Печать связывает владельца и его молот нерушимой связью, не позволяющей потерять молот. <br>  С 734 года печати ставятся на все инструменты, созданные на Нексурте. Из-за своей прочности молот используется для толкания и ломания препятствий, активации нажимных кнопок и конечно же в битвах.
+          <br>
+          <br>Картофельная пушка <br>
+          <br>  Оружие дальнего боя, поражающее противников клубнями картофеля.
+          Кинетической энергии выпущенного картофеля хватает не только на поражение гномьих войнов, но и на нанесение существенного урона роботам. Крахмал, попадающий во внутренние механизмы роботов, портит их и снижает их подвижность, и уменьшает общих уровень разрушений от них.
+          <br>  С 690 года является официальным оружием армии Гномьего союза. 
+          <br>  В 712 году создаются две модификации пушки, Дробовик с фритюрницей и автоматический пулемёт. Дробовик незаменим на короткой дистанции, на которой кучность стрельбы намного выше, пулемёт не сыскал популярности и применяется в основном для разнообразия или для замены картофельной пушки на средней дистанции из-за низкой повторяемости попаданий.
+          `;
+                    ci = ``;
+                    b_mont = ` Торговец Бульбар, очень предприимчивый гном, ведущий монополистическую торговлю в стенах 
+              завода. <br>  Торгует инструментами, в частности оружием, картошкой и всякой мелочью. <br>  В качестве оплаты предпочитает 
               принимать дукаты, хотя с ним можно договориться на бартерный метод. 
                 `;
-        }
-        break;
-      case "03045023":
-      case "3045023":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Entry from 19.10.47 <br>  ...<br>  The elevator was turned off again, well, why should the key components be removed. I understand the security of the upper
+                }
+                break;
+            case "361349":
+                booolSA_G[4] = true;
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Welding Machine
+            <br>  An indispensable tool for the construction of tracks and suspension, as well as in the daily life of a mechanic. 
+            <br>   <img src="piccher/pay/weld.webp" class="pictin" >
+The tool creates an inter-spatial shift that teleports the captured part to the point at which atoms and molecules of a crystalline or amorphous medium connect to each other, forming a single structure.
+            <br>  In addition to creating a rigid coupling between adjacent parts, the welding machine is used to connect and transfer objects. Complex objects that are keys can be installed in the connectors created for them and thereby activate something.
+            <br>  ...`;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Сварочный аппарат
+            <br>  Незаменимый инструмент для строительства гусениц и подвески, а также в повседневной жизни механика. 
+            <br>   <img src="piccher/pay/weld.webp" class="pictin" >
+           Инструмент создаёт меж пространственный сдвиг, телепортирующий прихваченную часть в точку, в которой атомы и молекулы, кристаллической или аморфной среды соединяются между собой, образуя единую структуру.
+            <br>  Помимо создания жесткого сцепления между соседними деталями, сварочный аппарат используется для соединения и переноса объектов. Сложные предметы, являющиеся ключами можно устанавливать в созданные для них разъёмы и тем самым активировать что-либо. 
+            `;
+                    b_mont = ``;
+                }
+                break;
+            case "03045023":
+            case "3045023":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Entry from 19.10.47 <br>  ...<br>  The elevator was turned off again, well, why should the key components be removed. I understand the security of the upper
           floors may be important, and those who work there have the opportunity to arrive through the roof
           buildings and going down stairs, but ordinary workers do not have such a privilege. It's nonsense
           who needs what in offices to make access to them so difficult.
           <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Запись от 19.10.47г <br>  ...<br>  Опять лифт отключили, ну зачем ключ компоненты убирать. Я понимаю безопасность верхних этажей может быть и важна, а у тех кто там работает есть возможность прибывать через на крышу здания и спускаться по лестнице, но у простых рабочих такой привилегии нет. Бред какой-то, кому  и что нужно в офисах, чтобы так усложнять доступ к ним.<br>  ...`;
-          b_mont = ``;
-        }
-        break;
-      case "121024":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `Entry from 17.10.47. <br>...<br>  Commander Dolgopuk, the seismic activity of the valley is beyond the norm. For safety reasons, it is required to declare three non-working days for the plant's personnel, as well as to de-energize the main power supply system. <br>  When the elevator is turned off, for emergency use, it is necessary to use fuse components, they are located on the lower floor of the complex, place them in special holes in the floor near the elevator doors. <br>  To activate the components, repaint them white. <br>...<br>  Engineer: Pipkin K.T..
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись от 19.10.47г <br>  ...<br>  Опять лифт отключили, ну зачем ключ компоненты убирать. Я понимаю безопасность верхних этажей может быть и важна, а у тех кто там работает есть возможность прибывать через на крышу здания и спускаться по лестнице, но у простых рабочих такой привилегии нет. Бред какой-то, кому  и что нужно в офисах, чтобы так усложнять доступ к ним.<br>  ...`;
+                    b_mont = ``;
+                }
+                break;
+            case "121024":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Entry from 17.10.47. <br>...<br>  Commander Dolgopuk, the seismic activity of the valley is beyond the norm. For safety reasons, it is required to declare three non-working days for the plant's personnel, as well as to de-energize the main power supply system. <br>  When the elevator is turned off, for emergency use, it is necessary to use fuse components, they are located on the lower floor of the complex, place them in special holes in the floor near the elevator doors. <br>  To activate the components, repaint them white. <br>...<br>  Engineer: Pipkin K.T..
             <br>  ...`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Запись от 17.10.47г. <br>...<br>  Командир Долгопук, сейсмическая активность долины выходит за рамки нормы. В целях безопасности требуется объявить три нерабочих дня для персонала завода, а также обесточить основную систему питания. <br>  При отключении лифта, для экстренного его использования необходимо использовать компоненты-предохранители, они находятся на нижнем этаже комплекса, поместите их в специальные отверстия в полу у дверей лифта. <br>  Для активации компонентов перекрасьте их в белый цвет. <br>...<br>  Инженер: Пипкин К.Т.`;
-          b_mont = ``;
-        }
-        break;
-      case "04515441":
-      case "4515441":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = `audio/en/.mp3`;
-          b_ta = `A record of a retired MGDS employee.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись от 17.10.47г. <br>...<br>  Командир Долгопук, сейсмическая активность долины выходит за рамки нормы. В целях безопасности требуется объявить три нерабочих дня для персонала завода, а также обесточить основную систему питания. <br>  При отключении лифта, для экстренного его использования необходимо использовать компоненты-предохранители, они находятся на нижнем этаже комплекса, поместите их в специальные отверстия в полу у дверей лифта. <br>  Для активации компонентов перекрасьте их в белый цвет. <br>...<br>  Инженер: Пипкин К.Т.`;
+                    b_mont = ``;
+                }
+                break;
+            case "04515441":
+            case "4515441":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `A record of a retired MGDS employee.
             <br>   …
-            <br> Stupid security system, what kind of idiot came up with the idea of putting and generally came up with a sound 
+            <br>  Stupid security system, what kind of idiot came up with the idea of putting and generally came up with a sound 
             the lock, I can't get into the server room on my own for the fourth day, I have to ask my 
             Samil's disciple to open this door. I built myself a dictaphone and left it in the garage so as not to 
             forget the melody from the castle, if anyone needs it.
             <br>  That's right, old Dolran says that protection should be done from the ideas of the authorities, and not from imaginary ones 
             detractors.
             <br>  …`;
-          b_mont = ``;
-        } else {
-          b_au = `audio/ru/.mp3`;
-          b_ta = `Запись уволившегося сотрудника ВГПК.
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись уволившегося сотрудника ВГПК.
             <br>   …
             <br>  Дурацкая система безопасности, какой идиот придумал ставить и вообще придумал звуковой 
             замок, я четвертый день не могу самостоятельно попасть в серверную, приходится просить моего 
@@ -3252,622 +3406,1278 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
             <br>  Правильно старина Долран говорит, что от идей начальства надо защиту делать, а не от мнимых 
             недоброжелателей.
             <br>  …`;
-          b_mont = ``;
-        }
+                    b_mont = ``;
+                }
 
-        booolSA_G[18] = true;
-        break;
+                booolSA_G[18] = true;
+                break;
+            case "071114330":
+            case "0,7,1,1,1,4,3,3,0":
+                au = true;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    b_mont = `So, so, so, as far as I remember, this floor is protected by components that need to be put on the elevator, and the elevator is locked with two keys that need to be found and installed. <br>  How, after all, the Crucian loves to complicate everything.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    b_mont = `Так, так, так,  насколько я помню, этот этаж защищён компонентами, которые нужно ставить на подъемник, а подъемник заперт на два ключа, которые нужно найти и установить. <br>  Как же всё-таки Корась любит всё усложнять.`;
+                }
 
-      case "2114171":
-        if (checc == "en") {
-          alert('Congratulations, you have found a modification of the Communication Module for your Rafik directory');
-        } else {
-          alert('Поздравляю, вы нашли модификацию Модуль связи для своего справочника Рафик');
-        }
+                if (booolSA_MODS[3]) {
+                    Ans = 0;
+                    document.getElementById("closd").style.display = 'none';
+                    Qv = "Koras";
+                    QvSA = "Koras";
+                    dialTime = false;
+                    setTimeout(INVA, 15000);
+                }
+                break;
+            case "90180123":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Entry from 01.07.29
+              <br>  …
+              <br>  As ordered by the head of Haris, it is necessary to restrict access to the room with chests. 
+              <br>  …
+              <br>  Engineers installed two panels for installing keys in the corridor on the previous floor. The mechanism is triggered only if there are two keys. It is impossible to forge or replace keys, thanks to a complex security system.
+              <br>  …
+              <br>  Keys are interchangeable, any attempt to take a key without a special tool is unacceptable and threatens with a reprimand from the authorities, for the breakdown of a complex technical device and its further repair.
+              <br>  …`;
+                    b_mont = `It's strange, I thought it was Karas who came up with the idea of using keys, and this was old Harris' idea.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись от 01.07.29 года
+              <br>  …
+              <br>  Как приказал начальник Харис, нужно ограничить доступ к комнате с сундуками. 
+              <br>  …
+              <br>  Инженеры установили две панели для установки ключей в коридоре на предыдущем этаже. Механизм запускается только при наличии двух ключей. Подделать или заменить ключи невозможно, благодаря сложной системе защиты.
+              <br>  …
+              <br>  Ключи взаимозаменяемы, любая попытка взять ключ без специального инструмента недопустима и грозит выговором от начальства, за поломку сложного технического прибора и его дальнейшую починку.
+              <br>  …
+              `;
+                    b_mont = `Странно, я думал это Корась придумал использовать ключи, а это идея старины Хариса была.`;
+                }
+                break;
+            case "461950":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
+                ta = true;
+                mont = true;
+                booolSA_S[8] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv9.mp3`;
+                    b_ta = `History of the War with the Giants
+              Part&nbsp;9. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1145.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
+                    b_mont = `Strangely, at the end of part 9 it is written that by the decision of the Gnome Union, the eighth part was withdrawn from print, and it cannot be found on a physical medium. You can try to search in the database of Rafik. The story of the war with the giants Part 8/18`;
+                } else {
+                    b_au = `audio/ru/vv9.mp3`;
+                    b_ta = `История войны с великанами
+              часть&nbsp;9. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1145 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
+              `;
+                    b_mont = `Странно, в конце 9 части написано, что по решению Союза гномов, восьмая часть была изъята из печати, и на физическом носителе её не найти. Можно попробовать поискать в базе Рафика. История войны с великанами часть 8/18`;
+                }
+                break;
+            case "История войны с великанами часть 8/18":
+            case "The story of the war with the giants Part 8/18":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
+                ta = true;
+                mont = false;
+                booolSA_S[7] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv8.mp3`;
+                    b_ta = `History of the War with the Giants
+                Part&nbsp;8. <br> (Abridged version edited by Professor of Gnomology Garswer Nurdak 1145.) <br>  The transcribed text of the record is marked in the "Backpack" tab.`;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv8.mp3`;
+                    b_ta = `История войны с великанами
+                часть&nbsp;8. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1145 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".
+                `;
+                    b_mont = ``;
+                }
+                break;
+            case "29435":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `....<br>  The recording cannot be played back, the media is damaged, repair or configuration is required. The contents of the cassette are stored in memory. <br>  The entry number is 11882.<br>  ...`;
+                    b_mont = `A cassette from a tape recorder with some kind of recording, with a note from the staff. <br>  [ Programmer Satur ] : A damaged record found in a crevice in the foundation of the plant. There is no physical damage, you can try to adjust and restore the magnetization. 
+                    <br>  I remember how the programming teacher told me that in the version of Rafiq 2.4, the function of soft tuning of cassettes was added. If you enter the RES command, a hint to the function will open.
+                    <br>  So, you still need to remember or write down the record number, if necessary.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `....<br>  Невозможно воспроизвести запись, носитель повреждён, требуется ремонт или настройка. Сожержимое кассеты сохранено в память. <br>  Номер записи 11882.<br>  ...
+                  `;
+                    b_mont = `Кассета от магнитофона с какой-то записью и рукописной заметкой от персонала. <br>  [ Программист Сатур ] : Поврежденная запись, найденная в расщелине в фундаменте завода. Физических повреждений нет, можно попробовать настроить и восстановить намагниченность. 
+                    <br>  Помню, как преподаватель по программированию рассказывал, что в версии Рафика 2.4 была добавлена функция мягкой настройки кассет. Если вписать команду RES, то откроется подсказка к функции. 
+                    <br>  Так, ещё надо запомнить или записать номер записи, если потребуется.
+                    `;
+                }
+                break;
+            case "RES":
+            case "res":
+            case "Res":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Soft RES setting function
+          <br>  To activate the function, enter the QW space and the number of the saved record, for example, QW 12345.
+          Then the setup program will start. <br>  You will need to enter (pick up) a four-digit number so that the Rafik 2.4+ CPU can properly magnetize the damaged sections of the recording code. <br>  The built-in comparators are unable to accurately determine the voltage of the solenoid coils for proper magnetization, this requires a user.
+          <br>  The algorithm of record recovery is similar to the rules of the game Bulls and Cows. If the number 1234 is needed for the setup, and the user has entered 1253, then the computer will output (2) and (1), (2)- correctly matched 1 and 2 at the beginning in their positions, and (1) because 3 is selected, but not in its place. To disable the function, enter QWC.<br>  ...`;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Функция мягкой настройки RES
+          <br>  Чтобы активировать функцию впишите QW пробел и номер сохранённой записи, например, QW 12345.
+          Затем запустится программа настройки. <br>  Вам нужно будет ввести (подобрать) четырёхзначное число, чтобы центральный процессор Рафика 2.4+ смог правильно намагнитить повреждённые участки кода записи. <br>  Встроенные компараторы неспособны точно определить напряжения катушек соленоида, для правильного намагничивания нужен пользователь.
+          <br>  Алгоритм восстановления записи схож с правилами игры Быки и Коровы. Если для настройки необходимо число 1234, а пользователь ввёл 1253, то компьютер выведет (2) и (1), (2)- верно подобранные 1 и 2 в начале на своих позициях, а (1) потомушто 3 подобрана, но не на своём месте. Чтобы отключить функцию впишите QWC .<br>  ...
+          `;
+                    b_mont = ``;
+                }
+                break;
+            case "QW 11882":
+            case "Qw 11882":
+            case "qw 11882":
+                au = false;
+                ta = true;
+                mont = false;
+                Qv = "QW";
+                Ans = 9128;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `The recovery mode of record № 11882 is enabled. <br>  The driver is connected. You can start configuring the data. <br>  Enter a four-digit setting number.
+            `;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Включён режим востановления записи №11882. <br>  Драйвер подключён. Можете начинать настройку данных. <br>  Введите четырёхзначное число настройки.
+            `;
+                    b_mont = ``;
+                }
 
-        booolSA_MODS[3] = true;
-        Ans = 0;
-        document.getElementById("closd").style.display = 'none';
+                break;
+            case "522085009":
+            case "5,2,2,0,8,5,0,0,9":
+                au = false;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    b_mont = `Phew, why go up so high without an elevator. <br>   ... Oh, my back, I can't feel my knees, it's getting dark in my eyes. <br>   ... It seems to have rested, you can continue to climb.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    b_mont = `Фух, почему так высоко подниматься без лифта. <br>  … Ох моя спина, колени не чувствую, в глазах темнеет. <br>  … Вроде отдохнул, можно дальше подниматься.`;
+                }
 
-        QvSA = "FirstN";
-        break;
-      case "0,2,1,3,4,1,4,4,2":
-      case "021341442":
-        if (checc == "en") {
-          alert('Access denied!');
-        } else {
-          alert('Ваш начальник что-то вам написал, откройте модуль диалогов чтобы ответить ему.');
-        }
+                break;
+            case "554544241":
+            case "5,5,4,5,4,4,2,4,1":
+                au = false;
+                ta = false;
+                mont = true;
 
-        QvSA = "Koras";
-        break;
-      case "admin53642762":
-        for (let index = 2; index < booolSA_G.length; index++) {
-          booolSA_G[index] = true;
-        }
-        for (let index = 0; index < booolSA_S.length; index++) {
-          booolSA_S[index] = true;
-        }
-        break;
-      case "Space":
-        if (checc == "en") {
-          pasvord = prompt('Enter the confirmation password:');
-        } else {
-          pasvord = prompt('Введите пароль подтверждения:');
-        }
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    ci = `Uvard Pilot`;
+                    b_mont = ` Oh, the new pilot, my name is Uvard Hoaken, I command space flights from this site and train pilots. <br>  If I'm not mistaken, they call you Duncan. <br>  Four years have passed since I was preparing my last student. Although no, two years ago I had a newcomer Alex, but he did not pass the test. When performing the tests, he disappeared without telling me anything. I remember he was an outstanding soldier, he probably found a job to his liking and did not upset me.
+          <br>  I will take care of your preparation, first take things from the chest that is closer to me. It contains the keys to the trials that I have prepared, try not to lose or break them. 
+          <br>  On three floors of the roof, there are four tests, for dexterity, strength, accuracy and intelligence. When performing the test, a green lamp lights up, when you complete all four, come back here and I will give you access to the chest, which contains the item necessary to collect all the necessary things required for the flight. <br>  Come on, good luck.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    ci = `Пилот Увард`;
+                    b_mont = ` О, новый пилот, меня зовут Увард Хоакен, я командую космическими полётами с этой площадки и готовлю пилотов. <br>  Если не ошибаюсь, тебя Дунканом величают. <br>  Года четыре прошло, как я готовила своего последнего ученика. Хотя нет, два года назад у меня был новичок Алекс, но он не прошёл тестирование. При выполнении испытаний, он пропал ничего не сказав мне. Помню он был выдающимся солдатом, нашёл наверное работу по душе и не стал меня расстраивать.
+          <br>  Твоей подготовкой займусь я, для начала возьми вещи из сундука, который ближе ко мне. В нём ключи к испытаниям, которые я подготовила, постарайся их не потерять и не сломать. 
+          <br>  На трёх этажах крыши, находятся четыре испытания, на ловкость, силу, меткость и сообразительность. При выполнении испытания зажигается зелёная лампа, когда выполнишь все четыре, возвращайся сюда и я дам тебе доступ к сундуку, в котором лежит предмет, необходимый для сбора всех необходимых вещей обязательных для полёта. <br>  Давай, удачи.
+          
+          `;
+                }
+                break;
+            case "8,0,4,0,8,0,4,6":
+            case "080408046":
+                au = false;
+                ta = false;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = ``;
+                    b_mont = ` And here the elevator does not work, the management has thoroughly approached the issue of de-energizing the complex. Activating this elevator is the only way to get to the roof, there should be a generator in the next room.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = ``;
+                    b_mont = ` И здесь лифт не работает, руководство основательно подошло к вопросу об обесточивании комплекса. Активация данного лифта это единственный способ попасть на крышу, в соседней комнате должен быть генератор.
+              `;
+                }
+                break;
+            case "67615733":
+                if (booolSA_MODS[1]) {
+                    au = true;
+                }
+                ta = true;
+                mont = false;
+                booolSA_S[9] = true;
+                if (checc == "en") {
+                    b_au = `audio/en/vv10.mp3`;
+                    b_ta = `History of the war with the giants
+                  part 10. <br> (Abridged version edited by Professor of Gnomology Garsver Nurdak 1145.) <br> The transcribed text of the entry is marked in the "Backpack" tab.`;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/vv10.mp3`;
+                    b_ta = `История войны с великанами
+                  часть&nbsp;10. <br> (Сокращенная версия под редакцией профессора гномологии Гарсвера Нурдака 1145 год.) <br>  Расшифрованный текст записи отмечен во вкладке "Рюкзак".`;
+                    b_mont = `
+                  `;
+                }
+                break;
+            case "31315":
+                au = false;
+                ta = true;
+                mont = true;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Entry Flight Commander Uvard Joaquin.
+                  <br>  …
+                  <br>  Attention, the flight is carried out strictly by permission of Commander Koras P.K. and in agreement with the Plant's air defense management staff.
+                  The pilot is obliged to undergo testing and independently prepare the last missing components for the flight.
+                  <br>  …
+                  <br>  For the flight, you need to prepare fuel, simple fuel in cans, in the size of 4 pieces, can be suitable for this ship.
+                  <br>  Charge the batteries with four batteries.
+                  <br>  Stock up on potatoes.
+                  <br>  Install the capsules of the paint gun to stabilize the flight during the passage of the upper atmosphere.
+                  <br>  …
+                  <br>  To refuel the ship and recharge it, it is advisable to hold the loading buttons, and not just click on them.
+                  <br>  …`;
+                    b_mont = `To launch the ship, you need to find the missing cartridges for the spray gun and fuel with
+                  batteries, and it would not hurt to bring potatoes with you. Maybe I'll fry it, fried
+                  potatoes for guns are much tastier than usual.`;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись командующий полётами Увард Хоакен.
+                  <br>  …
+                  <br>  Внимание, полёт выполняется строго по разрешению командира Корася П.К. и по согласованию с управляющим составом ПВО Завода.
+                  Лётчик обязан пройти тестирование и самостоятельно подготовить последние недостающие компоненты для полёта.
+                  <br>  …
+                  <br>  Для полёта нужно подготовить топливо, для данного корабля может подойти простое топливо в канистрах, в размере 4 штук.
+                  <br>  Зарядить аккумуляторы с помощью четырёх батареек.
+                  <br>  Запастись картофелем.
+                  <br>  Установить капсулы краскомёта для стабилизации полёта при прохождении верхних слоёв атмосферы.
+                  <br>  …
+                  <br>  Для заправки корабля и его подзарядки желательно удерживать кнопки загрузки, а не просто нажать на них.
+                  <br>  …
+                  `;
+                    b_mont = `Чтобы запустить корабль нужно найти недостающие картриджи для краскопульта и топливо с 
+                  батарейками, и ещё не помешало бы захватить с собой картошку. Может поджарю её, жаренная 
+                  картошка для пушек намного вкуснее обычной.
+                  `;
+                }
+                break;
+            case "432949":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = `audio/en/.mp3`;
+                    b_ta = `Entry from the diary of recruit Alex Merkon
+                  <br>  …
+                  <br>  01.03.45 of the year.
+                  <br>  15:08 - Finally I was admitted to the final test, I will be the first to pass the new test of Master Joaquin U.S. designed to test and train pilots according to the accelerated program.
+                  20:01 - Today was a difficult day, I barely managed to shoot at all the targets, but I coped.
+                  <br>  …
+                  <br>  02.03.45 of the year
+                  <br>  I was exhausted while beating a big pear with a hammer, I definitely dropped a kilogram. I found a clue how to open the doors to the last test.
+                  I tried to climb a column, after training with a hammer, did not calculate my strength, injured my right leg in a fall.
+                  <br>  …
+                  <br> 26.03.45 of the year.
+                  <br>  After three weeks in the medical department, I am ready to start testing again.
+                  <br>  …
+                  <br>  28.03.45 of the year.
+                  We managed to climb the columns, jumping on them, and light the lamp, closing two sensors at the same time. 
+                  <br>  … 
+                  <br> 03.04.45 of the year.
+                  <br>  The last test is connected with stealthy movement, you can't get caught by sensors. It only occurred to me today that the button outside resets the sensor system, otherwise the passage closes, even if you press the button inside the maze. Fortunately, during this time I found fuel cans.
+                  <br>  …
+                  <br>  06.04.45 of the year.
+                  <br>  I am very tired of this stage of learning, there are no buttons in the maze. At the end of the maze, you have to crawl along the elevator shaft, I even saw the passage further, but the gap is very narrow.
+                  <br>  …
+                  <br>  10.04.45 of the year.
+                  <br>  Yesterday I asked Master Uvard to tell me what to do further, she replied to move the elevator. I've been trying for the whole day, but the elevator is very massive, and I can't move it with a hammer.
+                  <br>  12.04.45 of the year.
+                  <br>  Tonight I had an idea with an elevator. I hope I will be able to approach this issue from the other side, the main thing is that no one calls him to the roof. When everyone goes to bed, I will go through the maze again so that no one will disturb me.
+                  <br>  …
+                  <br>  [This was the last entry]`;
+                    b_mont = ``;
+                } else {
+                    b_au = `audio/ru/.mp3`;
+                    b_ta = `Запись из дневника новобранца Алекса Меркона
+                  <br>  …
+                  <br>  01.03.45 года.
+                  <br>  15:08 - Наконец-то меня допустили до выпускного испытания, я буду, первый кто пройдёт новое испытание мастера Хоакин У.С. предназначенное для проверки и подготовки пилотов по ускоренной программе.
+                  <br>  20:01 - Сегодня был трудный день, еле успел выстрелить во все мишени, но я справился.
+                  <br>  …
+                  <br>  02.03.45 года
+                  <br>  Весь вымотался пока бил большую грушу молотком, килограмм точно сбросил. Нашёл подсказку как открыть двери к последнему испытанию.
+                  Попробовал забраться на колонну, после тренировки с молотом, не рассчитал свои силы, повредил правую ногу при падении.
+                  <br>  …
+                  <br>  26.03.45 года.
+                  <br>  Спустя три недели в медицинском отделении, я снова готов приступить к испытаниям.
+                  <br>  …
+                  <br>  28.03.45 года.
+                  <br>  Удалось забраться на колонны, прыгая по ним, и зажечь лампу, закрыв два сенсора одновременно. 
+                  <br>  … 
+                  <br>  03.04.45 года.
+                  <br>  Последнее испытание связано со скрытным передвижением, нельзя попадаться на сенсоры. До меня только сегодня дошло, что кнопка снаружи сбрасывает систему сенсоров, иначе проход закрывается, даже если нажать кнопку внутри лабиринта. Благо за это время отыскал канистры с топливом.
+                  <br>  …
+                  <br>  06.04.45 года.
+                  <br>  Я сильно утомился этим этапом обучения, в лабиринте нет никаких кнопок. В конце лабиринта надо проползти по лифтовой шахте, я даже видел проход дальше, но щель очень узкая.
+                  <br>  …
+                  <br>  10.04.45 года.
+                  <br>  Вчера я попросил мастера Увард подсказать мне, что делать дальне, она ответила, сдвинуть лифт. Я пытаюсь уже целый день, но лифт очень массивный, и молотком мне его не сдвинуть.
+                  <br>  12.04.45 года.
+                  <br>  Сегодня вечером у меня появилась идея с лифтом. Надеюсь у меня получится подойти к этому вопросу с другой стороны, главное чтобы никто не вызвал его на крышу. Когда все лягут спать, я снова пройду лабиринт, чтобы мне никто не помешал.
+                  <br>  …
+                  <br>  [Это была последняя запись] 
+                  `;
+                    b_mont = `
+                  `;
+                }
+                break;
+            case "QWC":
+                au = false;
+                ta = false;
+                mont = false;
+                if (Qv == "QW") {
+                    if (checc == "en") {
+                        alert('The recording recovery function is disabled.');
+                    } else {
+                        alert('Функция восстановления записи отключена.');
+                    }
+                    Qv = "";
+                } else {
+                    if (checc == "en") {
+                        alert('The record recovery function was not active.');
+                    } else {
+                        alert('Функция восстановления записи не была активна.');
+                    }
+                }
+                break;
+            case "2114171":
+                if (checc == "en") {
+                    alert('Congratulations, you have found a modification of the Communication Module for your Rafik directory');
+                } else {
+                    alert('Поздравляю, вы нашли модификацию Модуль связи для своего справочника Рафик');
+                }
 
-        if (pasvord == "Adventures") {
-          au = false;
-          ta = true;
-          mont = false;
-          if (checc == "en") {
-            b_au = `audio/en/.mp3`;
-            b_ta = `The Creator welcomes you!`;
-            b_mont = ``;
-          } else {
-            b_au = `audio/ru/.mp3`;
-            b_ta = `Содатель приветствует вас!`;
-            b_mont = ``;
-          }
-        } else {
-          if (checc == "en") {
-            alert('Access denied!');
-          } else {
-            alert('В доступе отказано!');
-          }
-        }
+                booolSA_MODS[3] = true;
+                Ans = 0;
+                document.getElementById("closd").style.display = 'none';
 
-        break;
-      case "Rafik":
-      case "rafik":
-      case "Рафик":
-      case "рафик":
-        au = false;
-        ta = true;
-        mont = false;
-        if (checc == "en") {
-          b_au = ``;
-          if (cmode == "SA") {
-            b_ta = `Rafik 3 is a device that is the latest version of a portable reference book. Unlike the previous version, he has an artifact implanted in his body - the "Eye of Angnor", left after the war with the giants. This item somehow violates the invisible fabric of time and gives the directory access to currently existing records or to those that will appear in it in the future. This does not mean that with the help of the device you can find out the answer to any question, but only strictly defined information, access to which is encrypted in time streams, which in a sense the eye sees.`;
-          } else b_ta = `Rafik 3 is a special modification of a portable reference book that allows you to decipher almost any information from the world around us, not only in the present, but also in the future. Access to all kinds of audio or video recordings, as well as notes and notes is provided by the amazing ability of one artifact called the "Eye of Angnor". The artifact itself is not of particular interest, except to collectors of old or rare items. The eye was created by Giants, given and implanted to the traitor of the dwarf family, Angar Tallinn. After that, the eye, cruelly torn out and given to study, lay idle for a long time, until the scientist Balenvur Muntagoris decided to mount it with a portable Rafik 2.6., revealing its true potential. 4 years after its creation, the Commonwealth became interested in it and bought it from Balenvur for a huge sum of money.`;
-          b_mont = ``;
-        } else {
-          b_au = ``;
-          if (cmode == "SA") {
-            b_ta = `Рафик 3- устройство, представляющее собой новейшую версию, портативного справочника. В отличие от предыдущей, своей версии он имеет имплантированный в свой корпус артефакт - " Глаз Ангнора", оставшийся после войны с великанами. Данный предмет каким-то образом нарушает незримую ткань времени и даёт справочнику доступ к уже существующим в настоящее время записям или к тем, которые появятся в нём в бубущем. Это не означает, что с помощью устройства можно узнать ответ на любой вопрос, а только строго определённую информацию, доступ к которой зашифрован во временных потоках, которые в некотором смысле видит глаз.`;
-          } else b_ta = `Рафик 3- особая модификация портативного справочника, позволяющая расшифровывать практически любую информацию из окружающего нас мира, не только в настоящем, но и в будущем. Доступ ко всяким звуковым или видео записям, а также к запискам и заметкам обеспечивается потрясающей способностью одного артефакта под названием - " Глаз Ангнора". Сам по себе артефакт не представляет особого интереса, разве что коллекционерам старых или редких предметов. Глаз был создан Великанами, подарен и имплантирован предателю гномьего рода Ангару Таллинскому. После чего жестоко вырванный и отданный на изучение глаз, долгое время лежал без дела, пока ученый Баленвур Мунтагорис не решил вмонтировать его с портативный Рафик 2.6., открыв его истинный потенциал. Через 4 года после его создания, Содружество заинтересовалось им и выкупила его у Баленвура за огромную сумму денег.`;
-          b_mont = ``;
-        }
-        break;
-      case "help":
-        // pasvord = prompt('Сколько тебе лет?');
-        DialogSA();
-        // au = false;
-        // ta = false;
-        // mont = false;
-        // if (checc == "en") {
-        //   b_au = `audio/en/.mp3`;
-        //   b_ta = ``;
-        //   b_mont = ``;
-        // } else {
-        //   b_au = `audio/ru/.mp3`;
-        //   b_ta = ``;
-        //   b_mont = ``;
-        // }
-        break;
-      default:
-        if (checc == "en") {
-          alert("Nothing was found for your query.");
-        } else {
-          alert("По вашему запросу ничего не найдено.");
-        }
-    }
+                QvSA = "FirstN";
+                break;
+            case "0,2,1,3,4,1,4,4,2":
+            case "021341442":
+                if (checc == "en") {
+                    alert('Access denied!');
+                } else {
+                    alert('Ваш начальник что-то вам написал, откройте модуль диалогов чтобы ответить ему.');
+                }
 
-    localStorage.setItem(`Mbool`, JSON.stringify(booolSA_S));
-    localStorage.setItem(`Mbool1`, JSON.stringify(booolSA_G));
-    localStorage.setItem(`Mds`, JSON.stringify(booolSA_MODS));
+                QvSA = "Koras";
+                break;
+            case "admin53642762":
+                for (let index = 2; index < booolSA_G.length; index++) {
+                    booolSA_G[index] = true;
+                }
+                for (let index = 0; index < booolSA_S.length; index++) {
+                    booolSA_S[index] = true;
+                }
+                break;
+            case "Space":
+                if (checc == "en") {
+                    pasvord = prompt('Enter the confirmation password:');
+                } else {
+                    pasvord = prompt('Введите пароль подтверждения:');
+                }
 
-    if (au) {
-      document.getElementById("mega_audio").src = b_au;
-    }
+                if (pasvord == "Adventures") {
+                    au = false;
+                    ta = true;
+                    mont = false;
+                    if (checc == "en") {
+                        b_au = `audio/en/.mp3`;
+                        b_ta = `The Creator welcomes you!`;
+                        b_mont = ``;
+                    } else {
+                        b_au = `audio/ru/.mp3`;
+                        b_ta = `Содатель приветствует вас!`;
+                        b_mont = ``;
+                    }
+                } else {
+                    if (checc == "en") {
+                        alert('Access denied!');
+                    } else {
+                        alert('В доступе отказано!');
+                    }
+                }
 
-    if (ta) {
-      document.getElementById("ttx").innerHTML = b_ta;
-    }
-
-    if (mont) {
-      if (checc == "en") {
-        alert("In the notes tab, a new entry has appeared.");
-      } else {
-        alert("Во вкладке заметки, появилась новая запись.");
-      }
-      Mont(b_mont);
-    }
-
-    document.getElementById("Ytu").value = ``;
-  }
-
-  function dialo() {
-    if (coling2) {
-      coling2 = false;
-      document.getElementById("ttx").innerHTML = "";
-      document.getElementById("Dial").style.display = 'none';
-    } else {
-      coling2 = true;
-      
-      document.getElementById("ttx").innerHTML = "";
-      document.getElementById("Dial").style.display = '';
-      DialogSA();
-    }
-  }
-
-  function scr1MT() {
-
-  }
-
-  function auter() {
-    let a = "";
-    if (checc == "en") {
-      a = confirm("Attention!!! This audio recording may contain copyrights, which may affect verification from YouTube, twitch, etc. You will listen to the notes at your own risk, the author is not responsible for copyright infringement. Play the recording?");
-    } else {
-      a = confirm("Внимание!!! Данная аудиозапись может содержать авторские права, что может повлиять на проверку от youtube, twitch и т.д. Вы будете слушать запись на свой страх и риск, автор не несет ответственности за нарушение авторских прав на этих платформах. Воспроизвести эту запись?");
-    }
-    return a;
-  }
-
-  function Ans1() {
-    Ans = 1;
-    ADialogSA();
-  }
-
-  function Ans2() {
-    Ans = 2;
-    ADialogSA();
-  }
-
-  function Ans3() {
-    Ans = 3;
-    ADialogSA();
-  }
-
-  function Ans4() {
-    Ans = 4;
-    ADialogSA();
-  }
-
-  function Ans5() {
-    Ans = 5;
-    ADialogSA();
-  }
-
-  function Ans6() {
-    Ans = 6;
-    ADialogSA();
-  }
-
-  function Ans7() {
-    Ans = 7;
-    ADialogSA();
-  }
-
-  function Ans8() {
-    Ans = 8;
-    ADialogSA();
-  }
-
-  function Ans9() {
-    Ans = 9;
-    ADialogSA();
-  }
-
-  function ADialogSA() {
-    let a = true;
-    switch (QvSA) {
-      case "FirstN":
-        switch (Ans) {
-          case 4:
-            QvSA = "FirstN1";
-            break;
-          default:
-            QvSA = "FirstN";
-            break;
-        }
-        break;
-      case "FirstN1":
-        switch (Ans) {
-          case 1:
-            QvSA = "FirstN1";
-            break;
-          default:
-            QvSA = "FirstN2";
-            break;
-        }
-        break;
-      case "Lara1":
-        switch (Ans) {
-          case 5:
-            a = false;
-            coling2 = true;
-            document.getElementById("ttx").innerHTML = "";
-            dialo();
-            break;
-          default:
-            QvSA = "Lara1";
-            break;
-        }
-        break;
-      case "Lara2":
-        switch (Ans) {
-          case 5:
-            AnsTime = 0;
-            QvSA = "Lara3";
-            break;
-          default:
-            QvSA = "Lara2";
-            break;
-        }
-        break;
-      case "Lara3":
-        switch (Ans) {
-          case 5:
-            AnsTime = 0;
-            a = false;
-            coling2 = true;
-            document.getElementById("ttx").innerHTML = "";
-            QvSA = "znakomstvo";
-            dialo();
-            break;
-          default:
-            QvSA = "Lara3";
-            break;
-        }
-        break;
-      case "Koras":
-        QvSA = "корась1";
-        break;
-      case "корась1":
-        switch (Ans) {
-          case 2:
-            QvSA = "корасьВозмущение";
-            break;
-          default:
-            QvSA = "корасьСогласие";
-            break;
-        }
-        break;
-      case "корасьВозмущение":
-        switch (Ans) {
-          case 2:
-            QvSA = "корасьСогласие";
-            break;
-          default:
-            QvSA = "корасьУступок";
-            break;
-        }
-        break;
-      case "корасьУступок":
-        QvSA = "корасьСогласие";
-        break;
-      case "корасьСогласие":
-        a = false;
-        coling2 = true;
-        document.getElementById("ttx").innerHTML = "";
-        dialo();
-        break;
-      case "FirstN2":
-        a = false;
-        coling2 = true;
-        document.getElementById("ttx").innerHTML = "";
-        dialo();
-        break;
-      default:
-        if (checc == "en") {
-          alert("No new messages!");
-        } else {
-          alert("Новых сообщений нет!");
-        }
-        QvSA = "znakomstvo";
-        a = false;
-        coling2 = true;
-        document.getElementById("ttx").innerHTML = "";
-        dialo();
-        break;
-    }
-
-    localStorage.setItem(`ZQvSA`, QvSA);
-    if (a) {
-      DialogSA();
-    }
-  }
-
-  function DialogSA() {
-    let b_ta = "", b_mont = "";
-    switch (QvSA) {
-      case "FirstN":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (Ans) {
-            case 0:
-              b_ta = `Здравствуйте, модуль связи успешно установлен. Для продолжения введите имя пользователя и должность.`;
-              break;
-            case 1:
-              b_ta = `Неверные данные, в настоящее время предприятием ВГПК командует генерал Долгопук Н.Н.. Введите настоящее имя и должность.`;
-              break;
-            case 2:
-              b_ta = `Неверные данные, должность садовник на территории ВГПК упразднена в 1238 году. Введите настоящее имя и должность.`;
-              break;
-            case 3:
-              b_ta = `Неверные данные, такой персонал комплекса уже в сети и он учавствовал в моей настройке, не пытайтеcь выдать себя за него. Введите настоящее имя и должность.`;
-              break;
+                break;
+            case "Rafik":
+            case "rafik":
+            case "Рафик":
+            case "рафик":
+                au = false;
+                ta = true;
+                mont = false;
+                if (checc == "en") {
+                    b_au = ``;
+                    if (cmode == "SA") {
+                        b_ta = `Rafik 3 is a device that is the latest version of a portable reference book. Unlike the previous version, he has an artifact implanted in his body - the "Eye of Angnor", left after the war with the giants. This item somehow violates the invisible fabric of time and gives the directory access to currently existing records or to those that will appear in it in the future. This does not mean that with the help of the device you can find out the answer to any question, but only strictly defined information, access to which is encrypted in time streams, which in a sense the eye sees.`;
+                    } else b_ta = `Rafik 3 is a special modification of a portable reference book that allows you to decipher almost any information from the world around us, not only in the present, but also in the future. Access to all kinds of audio or video recordings, as well as notes and notes is provided by the amazing ability of one artifact called the "Eye of Angnor". The artifact itself is not of particular interest, except to collectors of old or rare items. The eye was created by Giants, given and implanted to the traitor of the dwarf family, Angar Tallinn. After that, the eye, cruelly torn out and given to study, lay idle for a long time, until the scientist Balenvur Muntagoris decided to mount it with a portable Rafik 2.6., revealing its true potential. 4 years after its creation, the Commonwealth became interested in it and bought it from Balenvur for a huge sum of money.`;
+                    b_mont = ``;
+                } else {
+                    b_au = ``;
+                    if (cmode == "SA") {
+                        b_ta = `Рафик 3- устройство, представляющее собой новейшую версию, портативного справочника. В отличие от предыдущей, своей версии он имеет имплантированный в свой корпус артефакт - " Глаз Ангнора", оставшийся после войны с великанами. Данный предмет каким-то образом нарушает незримую ткань времени и даёт справочнику доступ к уже существующим в настоящее время записям или к тем, которые появятся в нём в бубущем. Это не означает, что с помощью устройства можно узнать ответ на любой вопрос, а только строго определённую информацию, доступ к которой зашифрован во временных потоках, которые в некотором смысле видит глаз.`;
+                    } else b_ta = `Рафик 3- особая модификация портативного справочника, позволяющая расшифровывать практически любую информацию из окружающего нас мира, не только в настоящем, но и в будущем. Доступ ко всяким звуковым или видео записям, а также к запискам и заметкам обеспечивается потрясающей способностью одного артефакта под названием - " Глаз Ангнора". Сам по себе артефакт не представляет особого интереса, разве что коллекционерам старых или редких предметов. Глаз был создан Великанами, подарен и имплантирован предателю гномьего рода Ангару Таллинскому. После чего жестоко вырванный и отданный на изучение глаз, долгое время лежал без дела, пока ученый Баленвур Мунтагорис не решил вмонтировать его с портативный Рафик 2.6., открыв его истинный потенциал. Через 4 года после его создания, Содружество заинтересовалось им и выкупила его у Баленвура за огромную сумму денег.`;
+                    b_mont = ``;
+                }
+                break;
+            case "help":
+                // pasvord = prompt('Сколько тебе лет?');
+                DialogSA();
+                // au = false;
+                // ta = false;
+                // mont = false;
+                // if (checc == "en") {
+                //   b_au = `audio/en/.mp3`;
+                //   b_ta = ``;
+                //   b_mont = ``;
+                // } else {
+                //   b_au = `audio/ru/.mp3`;
+                //   b_ta = ``;
+                //   b_mont = ``;
+                // }
+                break;
             default:
-              b_ta = `Ведущий инженер-механик находится уже в сети и это не ВЫ! Введите настоящее имя и должность.`;
-              break;
-          }
-          ci = `
+                switch (Qv) {
+                    case "QW":
+                        au = false;
+                        ta = true;
+                        mont = false;
+
+                        NumA[0] = Math.trunc(Number(a) / 1000);
+                        NumA[1] = Math.trunc((Number(a) - (NumA[0] * 1000)) / 100);
+                        NumA[2] = Math.trunc((Number(a) - (NumA[0] * 1000) - (NumA[1] * 100)) / 10);
+                        NumA[3] = Number(a) - (NumA[0] * 1000) - (NumA[1] * 100) - (NumA[2] * 10);
+
+                        NumB[0] = Math.trunc(Ans / 1000);
+                        NumB[1] = Math.trunc((Ans - (NumB[0] * 1000)) / 100);
+                        NumB[2] = Math.trunc((Ans - (NumB[0] * 1000) - (NumB[1] * 100)) / 10);
+                        NumB[3] = Ans - (NumB[0] * 1000) - (NumB[1] * 100) - (NumB[2] * 10);
+
+                        for (let index = 0; index < NumA.length; index++) {
+                            if (NumA[index] == NumB[index]) {
+                                nB++;
+                            }
+                        }
+
+                        for (let index = 0; index < NumA.length; index++) {
+                            for (let index1 = 0; index1 < NumA.length; index1++) {
+                                if (NumA[index] == NumB[index1]) {
+                                    nC++;
+                                }
+                            }
+                        }
+
+                        nC = nC - nB;
+
+                        if (nB < 4) {
+                            if (checc == "en") {
+                                b_au = `audio/en/.mp3`;
+                                b_ta = ` Matched: ` + String(nB) + ` is true in its place and from the remaining positions: ` + String(nC) + ` is true, but not in its place.` + ` A number was entered: ` + a;
+                                b_mont = ``;
+                            } else {
+                                b_au = `audio/ru/.mp3`;
+                                b_ta = ` Подобрано: ` + String(nB) + ` верно на своём месте и из оставшихся позиций : ` + String(nC) + ` верно, но не на своём месте.` + ` Было введено число: ` + a;
+                                b_mont = ``;
+                            }
+                        } else {
+                            switch (Ans) {
+                                case 9128:
+                                    mont = true;
+                                    if (checc == "en") {
+                                        b_au = `audio/en/.mp3`;
+                                        b_ta = `The restored text of the entry: <br> <br>  My Lord, the search for Darnuvir was unsuccessful, the remaining fragment showed us that he is somewhere in the vicinity of this complex, the exact location is still unknown.
+                    <br>  There is information that the VEGA commander contacted General Dolgopuk and reported the incident at the station.
+                    <br>  The tremors and the smell of gas from the ground became stronger, the detachment led by Balard lost some of the researchers in the mine to the north of the valley. The search for new ones is organized after the arrival of reinforcements from Sortavala.
+                    <br>  The next communication session is in 11 days at one o'clock in the morning.
+                    `;
+                                        b_mont = ` I don't like all this. Judging by the points mentioned, the recordings are no more than a week old. Apparently the author of the message was scared off, and he threw the tape. Since I have not seen any warning or wanted ads, there is most likely no threat.`;
+                                        alert("Record restored");
+                                    } else {
+                                        b_au = `audio/ru/.mp3`;
+                                        b_ta = `Восстановленный текст записи: <br> <br>  Повелитель, поиски Дарнувира не увенчались успехом, оставшийся осколок показал нам, что он где-то в окрестностях этого комплекса, точное местоположение до сих пор не известно.
+                    <br>  Есть информация, что командир ВЕГИ связался с генералом Долгопуком, и доложил о происшествии на станции. 
+                    <br>  Толчки и запах газа из-под земли стали сильнее, отряд под руководством Бэларда потерял часть исследователей в шахте к северу от долины. Поиск новых организуется после прибытия подкрепления из Сортала. 
+                    <br>  Следующий сеанс связи через 11 дней в час ночи.
+                    `;
+                                        b_mont = ` Не нравится мне всё это. Судя по упомянутым толчкам, записи не больше недели. Видимо автора сообщения спугнули, и он бросил кассету. Поскольку я не видел объявлений с предупреждениями или розыском, скорее всего угрозы нет.`;
+                                        alert("Запись восстановлена");
+                                    }
+                                    break;
+                                default:
+
+                                    break;
+                            }
+                        }
+
+
+                        break;
+                    case "QR":
+
+                        break;
+                    case "-":
+
+                        break;
+                    default:
+                        if (checc == "en") {
+                            alert("Nothing was found for your query.");
+                        } else {
+                            alert("По вашему запросу ничего не найдено.");
+                        }
+                        break;
+                }
+
+                break;
+        }
+
+        localStorage.setItem(`Mbool`, JSON.stringify(booolSA_S));
+        localStorage.setItem(`Mbool1`, JSON.stringify(booolSA_G));
+        localStorage.setItem(`Mds`, JSON.stringify(booolSA_MODS));
+
+        if (au) {
+            document.getElementById("mega_audio").src = b_au;
+        }
+
+        if (ta) {
+            document.getElementById("ttx").innerHTML = b_ta;
+        }
+
+        if (mont) {
+            if (checc == "en") {
+                alert("In the notes tab, a new entry has appeared.");
+            } else {
+                alert("Во вкладке заметки, появилась новая запись.");
+            }
+            Mont(b_mont);
+        }
+
+        document.getElementById("Ytu").value = ``;
+    }
+
+    function dialo() {
+        if (coling2) {
+            coling2 = false;
+            document.getElementById("ttx").innerHTML = "";
+            document.getElementById("Dial").style.display = 'none';
+        } else {
+            coling2 = true;
+
+            document.getElementById("ttx").innerHTML = "";
+            document.getElementById("Dial").style.display = '';
+            DialogSA();
+        }
+    }
+
+    function scr1MT() {
+
+    }
+
+    function auter() {
+        let a = "";
+        if (checc == "en") {
+            a = confirm("Attention!!! This audio recording may contain copyrights, which may affect verification from YouTube, twitch, etc. You will listen to the notes at your own risk, the author is not responsible for copyright infringement. Play the recording?");
+        } else {
+            a = confirm("Внимание!!! Данная аудиозапись может содержать авторские права, что может повлиять на проверку от youtube, twitch и т.д. Вы будете слушать запись на свой страх и риск, автор не несет ответственности за нарушение авторских прав на этих платформах. Воспроизвести эту запись?");
+        }
+        return a;
+    }
+
+    function Ans1() {
+        Ans = 1;
+        ADialogSA();
+    }
+
+    function Ans2() {
+        Ans = 2;
+        ADialogSA();
+    }
+
+    function Ans3() {
+        Ans = 3;
+        ADialogSA();
+    }
+
+    function Ans4() {
+        Ans = 4;
+        ADialogSA();
+    }
+
+    function Ans5() {
+        Ans = 5;
+        ADialogSA();
+    }
+
+    function Ans6() {
+        Ans = 6;
+        ADialogSA();
+    }
+
+    function Ans7() {
+        Ans = 7;
+        ADialogSA();
+    }
+
+    function Ans8() {
+        Ans = 8;
+        ADialogSA();
+    }
+
+    function Ans9() {
+        Ans = 9;
+        ADialogSA();
+    }
+
+    function ADialogSA() {
+        let a = true;
+        switch (QvSA) {
+            case "FirstN":
+                switch (Ans) {
+                    case 4:
+                        QvSA = "FirstN1";
+                        break;
+                    default:
+                        QvSA = "FirstN";
+                        break;
+                }
+                break;
+            case "FirstN1":
+                switch (Ans) {
+                    case 1:
+                        QvSA = "FirstN1";
+                        break;
+                    default:
+                        QvSA = "FirstN2";
+                        break;
+                }
+                break;
+            case "Lara1":
+                switch (Ans) {
+                    case 5:
+                        a = false;
+                        coling2 = true;
+                        document.getElementById("ttx").innerHTML = "";
+                        dialo();
+                        break;
+                    default:
+                        QvSA = "Lara1";
+                        break;
+                }
+                break;
+            case "Lara2":
+                switch (Ans) {
+                    case 5:
+                        AnsTime = 0;
+                        QvSA = "Lara3";
+                        break;
+                    default:
+                        QvSA = "Lara2";
+                        break;
+                }
+                break;
+            case "Lara3":
+                switch (Ans) {
+                    case 5:
+                        AnsTime = 0;
+                        a = false;
+                        coling2 = true;
+                        document.getElementById("ttx").innerHTML = "";
+                        QvSA = "znakomstvo";
+                        dialo();
+                        break;
+                    default:
+                        QvSA = "Lara3";
+                        break;
+                }
+                break;
+            case "Koras":
+                QvSA = "koras1";
+                break;
+            case "koras1":
+                switch (Ans) {
+                    case 2:
+                        QvSA = "korasV";
+                        break;
+                    default:
+                        QvSA = "korasS";
+                        break;
+                }
+                break;
+            case "korasV":
+                switch (Ans) {
+                    case 2:
+                        QvSA = "korasS";
+                        break;
+                    default:
+                        QvSA = "korasU";
+                        break;
+                }
+                break;
+            case "korasU":
+                QvSA = "korasS";
+                break;
+            case "korasS":
+                switch (Ans) {
+                    case 1:
+                        a = false;
+                        coling2 = false;
+                        document.getElementById("ttx").innerHTML = "";
+                        document.getElementById("Dial").style.display = 'none';
+                        Mont(b_mont);
+                        QvSA = "y";
+                        Qv = "y";
+                        //dialo();
+                        break;
+                    default:
+                        QvSA = "y";
+                        Qv = "y";
+                        break;
+                }
+
+                break;
+            case "FirstN2":
+                a = false;
+                coling2 = true;
+                document.getElementById("ttx").innerHTML = "";
+                dialo();
+                break;
+            default:
+                if (checc == "en") {
+                    alert("No new messages!");
+                } else {
+                    alert("Новых сообщений нет!");
+                }
+                // QvSA = "znakomstvo";
+                a = false;
+                coling2 = true;
+                document.getElementById("ttx").innerHTML = "";
+                dialo();
+                break;
+        }
+
+        localStorage.setItem(`ZQvSA`, QvSA);
+        if (a) {
+            DialogSA();
+        }
+    }
+
+    function DialogSA() {
+        let b_ta = "", b_mont = "";
+        switch (QvSA) {
+            case "FirstN":
+                if (checc == "en") {
+                    switch (Ans) {
+                        case 0:
+                            b_ta = `Hello, the communication module has been successfully installed. To continue, enter the user name and position.`;
+                            break;
+                        case 1:
+                            b_ta = `Incorrect data, currently the enterprise of the MGDS is commanded by General N.N. Dolgopuk.. Enter your real name and position.`;
+                            break;
+                        case 2:
+                            b_ta = `Incorrect data, the position of gardener on the territory of the MGDS was abolished in 1238. Enter your real name and position.`;
+                            break;
+                        case 3:
+                            b_ta = `Incorrect data, such a complex staff is already online and he participated in my setup, do not try to impersonate him. Enter your real name and position.`;
+                            break;
+                        default:
+                            b_ta = `The leading mechanical engineer is already online and it's not YOU! Enter your real name and position.`;
+                            break;
+                    }
+                    ci = `
+  <div class="anD" onclick="Ans1()">&#8226; Duncan is the commander of the MGDS.</div>
+  <div class="anD" onclick="Ans2()">&#8226; Duncan the gardener.</div>
+  <div class="anD" onclick="Ans3()">&#8226; Samil sysadmin.</div>
+  <div class="anD" onclick="Ans4()">&#8226; Duncan is a research engineer of the second rank.</div>
+  <div class="anD" onclick="Ans5()">&#8226; Duncan is a leading mechanical engineer.</div>
+  `;
+                } else {
+                    switch (Ans) {
+                        case 0:
+                            b_ta = `Здравствуйте, модуль связи успешно установлен. Для продолжения введите имя пользователя и должность.`;
+                            break;
+                        case 1:
+                            b_ta = `Неверные данные, в настоящее время предприятием ВГПК командует генерал Долгопук Н.Н.. Введите настоящее имя и должность.`;
+                            break;
+                        case 2:
+                            b_ta = `Неверные данные, должность садовник на территории ВГПК упразднена в 1238 году. Введите настоящее имя и должность.`;
+                            break;
+                        case 3:
+                            b_ta = `Неверные данные, такой персонал комплекса уже в сети и он учавствовал в моей настройке, не пытайтеcь выдать себя за него. Введите настоящее имя и должность.`;
+                            break;
+                        default:
+                            b_ta = `Ведущий инженер-механик находится уже в сети и это не ВЫ! Введите настоящее имя и должность.`;
+                            break;
+                    }
+                    ci = `
   <div class="anD" onclick="Ans1()">&#8226; Дункан командир ВГПК.</div>
   <div class="anD" onclick="Ans2()">&#8226; Дункан садовник.</div>
   <div class="anD" onclick="Ans3()">&#8226; Самиль сисадмин.</div>
   <div class="anD" onclick="Ans4()">&#8226; Дункан инженер-исследователь второго ранга.</div>
   <div class="anD" onclick="Ans5()">&#8226; Дункан ведущий инженер-механик.</div>
   `;
-        }
+                }
 
-        break;
-      case "FirstN1":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (AnsTime) {
-            case 0:
-              b_ta = `Ваши данные найдены в системе, господин Дункан ...`;
-              break;
-            case 1:
-              b_ta = `... ваш профиль сформирован ...`;
-              break;
-            case 2:
-              b_ta = `... информация и контакты направлены в базу данных... `;
-              break;
-            case 3:
-              b_ta = `Сеть КТС (континентальная техническая связь) успешно 
-              подключена к вашему устройству Рафик 2.0000`;
-              break;
-            case 4:
-              b_ta = `00&&&₽@$ 0..000`;
-              break;
-            case 5:
-              b_ta = `Ошибка`;
-              break;
-            default:
-              b_ta = ` В базе данных ВГПК нет прошивки вашего Рафика или технический сбой. Компания ВГПК постарается исправить ошибку в ближайшее время.
+                break;
+            case "FirstN1":
+                if (checc == "en") {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Your data is found in the system, Mr. Duncan...`
+                            break;
+                        case 1:
+                            b_ta = `... your profile is formed ...`;
+                            break;
+                        case 2:
+                            b_ta = `... information and contacts are sent to the database... `;
+                            break;
+                        case 3:
+                            b_ta = `The CTC network (Continental Technical Communication) is successful 
+              connected to your device Rafik 2.0000`;
+                            break;
+                        case 4:
+                            b_ta = `00&&&₽@$ 0..000`;
+                            break;
+                        case 5:
+                            b_ta = `Error`;
+                            break;
+                        default:
+                            b_ta = ` There is no firmware of your Rafik or a technical failure in the MGDS database. The MGDS company will try to correct the error in the near future.
               `;
-              break;
-          }
-          if (AnsTime < 6) {
-            AnsTime++;
-            ci = `
+                            break;
+                    }
+                    if (AnsTime < 6) {
+                        AnsTime++;
+                        ci = `
             <div class="anD" onclick="Ans1()">&#8226; ...</div>
             `;
-          } else {
-            AnsTime = 0;
-            ci = `
+                    } else {
+                        AnsTime = 0;
+                        ci = `
             <div class="anD" onclick="Ans2()">&#8226; ...</div>
             `;
-          }
-        }
+                    }
+                } else {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Ваши данные найдены в системе, господин Дункан ...`;
+                            break;
+                        case 1:
+                            b_ta = `... ваш профиль сформирован ...`;
+                            break;
+                        case 2:
+                            b_ta = `... информация и контакты направлены в базу данных... `;
+                            break;
+                        case 3:
+                            b_ta = `Сеть КТС (континентальная техническая связь) успешно 
+              подключена к вашему устройству Рафик 2.0000`;
+                            break;
+                        case 4:
+                            b_ta = `00&&&₽@$ 0..000`;
+                            break;
+                        case 5:
+                            b_ta = `Ошибка`;
+                            break;
+                        default:
+                            b_ta = ` В базе данных ВГПК нет прошивки вашего Рафика или технический сбой. Компания ВГПК постарается исправить ошибку в ближайшее время.
+              `;
+                            break;
+                    }
+                    if (AnsTime < 6) {
+                        AnsTime++;
+                        ci = `
+            <div class="anD" onclick="Ans1()">&#8226; ...</div>
+            `;
+                    } else {
+                        AnsTime = 0;
+                        ci = `
+            <div class="anD" onclick="Ans2()">&#8226; ...</div>
+            `;
+                    }
+                }
 
-        break;
-      case "FirstN2":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          b_ta = `Настройка завершена.
-          <br> Список контактов пуст.
-          <br> Ваше устройство готово принимать входящие вызовы.`;
-          ci = `
+                break;
+            case "FirstN2":
+                if (checc == "en") {
+                    b_ta = `Setup is complete.
+          <br> The contact list is empty.
+          <br> Your device is ready to receive incoming calls.`;
+                    ci = `
           <div class="anD" onclick="Ans2()">&#8226; ...</div>
           `;
-        }
-        Qv = "Lara1";
-        if (dialTime) {
-          setTimeout(INVA, 41000);
-          dialTime = false;
-        }
-        break;
-      case "Lara1":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (AnsTime) {
-            case 0:
-              b_ta = `Ох, приветик Дункан, это Лара секретарша Петра Константиновича. Я увидела твой профиль в КТС 
+                } else {
+                    b_ta = `Настройка завершена.
+          <br> Список контактов пуст.
+          <br> Ваше устройство готово принимать входящие вызовы.`;
+                    ci = `
+          <div class="anD" onclick="Ans2()">&#8226; ...</div>
+          `;
+                }
+                Qv = "Lara1";
+                if (dialTime) {
+                    setTimeout(INVA, 41000);
+                    dialTime = false;
+                }
+                break;
+            case "Lara1":
+                if (checc == "en") {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Oh, hello, Duncan, this is Lara, Pyotr Konstantinovich's secretary. I saw your profile in the CTC 
+              And I decided to call you, how are you?`;
+                            ci = `
+            <div class="anD" onclick="Ans1()"> Yes, hi, I'm going to launch the elevator to the upper floors.</div>
+            `;
+                            break;
+                        case 1:
+                            b_ta = `Oh, you're already in the building, okay, I hope you're not too tired from the road.`;
+                            ci = `
+              <div class="anD" onclick="Ans1()">&#8226; Everything is fine, I feel a surge of strength.</div>
+              <div class="anD" onclick="Ans2()">&#8226; Well, that's fine.</div>
+              <div class="anD" onclick="Ans3()">&#8226; The road was hard.</div>
+              <div class="anD" onclick="Ans4()">&#8226; And, it doesn't matter, then one, then the other.</div>
+              `;
+                            break;
+                        case 2:
+                            b_ta = `If you want to tell me about your trip here, we can talk over a cup of tea
+as soon as you're free.`;
+                            ci = `
+              <div class="anD" onclick="Ans1()">&#8226; Great idea.</div>
+              <div class="anD" onclick="Ans2()">&#8226; Hmm, I need to take advantage of your offer somehow.</div>
+              <div class="anD" onclick="Ans3()">&#8226; I will try not to forget about your offer. </div>
+              <div class="anD" onclick="Ans3()">&#8226; I don't like tea.</div>
+              `;
+                            break;
+                        default:
+                            b_ta = ` Well, I don't want to distract you yet :) 
+              `;
+                            ci = `
+              <div class="anD" onclick="Ans5()">&#8226; ...</div>
+              `;
+                            break;
+                    }
+                } else {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Ох, приветик Дункан, это Лара секретарша Петра Константиновича. Я увидела твой профиль в КТС 
               и решила позвонить тебе, как ты там?`;
-              ci = `
+                            ci = `
             <div class="anD" onclick="Ans1()">&#8226; Да, привет, вот собираюсь запустить лифт на верхние этажи.</div>
             `;
-              break;
-            case 1:
-              b_ta = `О, ты уже в здании, хорошо, надеюсь ты не сильно утомился от дороги.`;
-              ci = `
+                            break;
+                        case 1:
+                            b_ta = `О, ты уже в здании, хорошо, надеюсь ты не сильно утомился от дороги.`;
+                            ci = `
               <div class="anD" onclick="Ans1()">&#8226; Всё хорошо, я чувствую в себе прилив сил.</div>
               <div class="anD" onclick="Ans2()">&#8226; Ну так нормально.</div>
               <div class="anD" onclick="Ans3()">&#8226; Дорога была тяжёлой.</div>
               <div class="anD" onclick="Ans4()">&#8226; А, не важно, то одно, то другое.</div>
               `;
-              break;
-            case 2:
-              b_ta = `Если захочешь рассказать мне о своем путешествии сюда, то можем поговорить за чашечкой чая, 
+                            break;
+                        case 2:
+                            b_ta = `Если захочешь рассказать мне о своем путешествии сюда, то можем поговорить за чашечкой чая, 
               как освободишься.`;
-              ci = `
+                            ci = `
               <div class="anD" onclick="Ans1()">&#8226; Отличная идея.</div>
               <div class="anD" onclick="Ans2()">&#8226; Хм, нужно как-нибудь воспользоваться твоим предложением.</div>
               <div class="anD" onclick="Ans3()">&#8226; Постараюсь не забыть о твоём предложении. </div>
               <div class="anD" onclick="Ans3()">&#8226; Я не люблю чай.</div>
               `;
-              break;
-            default:
-              b_ta = ` Ну не хочу отвлекать тебя, пока :) 
+                            break;
+                        default:
+                            b_ta = ` Ну не хочу отвлекать тебя, пока :) 
               `;
-              ci = `
+                            ci = `
               <div class="anD" onclick="Ans5()">&#8226; ...</div>
               `;
-              break;
-          }
+                            break;
+                    }
 
-          if (AnsTime < 3) {
-            AnsTime++;
-          } else {
-            AnsTime = 0;
-            Qv = "Lara2";
-            if (dialTime) {
-              setTimeout(INVA, 11000);
-              dialTime = false;
-            }
-          }
-        }
+                }
 
-        break;
-      case "Lara2":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (AnsTime) {
-            case 0:
-              b_ta = `Ой, снова привет, чуть не забыла, так как ты только недавно подключился к 
+                if (AnsTime < 3) {
+                    AnsTime++;
+                } else {
+                    AnsTime = 0;
+                    Qv = "Lara2";
+                    if (dialTime) {
+                        setTimeout(INVA, 11000);
+                        dialTime = false;
+                    }
+                }
+                break;
+            case "Lara2":
+                if (checc == "en") {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Oh, hello again, I almost forgot, since you just recently connected to 
+              CTC networks, I want to ask - are you familiar with the functionality of the communication module?`;
+                            ci = `
+            <div class="anD" onclick="Ans5()"> Yes.</div>
+            <div class="anD" onclick="Ans1()"> No, can you tell me?</div>
+            `;
+                            break;
+                        case 1:
+                            b_ta = `Of course I can. This module allows, as it is not difficult to guess, to communicate at a distance. To you 
+              other gnomes can call who have the same module, as for example I did.`;
+                            ci = `
+              <div class="anD" onclick="Ans1()">&#8226; ...</div>
+              `;
+                            break;
+                        case 2:
+                            b_ta = ` You can also start a conversation yourself with someone who has this module, for this you have to choose 
+                who do you want to talk to, from the list of contacts available to you. `;
+                            ci = `
+                <div class="anD" onclick="Ans1()">&#8226; ...</div>
+                `;
+                            break;
+                        case 3:
+                            b_ta = `You probably don't have them yet, but soon, I think, they will appear. In addition, your interlocutor must confirm the call if he 
+                  is not busy and can talk or is in the network area.`;
+                            ci = `
+                  <div class="anD" onclick="Ans1()">&#8226; ...</div>
+                  `;
+                            break;
+                        default:
+                            b_ta = `Most likely you have already guessed it yourself, but it was nice for me to explain it to you. Was everything clear to you? 
+              `;
+                            ci = `
+              <div class="anD" onclick="Ans5()"> Yes.</div>
+              `;
+                            break;
+                    }
+                } else {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Ой, снова привет, чуть не забыла, так как ты только недавно подключился к 
               сети КТС, хочу спросить - тебе знаком функционал модуля связи?`;
-              ci = `
+                            ci = `
             <div class="anD" onclick="Ans5()">&#8226; Да.</div>
             <div class="anD" onclick="Ans1()">&#8226; Нет, можешь рассказать?</div>
             `;
-              break;
-            case 1:
-              b_ta = `Конечно могу. Данный модуль позволяет, как не трудно догадаться, общаться на расстоянии. Тебе 
+                            break;
+                        case 1:
+                            b_ta = `Конечно могу. Данный модуль позволяет, как не трудно догадаться, общаться на расстоянии. Тебе 
               могут звонить другие гномы у которых есть такой же модуль, как например сделала я.`;
-              ci = `
+                            ci = `
               <div class="anD" onclick="Ans1()">&#8226; ...</div>
               `;
-              break;
-            case 2:
-              b_ta = ` Также ты сам можешь начать разговор с кем-нибудь, у кого есть этот модуль, для этого ты должен выбрать 
+                            break;
+                        case 2:
+                            b_ta = ` Также ты сам можешь начать разговор с кем-нибудь, у кого есть этот модуль, для этого ты должен выбрать 
                 с кем хочешь поговорить, из списка доступных тебе контактов. `;
-              ci = `
+                            ci = `
                 <div class="anD" onclick="Ans1()">&#8226; ...</div>
                 `;
-              break;
-            case 3:
-              b_ta = `Наверное у тебя их ещё нет, но вскоре, как я думаю, появятся. Кроме этого, твой собеседник должен подтвердить вызов, если он 
+                            break;
+                        case 3:
+                            b_ta = `Наверное у тебя их ещё нет, но вскоре, как я думаю, появятся. Кроме этого, твой собеседник должен подтвердить вызов, если он 
                   не занят и может говорить или находится в зоне сети.`;
-              ci = `
+                            ci = `
                   <div class="anD" onclick="Ans1()">&#8226; ...</div>
                   `;
-              break;
-            default:
-              b_ta = `Скорее всего ты сам уже об этом догадался, но мне было приятно тебе объяснить. Тебе всё было понятно? 
+                            break;
+                        default:
+                            b_ta = `Скорее всего ты сам уже об этом догадался, но мне было приятно тебе объяснить. Тебе всё было понятно? 
               `;
-              ci = `
+                            ci = `
               <div class="anD" onclick="Ans5()">&#8226; Да.</div>
               `;
-              break;
-          }
+                            break;
+                    }
 
-          if (AnsTime < 4) {
-            AnsTime++;
-          } else {
-            AnsTime = 0;
-          }
-        }
+                }
 
-        break;
-      case "Lara3":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (AnsTime) {
-            case 0:
-              b_ta = `Отлично, а вот ещё один вопрос, тебе Самиль или Бульбар, ничего про коридор после лифта не говорили?`;
-              ci = `
-            <div class="anD" onclick="Ans1()">&#8226; Нет, не говорили.</div>
+                if (AnsTime < 4) {
+                    AnsTime++;
+                } else {
+                    AnsTime = 0;
+                }
+                break;
+            case "Lara3":
+                if (checc == "en") {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Great, but here's another question, did Samil or Bulbar tell you anything about the corridor after the elevator?`;
+                            ci = `
+            <div class="anD" onclick="Ans1()">&#8226; No, they didn't.</div>
             `;
-              break;
-            case 1:
-              b_ta = `Петр Константинович ограничил проход в коридоре после лифта, установив панель с кнопками. Код от двери 
-              на данный момент времени знают только оставшиеся сотрудники верхних этажей.`;
-              ci = `
+                            break;
+                        case 1:
+                            b_ta = `Pyotr Konstantinovich restricted the passage in the corridor after the elevator by installing a panel with buttons. Door code 
+              at this point in time, only the remaining employees of the upper floors know.`;
+                            ci = `
               <div class="anD" onclick="Ans1()">&#8226; ...</div>
               `;
-              break;
-            case 2:
-              b_ta = `Так вот, запиши себе куда-нибудь: 137584296.`;
-              ci = `
+                            break;
+                        case 2:
+                            b_ta = `So, write it down somewhere: 137584296.`;
+                            ci = `
+                <div class="anD" onclick="Ans1()">&#8226; ...[Need to memorize or write down somewhere]...</div>
+                `;
+                            break;
+                        default:
+                            b_ta = `Okay, it's time for me to get to work, it's good to talk to you, and the number of documents will not decrease by itself. For now ;) 
+              `;
+                            ci = `
+              <div class="anD" onclick="Ans5()">&#8226; For now...</div>
+              `;
+                            break;
+                    }
+                } else {
+                    switch (AnsTime) {
+                        case 0:
+                            b_ta = `Отлично, а вот ещё один вопрос, тебе Самиль или Бульбар, ничего про коридор после лифта не говорили?`;
+                            ci = `
+            <div class="anD" onclick="Ans1()">&#8226; Нет, не говорили.</div>
+            `;
+                            break;
+                        case 1:
+                            b_ta = `Петр Константинович ограничил проход в коридоре после лифта, установив панель с кнопками. Код от двери 
+              на данный момент времени знают только оставшиеся сотрудники верхних этажей.`;
+                            ci = `
+              <div class="anD" onclick="Ans1()">&#8226; ...</div>
+              `;
+                            break;
+                        case 2:
+                            b_ta = `Так вот, запиши себе куда-нибудь: 137584296.`;
+                            ci = `
                 <div class="anD" onclick="Ans1()">&#8226; ...[Надо запомнить или записать куда-нибудь]...</div>
                 `;
-              break;
-            default:
-              b_ta = `Ладно, мне пора браться за работу, с тобой говорить хорошо, а количество документов само не убавится. Пока ;) 
+                            break;
+                        default:
+                            b_ta = `Ладно, мне пора браться за работу, с тобой говорить хорошо, а количество документов само не убавится. Пока ;) 
               `;
-              ci = `
+                            ci = `
               <div class="anD" onclick="Ans5()">&#8226; Пока...</div>
               `;
-              break;
-          }
+                            break;
+                    }
+                }
 
-          if (AnsTime < 3) {
-            AnsTime++;
-          } else {
-            AnsTime = 0;
-          }
-        }
-
-        break;
-      case "Koras":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          b_ta = "Привет Дункан, охранник Канкин мне доложил, что ты вошёл в комплекс, надеюсь ты не сильно устал от дороги.";
-          ci = `
+                if (AnsTime < 3) {
+                    AnsTime++;
+                } else {
+                    AnsTime = 0;
+                }
+                break;
+            case "Koras":
+                if (checc == "en") {
+                    b_ta = "Hi Duncan, Guard Kankin told me you've entered the complex, I hope you're not too tired from the road.";
+                    ci = `
+  <div class="anD" onclick="Ans1()">&#8226; Hello Peter Konstantinovich, the road was not the easiest. The East Darkwell earthquake damaged the bridge and I had to drive through Prynfog.</div>
+  <div class="anD" onclick="Ans2()">&#8226; Okay, let's get down to business, why did you call me so urgently?</div>
+  <div class="anD" onclick="Ans3()">&#8226; Hello, everything is fine, uh, why are you texting me? I'm not far from your office, I'll get up now, and we can talk normally.</div>
+  <div class="anD" onclick="Ans4()">&#8226; Hello, it's hard to get to you, then an earthquake, then portals, and in addition the car broke down.</div>
+            `;
+                } else {
+                    b_ta = "Привет Дункан, охранник Канкин мне доложил, что ты вошёл в комплекс, надеюсь ты не сильно устал от дороги.";
+                    ci = `
   <div class="anD" onclick="Ans1()">&#8226; Здравствуйте Петр Константинович, дорога была не самая лёгкая. Землетрясение в восточном Дарквеле повредило мост и мне пришлось ехать через Принфог.</div>
   <div class="anD" onclick="Ans2()">&#8226; Нормально, давай ближе к делу, зачем ты меня так срочно вызвал?</div>
   <div class="anD" onclick="Ans3()">&#8226; Здравствуйте, всё хорошо, э.., а почему вы мне пишите? Я уже недалеко от вашего кабинета, сейчас поднимусь, и мы сможем нормально поговорить.</div>
   <div class="anD" onclick="Ans4()">&#8226; Здравствуйте, плохо до вас добираться, то землетрясение, то порталы и в добавок машина сломалась.</div>
   `;
-        }
+                }
 
-        break;
-      case "корась1":
-        b_ta = "";
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (Ans) {
-            case 1:
-              b_ta = `Да, я слышал, что землетрясение повредило пару станций в долине. Хм, если я не ошибаюсь ты в Принфоге учился до Завода, старина Каспар так и не вернулся туда? Ну не важно, вернёмся к делу.`;
-              break;
-            case 2:
-              b_ta = `Так, не ты, а вы, не забывай кто твой непосредственный руководитель. <br>  Я уже забыл какой у тебя скверный характер. Дело действительно срочное и важное для нашего предприятия.<br>  Приступим к делу.`;
-              break;
-            case 3:
-              b_ta = `Ко мне можешь не идти, лучше сразу поднимайся по лестнице на крышу, через обучающий класс. <br>  Лифт сломался и механик Долран уже 5 часов чинит его и лучше не отвлекать инженера от дела. Мне легче в таком формате объяснить тебе причину твоего прибытия.`;
-              break;
-            default:
-              b_ta = `Ну всё в жизни бывает, я как-то свой личный вертолёт утопил, в озере девяти, а потом ... в прочем .. хм, не буду тебя отвлекать пустой болтовнёй. Перейдём к делу.`;
-              break;
-          }
+                break;
+            case "koras1":
+                b_ta = "";
+                if (checc == "en") {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Yes, I heard that the earthquake damaged a couple of stations in the valley. Hmm, if I'm not mistaken, you studied at Prinfog before the Factory, old Kaspar never returned there? Well, it doesn't matter, let's get back to business.`;
+                            break;
+                        case 2:
+                            b_ta = `So, not you, but you, don't forget who your immediate supervisor is. <br>  I've already forgotten what a bad temper you have. The matter is really urgent and important for our company.<br>  Let's get down to business.`;
+                            break;
+                        case 3:
+                            b_ta = `You don't have to come to me, it's better to go straight up the stairs to the roof, through the training class. The elevator broke down and the mechanic Dolran has been fixing it for 5 hours and it's better not to distract the engineer from the case. It's easier for me to explain to you the reason for your arrival in this format.`;
+                            break;
+                        default:
+                            b_ta = `Well, everything happens in life, I somehow drowned my personal helicopter, in the lake of nine, and then... in other things .. Hmm, I won't distract you with empty chatter. Let's get down to business.`;
+                            break;
+                    }
 
-          b_ta = b_ta + `<br>  В прошлый вторник, генерал написал мне, что командир станции ВЕГа7 замучил его какими-то сообщениями. <br>  В отчёте командир писал о пропаже оборудования и о рассказах рабочих, как они слышали странные звуки и как один инженер якобы видел довоенного робота в вентиляции. <br>  В общем генерал отправил запрос на лучшего инженера, смелого и находчивого гнома, который готов отправиться на ВЕГу7. <br>   Ну лучше тебя мне не найти, твоя кандидатура идеально подходит для задания.`;
-          ci = `
+                    b_ta = b_ta + `<br>  Last Tuesday, the general wrote to me that the commander of the VEGA 7 station tortured him with some messages. <br>  In the report, the commander wrote about the loss of equipment and about the stories of workers, how they heard strange sounds and how one engineer allegedly saw a pre-war robot in the ventilation. <br>  In general, the general sent a request for the best engineer, a brave and resourceful dwarf who is ready to go to VEGA 7. <br>   Well, I can't find you better, your candidacy is perfect for the task.`;
+                    ci = `
+    <div class="anD" onclick="Ans1()">&#8226; Thank you for the honor, I will be happy to complete the task.</div>
+    <div class="anD" onclick="Ans2()">&#8226; Ha, of course I agree to go on a dangerous mission it is unclear where and why, at the request of my boss Peter Konstantinovich! .... A joke... I'm not bad on Nexurt either. Solid ground under your feet, better than a vacuum in the well... So no!</div>
+    <div class="anD" onclick="Ans3()">&#8226; Thank you for giving me the opportunity, but I'm not ready to go into space so easily, on such an important task. Besides, I'm a simple engineer, what's the use of me there?</div>
+    `;
+                } else {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Да, я слышал, что землетрясение повредило пару станций в долине. Хм, если я не ошибаюсь ты в Принфоге учился до Завода, старина Каспар так и не вернулся туда? Ну не важно, вернёмся к делу.`;
+                            break;
+                        case 2:
+                            b_ta = `Так, не ты, а вы, не забывай кто твой непосредственный руководитель. <br>  Я уже забыл какой у тебя скверный характер. Дело действительно срочное и важное для нашего предприятия.<br>  Приступим к делу.`;
+                            break;
+                        case 3:
+                            b_ta = `Ко мне можешь не идти, лучше сразу поднимайся по лестнице на крышу, через обучающий класс. <br>  Лифт сломался и механик Долран уже 5 часов чинит его и лучше не отвлекать инженера от дела. Мне легче в таком формате объяснить тебе причину твоего прибытия.`;
+                            break;
+                        default:
+                            b_ta = `Ну всё в жизни бывает, я как-то свой личный вертолёт утопил, в озере девяти, а потом ... в прочем .. хм, не буду тебя отвлекать пустой болтовнёй. Перейдём к делу.`;
+                            break;
+                    }
+
+                    b_ta = b_ta + `<br>  В прошлый вторник, генерал написал мне, что командир станции ВЕГа7 замучил его какими-то сообщениями. <br>  В отчёте командир писал о пропаже оборудования и о рассказах рабочих, как они слышали странные звуки и как один инженер якобы видел довоенного робота в вентиляции. <br>  В общем генерал отправил запрос на лучшего инженера, смелого и находчивого гнома, который готов отправиться на ВЕГу7. <br>   Ну лучше тебя мне не найти, твоя кандидатура идеально подходит для задания.`;
+                    ci = `
     <div class="anD" onclick="Ans1()">&#8226; Спасибо за оказанную мне честь, я с радостью выполню задание.</div>
     <div class="anD" onclick="Ans2()">&#8226; Ха, конечно я согласен отправиться на опасное задание непонятно куда и зачем, по просьбе моего начальника Петра Константиновича! .... Шутка... Мне и на Нексурте не плохо. Твёрдая земля под ногами, лучше вакуума в ж... Так что нет!</div>
     <div class="anD" onclick="Ans3()">&#8226; Спасибо за предоставленную мне возможность, но я не готов так просто отправиться в космос, на столь важное задание. К тому же я простой инженер, какая там от меня польза?</div>
     `;
-        }
+                }
 
-        break;
-      case "корасьВозмущение":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          b_ta = `Дункан, за такое обращение к начальству, я могу просто уволить тебя, но твой ум и навыки никому не заменить. <br>  В данный момент это не просьба, а приказ, последствий нарушения, которого никто из нас не хочет. Чтобы не доводить до крайностей, предлагаю выбрать себе вознаграждение за выполнение задания. <br>   Что ты хочешь получить, после возвращения?`;
-          ci = `
+                break;
+            case "korasV":
+                if (checc == "en") {
+                    b_ta = `Duncan, for such an appeal to the authorities, I can just fire you, but no one can replace your mind and skills. <br>  At the moment, this is not a request, but an order, the consequences of a violation, which none of us wants. In order not to take it to extremes, I suggest choosing a reward for completing the task. <br>   What do you want to get after returning?`;
+                    ci = `
+      <div class="anD" onclick="Ans1()">&#8226; Promotions.</div>
+      <div class="anD" onclick="Ans3()">&#8226; New car.</div>
+      <div class="anD" onclick="Ans4()">&#8226; Let me kick you at the next meeting of the MGDS.</div>
+      <div class="anD" onclick="Ans5()">&#8226; Well, at least 10,000 ducats.</div>
+      <div class="anD" onclick="Ans6()">&#8226; Surprise me, what are you ready to offer me?</div>
+      <div class="anD" onclick="Ans2()">&#8226; Okay, since you can't do without me, then I don't need anything from you.</div>
+      `;
+                } else {
+                    b_ta = `Дункан, за такое обращение к начальству, я могу просто уволить тебя, но твой ум и навыки никому не заменить. <br>  В данный момент это не просьба, а приказ, последствий нарушения, которого никто из нас не хочет. Чтобы не доводить до крайностей, предлагаю выбрать себе вознаграждение за выполнение задания. <br>   Что ты хочешь получить, после возвращения?`;
+                    ci = `
       <div class="anD" onclick="Ans1()">&#8226; Повышения в должности.</div>
       <div class="anD" onclick="Ans3()">&#8226; Новую машину.</div>
       <div class="anD" onclick="Ans4()">&#8226; Разрешить пнуть тебя, на следующем собрании ВГПК.</div>
@@ -3875,103 +4685,143 @@ if (false && (document.referrer !== 'https://scrappiy.github.io/QWjgjgj/') && (d
       <div class="anD" onclick="Ans6()">&#8226; Удиви меня, что ты готов мне предложить?</div>
       <div class="anD" onclick="Ans2()">&#8226; Ладно, раз вы без меня никак, то ничего мне от тебя не надо.</div>
       `;
-        }
+                }
 
-        break;
-      case "корасьУступок":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (Ans) {
-            case 1:
-              b_ta = `Хм, если я повышу тебя до ведущего инженера отдела промышленного оборудования, ты согласишься отправиться на задание?`;
-              break;
-            case 3:
-              b_ta = `Как я помню у тебя был старенький автомобиль Пирожок с гибридным двигателем, если я предоставлю тебе современную модель Ватрушка, ты согласишься отправиться на задание?`;
-              break;
-            case 4:
-              b_ta = `И речи быть не может, могу предложить один пинок сразу после твоего возвращения, в моём кабинете, без лишних глаз. Согласен?`;
-              break;
-            case 5:
-              b_ta = `Десять это много, почти четверть от моего заработка. Вознаграждения в 5000 дукатов будет достаточно, для выполнения задания?`;
-              break;
-            default:
-              b_ta = `У меня есть пачка шоколадных конфет, сухарики с сыром и чипсы с грибами,..так, ... так.., ещё газировка есть, сразу после прибытия получишь, готов?`;
-              break;
-          }
+                break;
+            case "korasU":
+                if (checc == "en") {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Hmm, if I promote you to the lead engineer of the industrial equipment department, will you agree to go on a mission?`;
+                            break;
+                        case 3:
+                            b_ta = `As I remember, you had an old Pie car with a hybrid engine, if I give you a modern Cheesecake model, will you agree to go on a mission?`;
+                            break;
+                        case 4:
+                            b_ta = `Out of the question, I can offer one kick right after your return, in my office, without prying eyes. Agree?`;
+                            break;
+                        case 5:
+                            b_ta = `Ten is a lot, almost a quarter of my earnings. Will the reward of 5,000 ducats be enough to complete the task?`;
+                            break;
+                        default:
+                            b_ta = `I have a pack of chocolates, crackers with cheese and chips with mushrooms, ..so, ... so.., there's also soda, you'll get it right after arrival, ready?`;
+                            break;
+                    }
 
-          b_ta = b_ta + `<br>  Но, ты будешь соблюдать уважение к вышестоящим по званию и обращаться ко мне на вы.`;
-          ci = `
+                    b_ta = b_ta + `<br> But, you will respect your superiors and address me as you.`;
+                    ci = `
+        <div class="anD" onclick="Ans2()">&#8226; I am ready to accept your conditions and go on a mission.</div>
+        `;
+                } else {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Хм, если я повышу тебя до ведущего инженера отдела промышленного оборудования, ты согласишься отправиться на задание?`;
+                            break;
+                        case 3:
+                            b_ta = `Как я помню у тебя был старенький автомобиль Пирожок с гибридным двигателем, если я предоставлю тебе современную модель Ватрушка, ты согласишься отправиться на задание?`;
+                            break;
+                        case 4:
+                            b_ta = `И речи быть не может, могу предложить один пинок сразу после твоего возвращения, в моём кабинете, без лишних глаз. Согласен?`;
+                            break;
+                        case 5:
+                            b_ta = `Десять это много, почти четверть от моего заработка. Вознаграждения в 5000 дукатов будет достаточно, для выполнения задания?`;
+                            break;
+                        default:
+                            b_ta = `У меня есть пачка шоколадных конфет, сухарики с сыром и чипсы с грибами,..так, ... так.., ещё газировка есть, сразу после прибытия получишь, готов?`;
+                            break;
+                    }
+
+                    b_ta = b_ta + `<br>  Но, ты будешь соблюдать уважение к вышестоящим по званию и обращаться ко мне на вы.`;
+                    ci = `
         <div class="anD" onclick="Ans2()">&#8226; Я готов принять ваши условия и отправиться на задание.</div>
         `;
-        }
+                }
 
-        break;
-      case "корасьСогласие":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          switch (Ans) {
-            case 1:
-              b_ta = `Благодарю за преданность общему делу. К твоему возвращению поговорю с генералом, может организую тебе награду за верную службу в ВГПК.`;
-              break;
-            case 2:
-              b_ta = `Ну...договорились.`;
-              break;
-            default:
-              b_ta = `Раз мне было поручено найти достойного кандидата, я уверен, что ты справишься с поставленной задачей. Там не должно быть ничего сверхсложного, приключение на 20 часов, туда, обратно и готово. Может даже награду у генерала для тебя попрошу`;
-              break;
-          }
+                break;
+            case "korasS":
+                if (checc == "en") {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Thank you for your dedication to the common cause. By the time you get back, I'll talk to the general, maybe I'll arrange a reward for your faithful service in the MGDS.`;
+                            break;
+                        case 2:
+                            b_ta = `Well...agreed.`;
+                            break;
+                        default:
+                            b_ta = `Since I was assigned to find a worthy candidate, I am sure that you will cope with the task. There should be nothing super complicated, an adventure for 20 hours, there, back and ready. Maybe I'll even ask the general for a reward for you`;
+                            break;
+                    }
 
-          b_ta = b_ta + `<br>   И ещё, как ты понимаешь без минимальной подготовки тебя нельзя отправлять на корабле в открытый космос. <br>   Так, что лётчик Увард решила провести тебе ускоренный курс подготовки пилота и проверить твои навыки перед полётом. <br>  Не понимаю зачем тебя проверять, но отказать я ей не смог. <br>   Она будет ждать тебя на крыше Завода, не знаю что именно она подготовила, но ты должен справиться. <br>   Удачи. <br>   До встречи.`;
-          ci = `
-          <div class="anD" onclick="Ans2()">&#8226; До встречи.</div>
+                    b_ta = b_ta + `<br>   And yet, as you understand, without minimal training, you cannot be sent on a ship into outer space. <br>   So, the pilot Uvard decided to give you an accelerated pilot training course and test your skills before the flight. <br> I don't understand why you should be checked, but I couldn't refuse her. <br>   She will be waiting for you on the roof of the Factory, I don't know what exactly she has prepared, but you have to cope. <br>   Good luck. <br>   See you.`;
+                    ci = `
+              <div class="anD" onclick="Ans1()">&#8226; ...</div>
           `;
 
-          b_mont = "Задание Корася заключается в посещении космической станции ВЕГА7, чтобы удостовериться, что там всё впорядке. Когда я вернусь, точно уволюсь и займусь фермерством. Описанные в отчёте командира странности, немного пугают меня, но раз я согласился, надо идти до конца."
-          Mont(b_mont)
-        }
+                    b_mont = `Koras' task is to visit the VEGA 7 space station to make sure that everything is in order there. When I come back, I will definitely quit and take up farming. The oddities described in the commander's report scare me a little, but since I agreed, I have to go to the end.`
+                } else {
+                    switch (Ans) {
+                        case 1:
+                            b_ta = `Благодарю за преданность общему делу. К твоему возвращению поговорю с генералом, может организую тебе награду за верную службу в ВГПК.`;
+                            break;
+                        case 2:
+                            b_ta = `Ну...договорились.`;
+                            break;
+                        default:
+                            b_ta = `Раз мне было поручено найти достойного кандидата, я уверен, что ты справишься с поставленной задачей. Там не должно быть ничего сверхсложного, приключение на 20 часов, туда, обратно и готово. Может даже награду у генерала для тебя попрошу`;
+                            break;
+                    }
 
-        break;
+                    b_ta = b_ta + `<br>   И ещё, как ты понимаешь без минимальной подготовки тебя нельзя отправлять на корабле в открытый космос. <br>   Так, что лётчик Увард решила провести тебе ускоренный курс подготовки пилота и проверить твои навыки перед полётом. <br>  Не понимаю зачем тебя проверять, но отказать я ей не смог. <br>   Она будет ждать тебя на крыше Завода, не знаю что именно она подготовила, но ты должен справиться. <br>   Удачи. <br>   До встречи.`;
+                    ci = `
+              <div class="anD" onclick="Ans1()">&#8226; ...</div>
+          `;
+
+                    b_mont = `Задание Корася заключается в посещении космической станции ВЕГА7, чтобы удостовериться, что там всё впорядке. Когда я вернусь, точно уволюсь и займусь фермерством. Описанные в отчёте командира странности, немного пугают меня, но раз я согласился, надо идти до конца.`
+                }
+
+                QvSA = "";
+                Qv = "";
+                break;
 
 
-      case "znakomstvo":
-        if (checc == "en") {
-          b_ta = "";
-        } else {
-          b_ta = "";
-        }
-        ci = `
+            case "znakomstvo":
+                if (checc == "en") {
+                    b_ta = "";
+                } else {
+                    b_ta = "";
+                }
+                QvSA = "";
+                Qv = "";
+                ci = `
 <div class="anD" onclick="Ans1()">&#8226; ... </div>
 `;
-        break;
-      default:
-        if (checc == "en") {
-        } else {
-          alert("ERROR!!!");
+                break;
+            default:
+                if (checc == "en") {
+                } else {
+                }
+                break;
         }
-        break;
+
+        document.getElementById("ttx").innerHTML = b_ta;
+        document.getElementById("Dial").innerHTML = "";
+        setTimeout(readDial, 500);
     }
 
-    document.getElementById("ttx").innerHTML = b_ta;
-    document.getElementById("Dial").innerHTML = "";
-    setTimeout(readDial, 500);
-  }
+    function readDial() {
+        document.getElementById("Dial").innerHTML = ci;
+    }
 
-  function readDial() {
-    document.getElementById("Dial").innerHTML = ci;
-  }
-
-  function INVA() {
-    document.getElementById("invA").innerHTML = `<audio src="audio/PRUY.mp3" autoplay loop preload="auto"></audio>`;
-    document.getElementById("invB").style.display = '';
-  }
-  function Call() {
-    document.getElementById("invA").innerHTML = ``;
-    document.getElementById("invB").style.display = 'none';
-    QvSA = Qv;
-    setTimeout(dialo, 800);
-    dialTime = true;
-  }
+    function INVA() {
+        document.getElementById("invA").innerHTML = `<audio src="audio/PRUY.mp3" autoplay loop preload="auto"></audio>`;
+        document.getElementById("invB").style.display = '';
+    }
+    function Call() {
+        document.getElementById("invA").innerHTML = ``;
+        document.getElementById("invB").style.display = 'none';
+        QvSA = Qv;
+        setTimeout(dialo, 800);
+        dialTime = true;
+    }
 
 }
